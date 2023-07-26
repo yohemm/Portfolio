@@ -7,6 +7,9 @@
     --linearGray : linear-gradient(45deg, transparent 50%, rgb(124, 124, 124) 50%, rgba(124, 124, 124, 0.278));
     --linearGreen : linear-gradient(45deg, #85FFBD 0%, #FFFB7D 50%);
 }
+html{
+    --res: calc(0.01*10vmin);
+}
 *, ::after, ::before{
     box-sizing: border-box;
     margin: 0;
@@ -19,12 +22,12 @@
     font-size: 1.5rem;
 }
 .bg .filter-bg:nth-child(even){
-    background-image: linear-gradient(255deg, transparent, white 60%), 
-    radial-gradient(ellipse at center, #79a0ed 20%, #ff7d95 60%, transparent 80%);
+    background-image: linear-gradient(255deg, transparent, rgba(255, 255, 255, 0.219) 60%), 
+    radial-gradient(ellipse at center, #92929256 20%, #74747467 60%);
 }
 .bg .filter-bg:nth-child(odd){
-    background-image: linear-gradient(45deg, transparent, white 60%),
-    radial-gradient(ellipse at center, #85FFBD 20%, var(--black) 60%, transparent 80%);
+    background-image: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.589) 60%),
+    radial-gradient(ellipse at center,  #7070709d 20%, #3131319d 60%);
 }
 .bg .filter-bg:nth-child(3n){
     width: 80vw ;height: 60vh;
@@ -41,7 +44,7 @@
     position: absolute;
     width: 500px;height: 500px;
     z-index: -1;
-    filter: opacity(0.4) blur(90px) brightness(1.1) saturate(1.6);
+    filter: brightness(1.2) blur(190px) saturate(0.5) opacity(0.2);
 }
 .bg{
     height: 0;
@@ -433,6 +436,9 @@ section#skills h3::before{
     padding: 10px;
     border-radius: 10px;
 }
+.projet-pro p {
+    font-size:calc(32*var(--res));
+}
 
 .projet-pro .images-container{
     position: absolute;
@@ -546,6 +552,7 @@ section#skills h3::before{
 .projet-pers .card .back-card p{
     position: absolute;
     bottom: 15px;left: 15px;
+    font-size:calc(28*var(--res));
 }
 .projet-pers .card .front-card{
     display: flex;
@@ -675,6 +682,7 @@ fieldset{
 }
 form .form-group{
     padding-top: 1.5rem;
+    margin-bottom: 10px;
     position: relative;
 }
 form .form-group:focus-within label, form .form-group.animation label{
@@ -686,6 +694,7 @@ form .form-group label{
     padding-left: 10px;
     transition: top 0.2s ease-in;
 }
+
 form .form-group textarea{
     width: 90%;
     height: 40vh;
