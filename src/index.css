@@ -10,6 +10,10 @@
 html{
     --res: calc(0.01*10vmin);
 }
+nav {
+    
+    font-size: 1.5rem;
+}
 *, ::after, ::before{
     box-sizing: border-box;
     margin: 0;
@@ -20,6 +24,7 @@ html{
     border: none;
     scroll-behavior: smooth;
     font-size: 1.5rem;
+    font-size: clamp(0.8rem, 4vw , 1.5rem);
 }
 .bg .filter-bg:nth-child(even){
     background-image: linear-gradient(255deg, transparent, rgba(255, 255, 255, 0.219) 60%), 
@@ -84,24 +89,27 @@ h3{
 
 nav{
     z-index: 9999;
+    height: clamp(50px, 15vw, 75px);
     position: fixed;
     top: 0;
     width: 100%;
-    transition: background 0.5s ease-in, border-bottom 0.5s ease-in;
+    transition: background 0.1s ease-in, border-bottom 0.5s ease-in;
 }
 nav ul { 
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
+nav ul li {
+    text-align: center;
+}
 nav ul li a {
-    line-height: 2;
+    line-height: 2.1;
 }
 nav img{
-    width: 2rem;
-    transform: translateY(calc(calc(72px - 2rem)/2));
+    width: 1.5rem;
+    /* transform: translateY(calc(calc(72px - 2rem)/2)); */
     transition: border-radius 0.2s ease-in ;
 
 }
@@ -115,14 +123,29 @@ nav ul li.name.hide {
 nav ul li.name { 
     transition: transform 0.2s ease-in;
 }
-nav i {
-    font-size: 2rem;
+nav li.photo-profile > a{
+    position: relative;
 }
+nav li.photo-profile > a > img{
+    position: absolute;
+    top: 120%;
+    
+}
+/* nav li>a  {
+    font-size: clamp(1rem, 5vw ,1.5rem);
+} */
 nav li.github{
     transition: transform 0.2s ease-in;
 }
+
+nav i{
+    font-size: 1.5rem;
+}
 nav li.github.hide{
-    transform: translate(221px, 0rem);
+    transform: translate(87%, 0rem);
+}
+nav li.github a > span{
+    /* padding-left: 1rem; */
 }
 nav li.github:hover{
     transform: translate(0, 0rem);
@@ -419,7 +442,7 @@ section#skills h3::before{
     backdrop-filter: blur(0.8px);
     background-color: var(--white-less-opacity);
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     border-radius: 40px;
 }
 .projet-pro .text div{
@@ -500,7 +523,7 @@ section#skills h3::before{
 
 #projet-perso #react-pers > div{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
     grid-template-rows: 1fr;
     column-gap: 20px;
   }
@@ -753,6 +776,11 @@ footer address a:hover {
     border-color: #fff;
 }
 
+#WP {
+    margin-left: 10vw;
+    margin-top: auto;
+    padding-top: 15px ;
+}
 @keyframes backToFront {
     0%{
         background-position: 220%;
