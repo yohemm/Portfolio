@@ -776,7 +776,7 @@ footer address a:hover {
     border-color: #fff;
 }
 
-#WP {
+.wp-footer {
     margin-left: 10vw;
     margin-top: auto;
     padding-top: 15px ;
