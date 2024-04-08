@@ -7,9 +7,9 @@ import { ProjetPro } from './ProjetPro';
 import { Formation } from './Formation';
 
 
-const pro = ReactDOM.createRoot(document.querySelector('#pro #react-pro'));
-const perso = ReactDOM.createRoot(document.querySelector('#react-pers'));
-const formation = ReactDOM.createRoot( document.querySelector('#react-forma'));
+const pro = ReactDOM.createRoot(document.querySelector('#pro #projets-profesionel'));
+const perso = ReactDOM.createRoot(document.querySelector('#projets-personel'));
+const formation = ReactDOM.createRoot( document.querySelector('#formations'));
 formation.render(
   <div><Formation name="Auto-didacte" date="2016-2022">En apprentissage permanent...</Formation><Formation name="baccalauréat général" date="2020-2022"><p>( NSI, Maths Physique)</p> <p>Mention Assez bien</p></Formation><Formation name="BUT Informatique" date="2022-2024">En cours de formation...</Formation></div>
 )

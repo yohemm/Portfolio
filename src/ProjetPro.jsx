@@ -9,12 +9,12 @@ export class ProjetPro extends Component {
     render(){
         for(let i = 1; i < this.listImgsprops.length; i++){
             console.log(i)
-            this.spanImager.push(<SpanImage  img={this.listImgsprops[i]} index={i-1} key={i-1}></SpanImage>)
+            this.spanImager.push(<SpanImage img={this.listImgsprops[i]} index={i-1} key={i-1}></SpanImage>)
         }
         console.log(this.spanImager)
-        return <div className="projet-pro" style={{backgroundImage: "url("+ this.listImgsprops[0] + ")"}}>
-            <div className="images-container">{this.spanImager}</div>
-            <div className="text" >
+        return <div className="wp-block-group projet-pro" style={{backgroundImage: "url("+ this.listImgsprops[0] + ")"}}>
+            <div className="wp-block-images images-container">{this.spanImager}</div>
+            <div className="wp-block-row text" >
                 <div><h4>{this.props.name}</h4></div>
                 <div>
                     <p>

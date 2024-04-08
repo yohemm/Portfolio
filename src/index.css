@@ -35,10 +35,10 @@ nav {
     radial-gradient(ellipse at center,  #7070709d 20%, #3131319d 60%);
 }
 .bg .filter-bg:nth-child(3n){
-    width: 80vw ;height: 60vh;
+    width: 80vw ;height: 30vh;
 }
 .bg .filter-bg:nth-child(3n+2){
-    width: 20vw;height: 50vh;
+    width: 20vw;height: 45vh;
 }
 .bg .filter-bg:nth-child(3n+1){
     width: 35vw;height: 40vh;
@@ -511,7 +511,7 @@ section#skills h3::before{
 
 
 
-#projet-perso #react-pers > div{
+#projet-perso #projets-personel > div{
 
     display: inline-grid;
     
@@ -521,7 +521,7 @@ section#skills h3::before{
 
 }
 
-#projet-perso #react-pers > div{
+#projet-perso #projets-personel > div{
     display: grid;
     grid-template-columns: 55% 45%;
     grid-template-rows: 1fr;
@@ -530,7 +530,7 @@ section#skills h3::before{
   
   @media screen and (max-width: 992px){
      
-    #projet-perso #react-pers > div{
+    #projet-perso #projets-personel > div{
         grid-template-columns: 1fr;
      }
   }
@@ -575,17 +575,17 @@ section#skills h3::before{
 .projet-pers .card .back-card p{
     position: absolute;
     bottom: 15px;left: 15px;
-    font-size:calc(28*var(--res));
+    font-size:calc(25*var(--res));
 }
 .projet-pers .card .front-card{
-    display: flex;
+    display: flexbox;
 }
 .projet-pers .card .front-card h4{
-    height: 2rem;
+    text-align: center;
     line-height: 0.9;
 }
 
-section#formation #react-forma > div{
+section#formation #formations > div{
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
@@ -594,11 +594,11 @@ section#formation #react-forma > div{
   
   @media screen and (max-width: 992px){
      
-    section#formation #react-forma > div{
+    section#formation #formations > div{
         grid-template-columns: 1fr;
      }
   }
-section#formation #react-forma .formation{
+section#formation #formations .formation{
     position: relative;
     background: var(--gray);
     padding: 10px;
@@ -610,11 +610,11 @@ section#formation #react-forma .formation{
     background-color: #85FFBD;
             
 }
-section#formation #react-forma .formation .text{
+section#formation #formations .formation .text{
     position: relative;
     z-index: 3; 
 }
-section#formation #react-forma .formation svg{
+section#formation #formations .formation svg{
     /* .formation a changer aussi pour br */
     border-radius: 10px;
     overflow: hidden;
@@ -623,7 +623,7 @@ section#formation #react-forma .formation svg{
     top: 0px;bottom: 0px;right: 0px;left: 0px;
     z-index: 1;
 }
-section#formation #react-forma .formation svg path{
+section#formation #formations .formation svg path{
     stroke-width: 15px;
     vector-effect: non-scaling-stroke;
     stroke: #fff;
