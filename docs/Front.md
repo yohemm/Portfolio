@@ -31,7 +31,7 @@ Avec Scrooll
 
 Sections Backend Front Avec relations entre les 2
 
-### Présentation de projet
+### mini Présentation de projet
 
 Panel Tournant avec image en background.
 

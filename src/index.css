@@ -89,7 +89,7 @@ h3{
 
 nav{
     z-index: 9999;
-    height: clamp(50px, 15vw, 75px);
+    /* height: clamp(50px, 15vw, 75px); */
     position: fixed;
     top: 0;
     width: 100%;
