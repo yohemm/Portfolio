@@ -8,11 +8,11 @@ export class ProjetPerso extends Component {
     render(){
         
         return <div className="projet-pers">
-            <div className="wp-card card">
-                <div className="wp-card-front front-card face-card" style={{backgroundImage: "url("+ this.listImgs[0]+")"}}>
+            <div className="card">
+                <div className="front-card face-card" style={{backgroundImage: "url("+ this.listImgs[0]+")"}}>
                     <h4>{this.props.name}</h4>
                 </div>
-                <div className="wp-card-back back-card face-card" style={this.listImgs.length >= 1?{backgroundImage: "url("+ this.listImgs[1]+")"}:{backgroundImage: "url("+ this.listImgs[0]+")"}}>
+                <div className="back-card face-card" style={this.listImgs.length >= 1?{backgroundImage: "url("+ this.listImgs[1]+")"}:{backgroundImage: "url("+ this.listImgs[0]+")"}}>
                     <p>{this.props.children}</p>
                 </div>
             </div>

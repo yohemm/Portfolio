@@ -4,6 +4,6 @@ export class SpanImage extends Component {
         super(props);
     }
     render() {
-        return <span className={"wp-image images-pro i" + this.props.index} style={{backgroundImage: "url("+ this.props.img+ ")"}}></span>;
+        return <span className={"images-pro i" + this.props.index} style={{backgroundImage: "url("+ this.props.img+ ")"}}></span>;
     }
 }
