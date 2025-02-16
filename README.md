@@ -28,7 +28,6 @@
 ### Redaction
 - homepage
 - Projects:
-  - 
 - formation
   - details des formation
   - sectio autodidact
