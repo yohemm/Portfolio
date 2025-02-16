@@ -5,7 +5,7 @@ export const NavBar = () => {
         <nav>
             <ul>
                 <li className="photo-profile">
-                <NavLink to="/" className="custom-logo-link"><img src="assets/photo-profil.webp" alt="photo de profile de Yohem" /></NavLink>
+                <NavLink to="/" className="custom-logo-link"><img src="/assets/photo-profil.webp" alt="photo de profile de Yohem" /></NavLink>
                 </li>
                 <li className="name hide"><NavLink to="/">Yohem</NavLink></li>
                 <li className="github">

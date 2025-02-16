@@ -46,8 +46,15 @@ export class Project implements IProject{
 // }
 
 export const projects: (WebProject | Project)[] = [
-    new WebProject("test1", (<>intro</>), (<>node</>),{back:["PHP", "PostGreSQL"], front:["React", "CSS"]}),
-    new Project("test2", (<>intro</>), (<>node</>),{ tools:["Git"], services:["GitHub"]}),
+    new WebProject(
+        "test1", 
+        (<>intro</>), 
+        (<>node</>),
+        {back:["PHP", "PostGreSQL"], front:["React", "CSS"]}),
+    new Project("test2", 
+        (<>intro</>), 
+        (<>node</>),
+        { tools:["Git"], services:["GitHub"]}),
 ] 
 
 export function getProjectByName(name:string) : Project|WebProject|null {
