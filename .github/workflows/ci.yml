@@ -39,7 +39,7 @@ jobs:
           node-version: 22
         # execute des commandes
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
       
       - name: Check Type
         run: npm run typecheck
