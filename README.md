@@ -12,20 +12,20 @@
 ## A faire
 
 ### Dev 
-<!-- - ProjectShowing
-  - Redisign
-  - liens
-- components/Projects.tsx
-  - Laisons entre project showing et projects liste (en rajoutant la connection au image)
-- elements/Projects.tsx
-  - ajout de l'attribut, "text-presentation" dans Projects -->
-- Ajout de la section contact sur l'accueil
-- Compétances
+- [x] ProjectShowing
+  - [x] Redisign
+  - [x] liens
+- [x] components/Projects.tsx
+  - [x] Laisons entre project showing et projects liste (en rajoutant la connection au image)
+- [x] elements/Projects.tsx
+  - [x] ajout de l'attribut, "text-presentation" dans Projects
+- [] Ajout de la section contact sur l'accueil
+- [ ] Compétances
 
 ### Redaction
-- homepage
-- Projects:
-- formation
-  - details des formation
-  - sectio autodidact
-- Compétance
+- [ ] homepage
+- [ ] Projects:
+- [ ] formation
+  - [ ] details des formation
+  - [ ] sectio autodidact
+- [ ] Compétance
