@@ -112,8 +112,11 @@ nav ul li.name.hide {
     transform: translate(0, -2.1rem);
 }
 nav ul li.name { 
-    position: relative;
-    left: 5rem;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    width: fit-content;
     transition: transform 0.2s ease-in;
 }
 nav li.photo-profile > a{
@@ -152,9 +155,12 @@ nav li.github:hover{
     transform: translate(0, 0rem);
 }
 
-header nav ul li.skills-nav{
-    position: relative;
-    left: 1.5rem;
+header nav ul li.skills-projects{
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    width: fit-content;
 
 }
 
@@ -205,8 +211,6 @@ section{
 }
 section:nth-last-of-type(1){
     margin-bottom: 80px;
-}
-section {
 }
 section h2{
     margin-left: 6vw;
@@ -412,6 +416,7 @@ h3.subtitle::before{
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 }
+
 .container-subtitle-async:nth-child(2n) h3.subtitle::before{
     animation-delay: 1.5s;
     /* animation-duration : 4.5s; */
@@ -442,142 +447,162 @@ h3.subtitle::before{
     width: 40%;
 }
 
+/* PRESENTATION DE PROJECT */
 
-.projet-pro{
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-attachment: fixed; */
-    min-height: 400px;
-    height: 70vh;
-    margin-bottom: 5vh;
+.projects-container {
+    padding: 0 20vw;
+}
+
+.card{
+    margin: 20vh 0;
+    border: 1px solid;
     border-radius: 5px;
-    border: 1px solid var(--black);
-    padding: 10px;
-}
-.projet-pro .text{
-    backdrop-filter: blur(0.8px);
-    background-color: var(--white-less-opacity);
-    width: 100%;
-    /* height: 100%; */
-    border-radius: 40px;
-}
-.projet-pro .text div{
+    max-height: 20vh;
+    min-height: 450px;
     display: flex;
+    flex-direction: column;
 }
 
-.projet-pro h4{
-    text-align: center;
-    margin: 0 auto;
+.card .card-header .card-header-content {
+    backdrop-filter: blur(1px);
+    /* height: 100%; */
+    width: 100%;
 }
-.projet-pro p , .projet-pro h4 {
-    backdrop-filter: blur(10px);
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    padding: 10px;
-    border-radius: 10px;
-}
-.projet-pro p {
-    font-size:calc(32*var(--res));
-}
-
-.projet-pro .images-container{
-    position: absolute;
-    top: 0;bottom: 0;left: 0;right: 0;
+.card .card-header{
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
     overflow: hidden;
 }
-.projet-pro .images-container .images-pro{
-    position: absolute;
-    min-width: 40%;
-    height: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-    border: 1px solid var(--black);
-}
-.projet-pro .images-container .images-pro.i0{
-    transform: rotateZ(10deg);
-    top: 5%;
-    left: 3%;
-}
-.projet-pro .images-container .images-pro.i1{
-    transform: rotateZ(-15deg);
-    bottom: 10%;
-    right: 20%;
-}
-.projet-pro .images-container .images-pro.i2{
-    transform: rotateZ(30deg);
-    bottom: 10%;
-    right: 4%;
-}
-.projet-pro .images-container .images-pro.i3{
-    transform: rotateZ(30deg);
-    bottom: 9%;
-    right: 70%;
-}
-.projet-pro .images-container .images-pro.i4{
-    transform: rotateZ(30deg);
-    bottom: 40%;left: 10%;
-}
-.projet-pro .images-container .images-pro.i5{
-    transform: rotateZ(30deg);
-    bottom: 90%;
-    right: 20%;;
+.card .card-header h4{
+    margin: 0  auto;
+    width: max(20%, 200px);
+    border-radius: 15px;
+    box-shadow: 10px 0 5px #555555c0,  -10px 0 5px #555555c0;
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+    font-size: 2.5rem;
+    backdrop-filter: grayscale(1);
+    -webkit-backdrop-filter: grayscale(1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: -1px 0px 0px white, 0px -1px 0px white, 1px 0px 0px white, 0px 1px 0px white; 
 }
 
-
-
-
-#projet-perso #projets-personel > div{
-
-    display: inline-grid;
-    
-    grid-auto-columns: minmax(125px, auto);
-    grid-gap: .5rem;
-    width: 100%;
-
+.card .card-content .formation-btn {
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--gray);
+    width: 200px;
+    margin: 0 auto;
+}
+.card .card-content {
+    background-color: white;
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-#projet-perso #projets-personel > div{
+.card .card-content .card-details {}
+.card .card-content .card-technos-overview {
+    align-self: flex-end;
+}
+.card .card-content .card-technos-overview span{
+    color: red;
+}
+/* 
+.projects-showing{
     display: grid;
-    grid-template-columns: 55% 45%;
-    grid-template-rows: 1fr;
-    column-gap: 20px;
-  }
-  
-  @media screen and (max-width: 992px){
-     
-    #projet-perso #projets-personel > div{
-        grid-template-columns: 1fr;
-     }
-  }
-.projet-pers{
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30px;
+    margin: 80px 0;
+}
+
+.projects-showing .card h4{
+    text-align: center;
+    margin: 20px 0;
+    border-bottom: dashed 1px var(--gray);
+}
+
+.card-wrapper {
+    position: absolute;
+    min-height: 350px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.card-wrapper:hover .card {
+    transform: rotateY(180deg);
+}
+.card {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.86,0,0.07,1);
+    backface-visibility: hidden;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.card-back {
+    transform: rotateY(180deg);
+} */
+
+
+/*
+.projet-showing{
     height: 400px;
     padding: 15px;
 }
-.projet-pers .card{
+.projet-showing .card{
     position: relative;
     transform-style: preserve-3d;
     border: 4px solid var(--black);
     transition: transform 0.4s ease-in-out;
-    background: var(--gray);
     border-radius: 5px;
     height: 100%;
 }
-.projet-pers:hover .card{
+.projet-showing:hover .card{
     transform: rotateY(180deg);
 }
-.projet-pers .card .face-card{
+.projet-showing .card .face-card{
     position: absolute;
+    background-color: var(--white);
     top: 0;bottom: 0;right: 0;left: 0;
-    backface-visibility: hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-.projet-pers .card .back-card p,
-.projet-pers .card .front-card h4{
+
+.projet-showing .card .front-card img.return-icon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: scale(100%, -100%);
+}
+
+.projet-showing .card .front-card img{
+    height : 50px;
+}
+
+.projet-showing .card .back-card p,
+.projet-showing .card .front-card h4{
     margin: 15px;
     margin: 0 auto;
     backdrop-filter: blur(2px);
@@ -587,35 +612,28 @@ h3.subtitle::before{
     background-color: var(--white-less-opacity);
 }
 
-.projet-pers .card .back-card{
+.projet-showing .card .back-card{
     transform: rotateY(180deg);
 }
-.projet-pers .card .back-card p{
+.projet-showing .card .back-card p{
     position: absolute;
     bottom: 15px;left: 15px;
     font-size:calc(25*var(--res));
 }
-.projet-pers .card .front-card{
+.projet-showing .card .front-card{
     display: flexbox;
 }
-.projet-pers .card .front-card h4{
+.projet-showing .card h4{
     text-align: center;
     line-height: 0.9;
 }
 
-section#formation #formations > div{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 1fr;
-    gap: 20px;
-  }
-  
-  @media screen and (max-width: 992px){
-     
-    section#formation #formations > div{
-        grid-template-columns: 1fr;
-     }
-  }
+ */
+
+
+
+/* SVG FORMATIONS */
+
 .school-step{
     position: relative;
     padding: 10px;
@@ -624,33 +642,35 @@ section#formation #formations > div{
     
     background: var(--white);
     background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 9px) calc(100% - 9px) no-repeat,
-            var(--formationStroke);   
-            
+    var(--formationStroke);   
+    
 }
 .school-step .text{
     position: relative;
-    z-index: 3; 
-}
-.school-step svg{
-    /* .formation a changer aussi pour br */
-    border-radius: 10px;
-    overflow: hidden;
-    position: absolute;
-    display: block;
-    top: 0px;bottom: 0px;right: 0px;left: 0px;
-    z-index: 1;
-}
-.school-step svg path{
-    stroke-width: 15px;
-    vector-effect: non-scaling-stroke;
-    stroke: #fff;
-}
-.path {
+            z-index: 3; 
+        }
+        .school-step svg{
+            /* .formation a changer aussi pour br */
+            border-radius: 10px;
+            overflow: hidden;
+            position: absolute;
+            display: block;
+            top: 0px;bottom: 0px;right: 0px;left: 0px;
+            z-index: 1;
+        }
+        .school-step svg path{
+            stroke-width: 15px;
+            vector-effect: non-scaling-stroke;
+            stroke: #fff;
+        }
+        .path {
     stroke-dasharray: 50;
     stroke-dashoffset: 400;
     animation: progress 8s linear forwards infinite;
 }
 
+
+/* FORMULAIRE */
 
 progress{
     width: 100%;
@@ -708,7 +728,7 @@ progress[value]::-webkit-progress-value::before {
     right: 7px;
     top: 7px;
     background-color: var(--white);
-  }
+}
 
 input, textarea{
     background: var(--white);
@@ -785,6 +805,7 @@ form .form-group .err{
 
 
 
+/* FORMATIONS */
 
 section#schoolcuriculum {
     position: relative;
@@ -829,7 +850,7 @@ section#schoolcuriculum .school-step:nth-child(even){
 
 
 
-
+/* FOOTER */
 
 footer address ul {
     display: flex;
@@ -843,6 +864,9 @@ footer address a {
 footer address a:hover {
     border-color: #fff;
 }
+
+/* ANIMATION */
+
 @keyframes backToFront {
     0%{
         background-position: 220%;

@@ -1,7 +1,12 @@
-import { ProjectShowing } from "~/components/ProjectShowing";
+import { data } from "react-router";
+import { projectShowcases } from "~/components/ProjectShowcase";
+import { projects } from "~/elements/Project";
 
 export default function Projects() {
     return (
-        <ProjectShowing name="Gites hautes vosges" images={["./assets/location/0.png","./assets/location/1.png"]}>J’ai conçu et développé une plateforme en ligne dédiée à la location d’appartements, offrant une expérience utilisateur conviviale. Grâce à l’utilisation de PHP, JavaScript et PostgreSQL, j’ai créé un site web dynamique qui met en avant des logements avec des détails précis, des descriptions attrayantes et des images de haute qualité. Les utilisateurs peuvent facilement parcourir les annonces, vérifier la disponibilité des logements et obtenir des informations détaillées sur les tarifs. J’ai également intégré un système d’alerte pour mettre en avant certains logements. De plus, j’ai mis en place un panneau d’administration sécurisé pour une gestion simplifiée des logements et des réservations.</ProjectShowing>
+        <div className="projects-container">
+            { projectShowcases() }
+            {/* { projects.map(project => <ProjectShowcase key={project.name} name={project.displayName} image={project.image} technos={project.getTechnos()}>{project.presentation}</ProjectShowcase>) } */}
+        </div>
     );
 }

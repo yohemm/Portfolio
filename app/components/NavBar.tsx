@@ -14,17 +14,17 @@ export const NavBar = () => {
                 </li>
             </ul>
             <ul>
-                <li className={"skills-projects"}>
-                <NavLink to="/projects"
-                    style={({isActive, isPending, isTransitioning}) => ({
-                        textDecoration: isActive?"underline":"none",
-                    })}>Projets</NavLink>
-                </li>
                 <li className={"skills-nav"}>
                 <NavLink to="/skills"
                     style={({isActive, isPending, isTransitioning}) => ({
                         textDecoration: isActive?"underline":"none",
                     })}>Compétances</NavLink>
+                </li>
+                <li className={"skills-projects"}>
+                <NavLink to="/projects"
+                    style={({isActive, isPending, isTransitioning}) => ({
+                        textDecoration: isActive?"underline":"none",
+                    })}>Projets</NavLink>
                 </li>
                 <li className={"skills-formations"}>
                 <NavLink to="/formations"

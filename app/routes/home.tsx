@@ -1,7 +1,6 @@
 import type { Route } from "./+types/home";
 import { Formation } from "app/components/Formation";
 import { WebTechno } from "~/components/WebTechno";
-import { ProjectShowing } from "~/components/ProjectShowing";
 import { ToolsAndServices } from "~/components/ToolsAndServices";
 
 

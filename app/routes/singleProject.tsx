@@ -27,10 +27,11 @@ export default function SingleProject(){
     
     return(
         <>
+            <h2>{iproject.displayName}</h2>
             { getProjectByName(params.project)?.intro }
             { webproject? (<WebTechno back={webproject.webTechnos.back} front={webproject.webTechnos.front}/>):"" }
             { project? (<ToolsAndServices tools={project.toolsAndServices.tools} services={project.toolsAndServices.services}/>):"" }
-            { getProjectByName(params.project)?.children }
+            { getProjectByName(params.project)?.mainContent }
         </>
     )
 }

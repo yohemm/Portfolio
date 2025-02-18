@@ -12,16 +12,13 @@
 ## A faire
 
 ### Dev 
-- ProjectShowing
+<!-- - ProjectShowing
   - Redisign
-    - Parais comment section classique, "juste entouré"
-    - avec boder et image
-    - au retournement : seul le border reste et le text
   - liens
 - components/Projects.tsx
   - Laisons entre project showing et projects liste (en rajoutant la connection au image)
 - elements/Projects.tsx
-  - ajout de l'attribut, "text-presentation" dans Projects
+  - ajout de l'attribut, "text-presentation" dans Projects -->
 - Ajout de la section contact sur l'accueil
 - Compétances
 
