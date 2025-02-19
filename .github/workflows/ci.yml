@@ -73,7 +73,7 @@ jobs:
       
     steps:
       # Recup les fichiers de travaille
-      - uses: actions/checkoutv4
+      - uses: actions/checkout@v4
       
       # utilise node
       - name: Login in to registry
