@@ -148,7 +148,7 @@ jobs:
 
   deploy-server:
     runs-on: ubuntu-latest
-    needs: checkup
+    needs: ci-and-build-artifact
     
     steps:
       - name: Checkout code
