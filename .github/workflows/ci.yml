@@ -61,7 +61,8 @@ jobs:
   build-image-github:
     runs-on: ubuntu-latest
     
-    if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+    # if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+    
     # changer de repertoire de travail
     # defaults:
     #   run:
