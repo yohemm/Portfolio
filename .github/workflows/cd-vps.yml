@@ -11,7 +11,7 @@ on:
       - master
 jobs:
   build:
-    run on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: checkup
     
     steps:
