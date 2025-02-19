@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Recup les fichiers de travaille
-      - uses: actions/checkoutv4
+      - uses: actions/checkout@v4
       
       # utilise node
       - name: Use Node.js  22
