@@ -160,7 +160,7 @@ jobs:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "target/"
+          source: "*,*/,!.DS_Store,!/node_modules/,!/.react-router/,!/build/"
           target: /VPS_v2/Projets/portfolio/
           strip_components: 0 
 
