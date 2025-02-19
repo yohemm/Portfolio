@@ -12,25 +12,10 @@ on:
 
 jobs:
 
-  # test-front:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # Recup les fichiers de travaille
-  #     - uses: actions/checkoutv3
-      
-  #     # utilise node
-  #     - name: Use Node.js  22
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: 22
-  #       # execute des commandes
-  #     - name: Install Dependencies
-  #       run: npm install
-      
-  #     - name: Install Dependencies
-  #       run: npm test
 
-  checkup:
+#### CI Check up and build artifact
+
+  ci-and-build-artifact:
     runs-on: ubuntu-latest
     steps:
       # Recup les fichiers de travaille
@@ -58,6 +43,9 @@ jobs:
         with:
           name: build
           path: build/
+
+
+#### setup github-packages registry image
 
   build-image-github:
     runs-on: ubuntu-latest
@@ -88,6 +76,11 @@ jobs:
           file: Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/portfolio:${{ github.ref_name }}
+
+
+
+
+#### docker hub image registry pipeline
 
   build-image-dockerhub:
     permissions: 
@@ -130,7 +123,13 @@ jobs:
           tags: ${{ vars.DOCKER_USERNAME }}/portfolio:latest
           # tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
 
-  deploy:
+
+
+
+
+#### set-up github-page
+
+  deploy-github-page:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -141,3 +140,40 @@ jobs:
       uses: bitovi/github-actions-react-to-github-pages@v1.2.4
       with:
         path: build # change to your build folder
+
+
+
+#### VPS Pipeline
+
+
+  deploy-server:
+    runs-on: ubuntu-latest
+    needs: checkup
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy files with SSH
+        uses: appleboy/scp-action@v.0.1.17
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "target/"
+          target: /VPS_v2/Projets/portfolio/
+          strip_components: 0 
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /VPS_v2/Projets/portfolio/
+            docker-compose down || true
+            docker-compose pull
+            docker-compose up --build -d
+            docker-compose image prune -f
+            docker-compose ps
