@@ -164,16 +164,16 @@ jobs:
           target: /VPS_v2/Projets/portfolio/
           strip_components: 0 
 
-      - name: Deploy to VPS
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.VPS_IP }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd /VPS_v2/Projets/portfolio/
-            docker-compose down || true
-            docker-compose pull
-            docker-compose up --build -d
-            docker-compose image prune -f
-            docker-compose ps
+      # - name: Deploy to VPS
+      #   uses: appleboy/ssh-action@v1.2.0
+      #   with:
+      #     host: ${{ secrets.VPS_IP }}
+      #     username: ${{ secrets.VPS_USER }}
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     script: |
+      #       cd /VPS_v2/Projets/portfolio/
+      #       docker-compose down || true
+      #       docker-compose pull
+      #       docker-compose up --build -d
+      #       docker-compose image prune -f
+      #       docker-compose ps
