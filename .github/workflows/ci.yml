@@ -87,6 +87,8 @@ jobs:
           tags: ghcr.io/${{ github.repository_owner }}/portfolio:${{ github.ref_name }}
 
   build-image-dockerhub:
+    permissions: 
+      contents: read
     runs-on: ubuntu-latest
     # needs: checkup
     steps:
