@@ -1,6 +1,7 @@
 name: Continous Intergration
 
 on:
+  push:
   pull_request:
     branches:
     - main
