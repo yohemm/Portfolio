@@ -4,6 +4,28 @@ import type { ReactNode } from "react";
 import type { ToolsAndServices } from "~/components/ToolsAndServices";
 import { WebTechno } from "~/components/WebTechno";
 
+
+const mergeArrayString = (arrays:string[][]): string[] => {
+    let res:string[] = [];
+    for (const arrayId in arrays) {
+        if (Object.prototype.hasOwnProperty.call(arrays, arrayId)) {
+            const array = arrays[arrayId];
+            
+            for (const elementId in array) {
+                if (Object.prototype.hasOwnProperty.call(array, elementId)) {
+                    const element = array[elementId];
+                    
+                    res.push(element);
+
+                }
+            }
+
+        }
+    }
+    return res;
+    
+}
+
 export interface IProject {
     name:string;
     displayName:string;
@@ -33,8 +55,7 @@ export class WebProject implements IProject{
         this.webTechnos = webTechnos;
     }
     getTechnos(): string[] {
-        let res:string[] = [].concat(this.webTechnos.back, this.webTechnos.front);
-        return res;
+        return mergeArrayString([this.webTechnos.back, this.webTechnos.front]);
     }
 }
 export class Project implements IProject{
@@ -45,7 +66,7 @@ export class Project implements IProject{
     mainContent: ReactNode;
     intro: React.ReactNode;
     toolsAndServices : ToolsAndServices;
-
+    
     constructor(name:string, displayName:string, image:string, presentation: React.ReactNode, intro: React.ReactNode, mainContent:ReactNode, toolsAndServices:ToolsAndServices) {
         this.name = name;
         this.displayName = displayName;
@@ -56,16 +77,15 @@ export class Project implements IProject{
         this.toolsAndServices = toolsAndServices;
     }
     getTechnos(): string[] {
-        let res:string[] = [].concat(this.toolsAndServices.tools, this.toolsAndServices.services);
-        return res;
+        return mergeArrayString([this.toolsAndServices.tools, this.toolsAndServices.services]);
     }
 }
 
 // export function isAnProject(obj: any): obj is Project {
-//     return 'name' in obj && 'mainContent' in obj && 'toolsAndServices' in obj;
-// }
-
-// export function isAnWebProject(obj: any): obj is Project {
+    //     return 'name' in obj && 'mainContent' in obj && 'toolsAndServices' in obj;
+    // }
+    
+    // export function isAnWebProject(obj: any): obj is Project {
 //     return 'name' in obj && 'mainContent' in obj && 'webTechno' in obj;
 // }
 
