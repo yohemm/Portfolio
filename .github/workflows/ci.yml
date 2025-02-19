@@ -56,36 +56,36 @@ jobs:
           name: build
           path: build/
 
-  # build-image:
-  #   runs-on: ubuntu-latest
+  build-image-github:
+    runs-on: ubuntu-latest
     
-  #   if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
-  #   # changer de repertoire de travail
-  #   # defaults:
-  #   #   run:
-  #   #     working-directory:
+    if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+    # changer de repertoire de travail
+    # defaults:
+    #   run:
+    #     working-directory:
 
-  #   permissions: 
-  #     packages: write
-  #     contents: read
+    permissions: 
+      packages: write
+      contents: read
       
-  #   steps:
-  #     # Recup les fichiers de travaille
-  #     - uses: actions/checkoutv4
+    steps:
+      # Recup les fichiers de travaille
+      - uses: actions/checkoutv4
       
-  #     # utilise node
-  #     - name: Login in to registry
-  #       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      # utilise node
+      - name: Login in to registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
       
-  #     - name: Build the docker image
-  #       uses: docker/build-push-action@v2
-  #       with:
-  #         context: .
-  #         file: Dockerfile
-  #         push: true
-  #         tags: ghcr.io/{{ github.repository_owner }}/portfolio:${{ github.ref_name }}
+      - name: Build the docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: ghcr.io/{{ github.repository_owner }}/portfolio:${{ github.ref_name }}
 
-  build:
+  build-image-dockerhub:
     runs-on: ubuntu-latest
     needs: checkup
     steps:
@@ -117,6 +117,18 @@ jobs:
           push: true
           tags: ${{ vars.DOCKER_USERNAME }}/portfolio:latest
           # tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+    - id: build-publish
+      uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+      with:
+        path: build # change to your build folder
 
   deploy:
     runs-on: ubuntu-latest
