@@ -49,7 +49,9 @@ jobs:
         run: npm run typecheck
 
       - name: Build App
-        run: npm run build
+        run: | 
+          npm run build
+          echo `ls`
       
       - uses: actions/upload-artifact@v4
         with:
@@ -87,7 +89,7 @@ jobs:
 
   build-image-dockerhub:
     runs-on: ubuntu-latest
-    needs: checkup
+    # needs: checkup
     steps:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
