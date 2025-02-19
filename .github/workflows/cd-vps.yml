@@ -1,0 +1,43 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches:
+      - v2
+      - master
+  pull_request:
+    branches:
+      - v2
+      - master
+jobs:
+  build:
+    run on: ubuntu-latest
+    needs: checkup
+    
+    steps:
+      - name: Checkout code
+        uses: actions:checkout@v4
+
+      - name: Copy files with SSH
+        uses: appleboy/scp-action@v.0.1.17
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "target/"
+          target: /VPS_v2/Projets/portfolio/
+          strip_components: 0 
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /VPS_v2/Projets/portfolio/
+            docker-compose down || true
+            docker-compose pull
+            docker-compose up --build -d
+            docker-compose image prune -f
+            docker-compose ps
