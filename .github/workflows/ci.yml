@@ -115,7 +115,8 @@ jobs:
           # context: .
           context: "{{defaultContext}}:build"
           push: true
-          tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+          tags: ${{ vars.DOCKER_USERNAME }}/portfolio:latest
+          # tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
 
   deploy:
     runs-on: ubuntu-latest
