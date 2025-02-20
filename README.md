@@ -47,6 +47,7 @@ exemple avec un changement de version:
       My message to describe new version
 
 
+
 build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
 ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
 docs: Documentation only changes
@@ -57,5 +58,8 @@ refactor: A code change that neither fixes a bug nor adds a feature
 style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 test: Adding missing tests or correcting existing tests
 
+_BREAKING CHANGE: major version_
+_feat: minor version_
+_fix: fix index_
 
-ci ne fais pas de release
+ci n'execute pas semantic release

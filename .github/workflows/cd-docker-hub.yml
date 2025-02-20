@@ -1,5 +1,5 @@
 
-name: Continous Intergration
+name: Push Image on docker hub
 
 on:
   push:

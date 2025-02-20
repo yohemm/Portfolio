@@ -1,15 +1,11 @@
 name: Deployment on server
 
-on:
-  push:
-    branches:
-    - master
-    - v2
-  pull_request:
-    branches:
-    - master
-    - v2
 
+on: 
+  workflow_run:
+    workflows: ['ontinous Intergration']
+    types:
+      - completed
 jobs:
 
   #### VPS Pipeline
