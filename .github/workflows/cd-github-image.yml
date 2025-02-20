@@ -1,0 +1,40 @@
+name: GitHub Build docker image
+
+on:
+  pull_request:
+    branches:
+    - master
+    - v2
+
+jobs:
+  #### setup github-packages registry image
+  build-image-github:
+    runs-on: ubuntu-latest
+    
+    if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+
+    # changer de repertoire de travail
+    # defaults:
+    #   run:
+    #     working-directory:
+
+    permissions: 
+      packages: write
+      contents: read
+      
+    steps:
+      # Recup les fichiers de travaille
+      - uses: actions/checkout@v4
+      
+      # utilise node
+      - name: Login in to registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      
+      - name: Build the docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/portfolio:${{ github.ref_name }}
+

@@ -1,0 +1,46 @@
+name: Deployment on server
+
+on:
+  push:
+    branches:
+    - master
+    - v2
+  pull_request:
+    branches:
+    - master
+    - v2
+
+jobs:
+
+  #### VPS Pipeline
+  deploy-server:
+    runs-on: ubuntu-latest
+    needs: ci-and-build-artifact
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy files with SSH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "*,*/,!.DS_Store,!/node_modules/,!/.react-router/,!/build/"
+          target: /VPS_v2/Projets/portfolio/
+          strip_components: 0 
+
+      # - name: Deploy to VPS
+      #   uses: appleboy/ssh-action@v1.2.0
+      #   with:
+      #     host: ${{ secrets.VPS_IP }}
+      #     username: ${{ secrets.VPS_USER }}
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     script: |
+      #       cd /VPS_v2/Projets/portfolio/
+      #       docker-compose down || true
+      #       docker-compose pull
+      #       docker-compose up --build -d
+      #       docker-compose image prune -f
+      #       docker-compose ps
