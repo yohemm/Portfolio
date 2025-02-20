@@ -32,7 +32,7 @@
 
 # CI-CD
 
-## Format
+## [Format](https://semantic-release.gitbook.io/semantic-release#commit-message-format)
     <type>(<scope>): <subject>
     <BLANK LINE>
     <body>
@@ -41,10 +41,12 @@
 
 exemple avec un changement de version: 
   
-  feat: Changes welcome message
+    feat: Changes welcome message
 
-  BREAKING CHANGE:
-    My message to describe new version
+    BREAKING CHANGE:
+      My message to describe new version
+
+
 build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
 ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
 docs: Documentation only changes

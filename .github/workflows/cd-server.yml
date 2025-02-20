@@ -15,7 +15,7 @@ jobs:
   #### VPS Pipeline
   deploy-server:
     runs-on: ubuntu-latest
-    needs: ci-and-build-artifact
+    # needs: ci-and-build-artifact
     
     steps:
       - name: Checkout code
