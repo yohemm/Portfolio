@@ -24,6 +24,9 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: Verify the integruty of signatures for installed dependencies
+        run: npm audit signatures
+        
       - name: Execute semantic release
         run: npx semantic-release
         env:
