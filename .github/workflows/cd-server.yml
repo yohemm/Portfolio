@@ -3,7 +3,7 @@ name: Deployment on server
 
 on: 
   workflow_run:
-    workflows: ['ontinous Intergration']
+    workflows: ['Continous Intergration']
     types:
       - completed
 jobs:

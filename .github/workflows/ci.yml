@@ -32,6 +32,9 @@ jobs:
       
       - name: Check Type
         run: npm run typecheck
+      
+      - name: Syntaxe and Lint Verification
+        run: npm run lint
 
       - name: Build App
         run: npm run build

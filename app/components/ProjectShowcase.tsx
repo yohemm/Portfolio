@@ -1,4 +1,5 @@
-import { Project, projects, WebProject } from "~/elements/Project";
+import { projects } from "~/elements/Project";
+import React from 'react';
 
 interface ProjectShowcase {
     name: string;

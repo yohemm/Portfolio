@@ -1,4 +1,5 @@
 import { Icon } from "./ToolsAndServices";
+import React from 'react';
 
 export interface WebTechno {
     front: string[];

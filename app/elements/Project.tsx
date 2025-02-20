@@ -4,9 +4,8 @@ import type { ReactNode } from "react";
 import type { ToolsAndServices } from "~/components/ToolsAndServices";
 import { WebTechno } from "~/components/WebTechno";
 
-
 const mergeArrayString = (arrays:string[][]): string[] => {
-    let res:string[] = [];
+    const res:string[] = [];
     for (const arrayId in arrays) {
         if (Object.prototype.hasOwnProperty.call(arrays, arrayId)) {
             const array = arrays[arrayId];

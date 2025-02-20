@@ -5,9 +5,9 @@ let sub = document.querySelector('input[type="submit"]');
 let contentInputs = {}; 
 progressbar.max = formGroups.length - 1;
 
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 let input
-document.addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', () => {
   formGroups.forEach(inputContainer => {
     input = inputContainer.querySelector('input, textarea');
     if(input.value != ""){
@@ -41,7 +41,7 @@ for (let i = 0; i < inputs.length - 1; i++){
 
 for (let i = 0; i < formGroups.length-1; i++) {
   const formGroup = formGroups[i];
-  formGroup.addEventListener('change', (event)=> {
+  formGroup.addEventListener('change', ()=> {
     if(formGroup.querySelector('datalist')){
       let inDataList = false;
       formGroup.querySelectorAll('option').forEach(option =>{

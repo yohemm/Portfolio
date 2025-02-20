@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import React from 'react';
 
 export const NavBar = () => {
     return (
@@ -16,19 +17,19 @@ export const NavBar = () => {
             <ul>
                 <li className={"skills-nav"}>
                 <NavLink to="/skills"
-                    style={({isActive, isPending, isTransitioning}) => ({
+                    style={({isActive}) => ({
                         textDecoration: isActive?"underline":"none",
                     })}>Compétances</NavLink>
                 </li>
                 <li className={"skills-projects"}>
                 <NavLink to="/projects"
-                    style={({isActive, isPending, isTransitioning}) => ({
+                    style={({isActive}) => ({
                         textDecoration: isActive?"underline":"none",
                     })}>Projets</NavLink>
                 </li>
                 <li className={"skills-formations"}>
                 <NavLink to="/formations"
-                    style={({isActive, isPending, isTransitioning}) => ({
+                    style={({isActive}) => ({
                         textDecoration: isActive?"underline":"none",
                     })}>Formations</NavLink>
                 </li>

@@ -1,4 +1,4 @@
-import { index } from "@react-router/dev/routes";
+import React from 'react';
 
 export const Icon: {[id:string]:string} = {
     "MySQL": "devicon-mysql-plain colored", 
@@ -40,7 +40,7 @@ export const ToolsAndServices = (props:ToolsAndServices) => {
         <div id="used-skills" className="">
             <div id="tools-skills" className="container-subtitle-async">
                 <div className="skill-title-container">
-                    <h3 className="subtitle">Les outils que j'ai pu utilisé : </h3>
+                    <h3 className="subtitle">Les outils que j&apos;ai pu utilisé : </h3>
                 </div>
                 <div className="all-section-skill-container">
                     { 
@@ -57,7 +57,7 @@ export const ToolsAndServices = (props:ToolsAndServices) => {
             </div>
             <div id="service-skills" className="container-subtitle-async">
                 <div className="skill-title-container">
-                    <h3 className="subtitle">Les services que j'ai pu utilisé : </h3>
+                    <h3 className="subtitle">Les services que j&apos;ai pu utilisé : </h3>
                 </div>
                 <div className="all-section-skill-container">
                     { 

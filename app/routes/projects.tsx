@@ -1,6 +1,5 @@
-import { data } from "react-router";
 import { projectShowcases } from "~/components/ProjectShowcase";
-import { projects } from "~/elements/Project";
+import React from 'react';
 
 export default function Projects() {
     return (

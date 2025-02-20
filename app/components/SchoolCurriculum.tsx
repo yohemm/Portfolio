@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const SchoolCuriculum = (props:SchoolCuriculum) => {
     return (
         <section id="schoolcuriculum">

@@ -1,5 +1,6 @@
+import React  from 'react';
 import { useEffect } from "react";
-import { SchoolCuriculum, SchoolStep } from "~/components/SchoolCurriculum";
+import { SchoolCuriculum } from "~/components/SchoolCurriculum";
 
 export default function Formations() {
     useEffect(() => {

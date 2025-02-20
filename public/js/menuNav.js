@@ -2,7 +2,7 @@ const nav = document.querySelector('nav');
 const name = nav.querySelector('.name');
 const github = nav.querySelector('.github');
 const logo = nav.querySelector('img');
-window.addEventListener('scroll', (event) => {
+window.addEventListener('scroll', () => {
   if(window.scrollY > 90) {
     nav.classList.add('nav-sticked');
     name.classList.remove('hide')
