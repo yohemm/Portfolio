@@ -3,11 +3,11 @@ name: Continous Intergration
 on:
   push:
     branches:
-    - main
+    - master
     - v2
   pull_request:
     branches:
-    - main
+    - master
     - v2
 
 jobs:
