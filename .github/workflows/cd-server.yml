@@ -2,10 +2,14 @@ name: Deployment on server
 
 
 on: 
-  workflow_run:
-    workflows: ['Continous Intergration']
-    types:
-      - completed
+  push:
+    branches:
+    - master
+    - v2
+  pull_request:
+    branches:
+    - master
+    - v2
 jobs:
 
   #### VPS Pipeline
