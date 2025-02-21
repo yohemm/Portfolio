@@ -28,7 +28,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           VPS_USER: ${{ secrets.VPS_USER }}
-          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_PASS: ${{ secrets.VPS_PASS }}
           VPS_IP: ${{ secrets.VPS_IP }}
         run: |
           echo "$SSH_PRIVATE_KEY , $VPS_USER , $VPS_USER , $VPS_IP"

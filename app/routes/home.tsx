@@ -30,5 +30,14 @@ export default function Home() {
         </p>
       </div>
     </section>
+    <section id="starting-dev">
+      <p>
+        J'ai commencé à créer des sites web durant mon collège et, depuis, je ne me suis jamais arrêté. J’ai pu développer mes compétences, notamment en UX/UI design, en référencement et en optimisation SEO. J’ai également appris les logiques et le fonctionnement du backend afin d’être capable de créer des applications complexes intégrant la gestion des utilisateurs, des pages d’administration, des middlewares et des API.
+    
+      </p>
+      <p>
+        Je me suis ensuite spécialisé durant mes études supérieures afin de mieux connaître les langages de bas niveau et les systèmes. J’ai ainsi appris à créer des scripts complexes en Bash, comme des explorateurs de fichiers, et à installer différents types de serveurs. Lors de cet apprentissage, j’ai également découvert les bases de la mise en place d’une infrastructure réseau professionnelle sécurisée.
+      </p>
+    </section>
     </>);
 }
