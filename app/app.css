@@ -237,6 +237,15 @@ section h2:hover::before{
 #about-me h2{
     margin-left: 0 ;
 }
+#about-me div{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: auto;
+}
+#about-me .space-between-vertcal p{
+    flex-grow: 1;
+}
 #about-me p{
     font-size: 1rem;
 }

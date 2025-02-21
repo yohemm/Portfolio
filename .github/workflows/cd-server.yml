@@ -21,15 +21,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+
+
+      - name: DEBUG
+        shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_IP: ${{ secrets.VPS_IP }}
+        run: |
+          echo "$SSH_PRIVATE_KEY , $VPS_USER , $VPS_USER , $VPS_IP"
+      - name: Copy files with SSH
+        uses: appleboy/scp-action@v0.1.7
       - name: Copy files with SSH
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
+          password: ${{ secrets.VPS_PASS }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "*,*/,!.DS_Store,!/node_modules/,!/.react-router/,!/build/"
           target: /VPS_v2/Projets/portfolio/
           strip_components: 0 
+          debug: true
 
       # - name: Deploy to VPS
       #   uses: appleboy/ssh-action@v1.2.0

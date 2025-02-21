@@ -12,8 +12,8 @@ interface ProjectShowcase {
 export const ProjectShowcase = (props:ProjectShowcase) => {
     return (
         
-        <div className="card">
-            <div className="card-header" style={{backgroundImage: "url("+props.image+")"}}>
+        <div key={props.name} className="card">
+            <div key={props.name} className="card-header" style={{backgroundImage: "url("+props.image+")"}}>
                 <div className="card-header-content">
                     <h4>{props.displayName}</h4>
                 </div>
@@ -22,7 +22,7 @@ export const ProjectShowcase = (props:ProjectShowcase) => {
                 <div className="card-details">{props.children}</div>
                 <a className="formation-btn" href={ "/projects/" + props.name }>Voir en détaille</a>
                 <p className="card-technos-overview">Techonologies utilisées : { props.technos.map((techno, index) => {
-                    return index==props.technos.length-1?<><span>{techno}</span>.</>:<><span>{techno}</span>,</>
+                    return index==props.technos.length-1?<><span key={techno}>{techno}</span>.</>:<><span key={techno}>{techno}</span>,</>
                 })}</p>
             </div>
         </div>
