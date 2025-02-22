@@ -1,8 +1,9 @@
-import React  from 'react';
+import React, { useState }  from 'react';
 import {
   isRouteErrorResponse,
   Links,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -12,8 +13,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 
 import { NavBar } from "./components/NavBar";
-import { BG } from "./components/BG"; 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { FooterContact } from "./components/FooterContact";
 
 export const links: Route.LinksFunction = () => [
@@ -48,15 +48,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
     document.body.appendChild(menuScript);
     
 
-    const bgScript = document.createElement("script");
-    bgScript.src = "/js/background.js";
-    bgScript.async = true;
-    document.body.appendChild(bgScript);
+    // const bgScript = document.createElement("script");
+    // bgScript.src = "/js/background.js";
+    // bgScript.async = true;
+    // document.body.appendChild(bgScript);
 
 
     return () => {
       document.body.removeChild(menuScript);
-      document.body.removeChild(bgScript);
+      // document.body.removeChild(bgScript);
       // document.body.removeChild(svgScript);
     };
   }, []);
@@ -79,6 +79,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const navigate = useNavigate();
+
   return (
     <>
       <header>
@@ -89,14 +90,13 @@ export default function App() {
             <p>
               Je m’appelle Yohem VAXELAIRE, et j’ai 18 ans. Je suis développeur informatique, fort de 6 ans d’expérience. Je suis passionné par la technologie et capable de travailler sur divers sujets, du développement web aux jeux vidéo. J’ai également de l’expérience dans le piratage et la création d’interfaces utilisateur optimisées pour le référencement (SEO). Je suis déterminé à continuer à apprendre et à me développer en tant que développeur professionnel.
             </p>
-            <div className=""><a href="/#contact-me" className="contact-btn">Me Contacter</a></div>
+            <div className=""><NavLink to="/#contact-me" className="contact-btn">Me Contacter</NavLink></div>
         </div>
       </header>
       <main>
         <Outlet />
         <FooterContact linkAndName={ {"About me":"/","Linkedin":"https://www.linkedin.com/in/yohem-vaxelaire/", "GitHub":"https://github.com/yohemm", "Contact":"/#my-contact"} }/>
       </main>
-      <BG/>
       {" "}
     </>
   );

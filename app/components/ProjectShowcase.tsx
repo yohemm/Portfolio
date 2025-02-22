@@ -1,6 +1,6 @@
 import { projects } from "~/elements/data";
 import React from 'react';
-import { useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 interface ProjectShowcase {
     name: string;
@@ -11,7 +11,7 @@ interface ProjectShowcase {
 }
 
 export const ProjectShowcase = (props:ProjectShowcase) => {
-    const navigate = useNavigate();
+    const navigate= useNavigate();
     const imageStyle:React.CSSProperties = {
         backgroundImage: `url(${props.image})`,
         backgroundRepeat: 'no-repeat',
@@ -26,7 +26,7 @@ export const ProjectShowcase = (props:ProjectShowcase) => {
             </div>
             <div className="card-content">
                 <div className="card-details">{props.children}</div>
-                <a className="formation-btn" href={ "/projects/" + props.name }>Voir en détaille</a>
+                <NavLink className="formation-btn" to={ "/projects/" + props.name }>Voir en détaille</NavLink>
                 <p className="card-technos-overview">Techonologies utilisées : { props.technos.map((techno, index) => {
                     return index==props.technos.length-1?<span key={techno}><span>{techno}</span>.</span>:<span key={techno}><span>{techno}</span>,</span>
                 })}</p>

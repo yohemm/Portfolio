@@ -3,15 +3,6 @@ import { useEffect } from "react";
 import { SchoolCuriculum } from "~/components/SchoolCurriculum";
 
 export default function Formations() {
-    useEffect(() => {
-        const svgScript = document.createElement("script");
-        svgScript.src = "./js/formationSvg.js";
-        svgScript.async = true;
-        document.body.appendChild(svgScript);
-        return () => {
-            document.body.removeChild(svgScript)
-        }
-    }, [])
     return (
         <>
             <SchoolCuriculum schoolSteps={[
