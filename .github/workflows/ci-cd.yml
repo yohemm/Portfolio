@@ -22,12 +22,12 @@ jobs:
       - name: Clean install NPM
         run: npm ci
 
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
       - name: Syntaxe and Lint Verification
         run: npm run lint
 
-      - name: Install Dependencies
-        run: npm install --legacy-peer-deps
-      
       - name: Check Type
         run: npm run typecheck
       

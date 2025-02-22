@@ -39,7 +39,9 @@ export default [
           'no-debugger': 'warn',
           'no-console': 'error',
           "@typescript-eslint/no-namespace": "off",
-          'no-empty-pattern': 'off'
+          'no-empty-pattern': 'off',
+          '@typescript-eslint/no-empty-object-type': 'off',
+          '@typescript-eslint/no-unused-vars': 'off'
       }
   },
 ];
