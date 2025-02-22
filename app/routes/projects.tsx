@@ -1,5 +1,15 @@
 import React from 'react';
+import type { Route } from '../+types/root';
 import { ProjectShowcases } from "~/components/ProjectShowcase";
+
+import "~/style/projects.css"
+
+export function meta({}:Route.MetaArgs){
+    return [
+        {title: "Yohem | Projects"},
+        {name: 'description', content: 'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'}
+    ]
+}
 
 export default function Projects() {
     return (

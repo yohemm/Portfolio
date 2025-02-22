@@ -1,0 +1,184 @@
+
+section h2{
+    margin-left: 6vw;
+    position: relative;
+    line-height: 1.5;
+}
+section h2::before{
+    position: absolute;
+    top: 1.5rem;
+    left: -6vw;
+    content: "";
+    width: 6vw;
+    height: 1.5rem;
+
+    background: linear-gradient(to left, #000 35%,  #00000000 50%);
+    background-size: 200% 100%;
+    background-position-x: 100%;   
+
+}
+section h2:hover::before{
+    animation: h3Spacer 5s infinite ease alternate;
+
+}
+
+
+
+
+
+/* FORMULAIRE */
+
+progress{
+    width: 100%;
+}
+.progressbar {
+    top: 100000px;
+    
+}
+
+progress[value] {
+    margin-bottom: 2.3rem;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+
+    width: 100%;
+    height: 5vh;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    transition: all 1s ease;
+    background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   var(--linearGreen);
+
+    border-radius: 20px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+progress[value]::-webkit-progress-value::before {
+    content: '80%';
+    position: absolute;
+    right: 0;
+    top: -125%;
+  }
+
+
+  progress[value]::-webkit-progress-value::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    border-radius: 100%;
+    right: 7px;
+    top: 7px;
+    background-color: var(--white);
+}
+
+input, textarea{
+    background: var(--white);
+    border-radius: 8px;
+    resize: none;
+    padding: 10px;
+    
+}
+fieldset{
+    display: flex;
+}
+form .form-group{
+    padding-top: 1.5rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+form .form-group:focus-within label, form .form-group.animation label{
+    top: -10px;
+}
+form .form-group label{
+    position: absolute;
+    top: calc(1.5rem + 10px);
+    padding-left: 10px;
+    transition: top 0.2s ease-in;
+}
+
+form .form-group textarea{
+    width: 90%;
+    height: 40vh;
+}
+form input[type="submit"]{
+    text-align: center;
+    width: 100px;
+    border-radius: 99px;
+}
+form .form-group{
+    width: 100%;
+    text-align: center;
+}
+form .form-group .err{
+    position: absolute;
+    color: tomato;
+    bottom: -1.5rem;
+    left: 0;
+    width: 100%;
+    
+}
+.form-group input[type="submit"]{
+    transition: background-position 0.2s ease-in, color 0.2s ease-out;
+    width: auto;
+    padding: 15px 60px;
+    border: 3px solid var(--black);
+    border-radius: 999px;
+    background-image: linear-gradient(45deg, transparent 50%, #85FFBD 50%, #FFFB7D);
+    background-size: 200%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.form-group input[type="submit"]:disabled{
+    background-image: var(--linearGray);
+    cursor: default;
+}
+.form-group input[type="submit"]:disabled:hover{
+    color: var(--gray);
+}
+.form-group input[type="submit"]:hover {
+    color: var(--black);
+    background-position: 100%;
+    border: 3px solid var(--white);
+    
+}
+
+
+  
+@keyframes progress {
+    to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes h3Spacer{
+    from{
+        background-position-x: 100%;
+    }
+    25%{
+        background-position-x: 85%;
+    }
+    50%{
+        background-position-x: 90%;
+    }
+    75%{
+        background-position-x: 70%;
+    }
+    to{
+        background-position-x: 80%;
+    }
+}

@@ -1,3 +1,4 @@
+import type { Route } from '../+types/root';
 import React from 'react';
 import { useNavigate, useParams } from "react-router"
 import { ToolsAndServices } from "~/components/ToolsAndServices";
@@ -5,6 +6,14 @@ import { WebTechno } from "~/components/WebTechno";
 import { getProjectByName } from '~/elements/data';
 import { Project, WebProject } from "~/elements/Project";
 
+import "~/style/singleProject.css"
+
+export function meta({}:Route.MetaArgs){
+    return [
+        {title: "Yohem | Projects"},
+        {name: 'description', content: 'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'}
+    ]
+}
 
 export default function SingleProject(){
     const navigate = useNavigate();

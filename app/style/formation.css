@@ -1,0 +1,84 @@
+
+/* SVG FORMATIONS */
+
+.school-step{
+    position: relative;
+    padding: 10px;
+    /* SvG a changer aussi pour br */
+    border-radius: 10px;
+    
+    background: var(--white);
+    background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 9px) calc(100% - 9px) no-repeat,
+    var(--formationStroke);   
+    
+}
+.school-step .text{
+    position: relative;
+            z-index: 3; 
+        }
+        .school-step svg{
+            /* .formation a changer aussi pour br */
+            border-radius: 10px;
+            overflow: hidden;
+            position: absolute;
+            display: block;
+            top: 0px;bottom: 0px;right: 0px;left: 0px;
+            z-index: 1;
+        }
+        .school-step svg path{
+            stroke-width: 15px;
+            vector-effect: non-scaling-stroke;
+            stroke: #fff;
+        }
+        .path {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 400;
+    animation: progress 8s linear forwards infinite;
+}
+
+
+
+
+/* FORMATIONS */
+
+section#schoolcuriculum {
+    position: relative;
+}
+section#schoolcuriculum::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    right: 49.9%;
+    top: 0%;
+    border: solid 2px var(--black);
+}
+
+section#schoolcuriculum .school-step{
+    /* position: relative; */
+    width: 49%;
+    margin-top: 1rem;
+}
+section#schoolcuriculum .school-step::after{
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    border-radius: 50%;
+    width: 1.5vw;
+    height: 1.5vw;
+    top: 0;
+    right: 0;
+    transform: translate(100%, 50%);
+}
+section#schoolcuriculum .school-step:nth-child(even)::after{
+    left: 0;
+    transform: translate(-100%, 50%);
+}
+section#schoolcuriculum .school-step:nth-child(even){
+    margin-left: auto;
+    /* text-align: right; */
+    /* float: right; */
+
+}
+
+
+

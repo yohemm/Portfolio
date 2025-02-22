@@ -1,6 +1,16 @@
 import React  from 'react';
 import { useEffect } from "react";
 import { SchoolCuriculum } from "~/components/SchoolCurriculum";
+import type { Route } from '../+types/root';
+
+import "~/style/formation.css"
+
+export function meta({}:Route.MetaArgs){
+    return [
+        {title: "Yohem | Formations"},
+        {name: 'description', content: 'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'}
+    ]
+}
 
 export default function Formations() {
     return (
