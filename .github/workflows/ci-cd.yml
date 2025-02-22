@@ -237,7 +237,7 @@ jobs:
       - name: Deploy to server
         run: |
           sshpass -p '${{ secrets.VPS_PASS }}' ssh -v -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} << EOF
-            cd {{ APP_PATH }}
+            cd /VPS_v2/Projets/portfolio/
 
             # Set GitHub credentials using GITHUB_TOKEN
             git config --global credential.helper store
