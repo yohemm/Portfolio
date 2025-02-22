@@ -838,8 +838,8 @@ section#schoolcuriculum .school-step::after{
     position: absolute;
     background-color: var(--black);
     border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.5vw;
+    height: 1.5vw;
     top: 0;
     right: 0;
     transform: translate(100%, 50%);
