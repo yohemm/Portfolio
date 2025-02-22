@@ -239,14 +239,18 @@ jobs:
           sshpass -p '${{ secrets.VPS_PASS }}' ssh -v -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} << EOF
             cd /VPS_v2/Projets/portfolio/
 
-            # Set GitHub credentials using GITHUB_TOKEN
-            git config --global credential.helper store
-            echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" > ~/.git-credentials
-
-            # Pull the latest code from the repository
-            git pull origin master
+            docker-compose down -v && docker-compose rm -f -v && docker compose down --rmi all && docker-compose build --no-cache && docker-compose up -d
 
           EOF
+
+        # # Set GitHub credentials using GITHUB_TOKEN
+        # git config --global credential.helper store
+        # echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" > ~/.git-credentials
+
+        # # Pull the latest code from the repository
+        # git pull origin master
+
+
 
       # - name: Deploy to VPS
       #   uses: appleboy/ssh-action@v1.2.0
