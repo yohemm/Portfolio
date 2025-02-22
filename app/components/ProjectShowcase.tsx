@@ -1,5 +1,6 @@
-import { projects } from "~/elements/Project";
+import { projects } from "~/elements/data";
 import React from 'react';
+import { useNavigate } from "react-router";
 
 interface ProjectShowcase {
     name: string;
@@ -10,10 +11,15 @@ interface ProjectShowcase {
 }
 
 export const ProjectShowcase = (props:ProjectShowcase) => {
+    const navigate = useNavigate();
+    const imageStyle:React.CSSProperties = {
+        backgroundImage: `url(${props.image})`,
+        backgroundRepeat: 'no-repeat',
+    }
     return (
         
-        <div key={props.name} className="card">
-            <div key={props.name} className="card-header" style={{backgroundImage: "url("+props.image+")"}}>
+        <div className="card">
+            <div className="card-header" style={ imageStyle }>
                 <div className="card-header-content">
                     <h4>{props.displayName}</h4>
                 </div>
@@ -22,13 +28,13 @@ export const ProjectShowcase = (props:ProjectShowcase) => {
                 <div className="card-details">{props.children}</div>
                 <a className="formation-btn" href={ "/projects/" + props.name }>Voir en détaille</a>
                 <p className="card-technos-overview">Techonologies utilisées : { props.technos.map((techno, index) => {
-                    return index==props.technos.length-1?<><span key={techno}>{techno}</span>.</>:<><span key={techno}>{techno}</span>,</>
+                    return index==props.technos.length-1?<span key={techno}><span>{techno}</span>.</span>:<span key={techno}><span>{techno}</span>,</span>
                 })}</p>
             </div>
         </div>
     );
 }
 
-export const projectShowcases = () => {
-    return <>{projects.map(project => <ProjectShowcase key={project.name} name={project.displayName} image={project.image} technos={project.getTechnos()} displayName={project.displayName} >{project.presentation}</ProjectShowcase>)}</>
+export const ProjectShowcases = () => {
+    return <>{projects.map(project => <ProjectShowcase key={project.name + "-card"} name={project.displayName} image={project.image} technos={project.getTechnos()} displayName={project.displayName} >{project.presentation}</ProjectShowcase>)}</>
 }

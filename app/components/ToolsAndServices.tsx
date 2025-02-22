@@ -34,7 +34,9 @@ export interface ToolsAndServices {
     tools: string[];
     services: string[];
 }
-
+export const getToolsAndServices = (tools: string[], services: string[]): ToolsAndServices => {
+    return {tools: tools, services: services};
+}
 export const ToolsAndServices = (props:ToolsAndServices) => {
     return (
         <div id="used-skills" className="">

@@ -1,7 +1,8 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import React from 'react';
 
 export const NavBar = () => {
+    const navigate = useNavigate();
     return (
         <nav>
             <ul>

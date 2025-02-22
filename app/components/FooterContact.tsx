@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 interface FooterContact {
     linkAndName : {[id:string]:string};
@@ -8,6 +8,7 @@ interface FooterContact {
 const externalPatern : RegExp = /http/
 
 export const FooterContact = (props:FooterContact) => {
+    const navigate = useNavigate();
     return (
         <footer id="my-contact">
             <address>

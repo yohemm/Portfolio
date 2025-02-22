@@ -1,11 +1,12 @@
-import { Icon } from "./ToolsAndServices";
 import React from 'react';
+import { Icon } from "./ToolsAndServices";
 
 export interface WebTechno {
     front: string[];
     back: string[];
 }
 
+export const getWebTechno = (front: string[], back: string[]):WebTechno => {return {front:front, back: back};}
 
 interface Techno {
     name: string;

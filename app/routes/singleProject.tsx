@@ -2,7 +2,9 @@ import React from 'react';
 import { useNavigate, useParams } from "react-router"
 import { ToolsAndServices } from "~/components/ToolsAndServices";
 import { WebTechno } from "~/components/WebTechno";
-import { Project, WebProject, getProjectByName } from "~/elements/Project";
+import { getProjectByName } from '~/elements/data';
+import { Project, WebProject } from "~/elements/Project";
+
 
 export default function SingleProject(){
     const navigate = useNavigate();

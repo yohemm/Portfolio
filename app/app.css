@@ -523,7 +523,7 @@ h3.subtitle::before{
 .card .card-content .card-technos-overview {
     align-self: flex-end;
 }
-.card .card-content .card-technos-overview span{
+.card .card-content .card-technos-overview span > span{
     color: red;
 }
 /* 
