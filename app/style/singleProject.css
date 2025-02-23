@@ -147,6 +147,9 @@
 .skill-container i{
     font-size: 2rem;
     margin: 0 auto;
+    width: 2rem;
+    display: flex;
+    height: 2rem;
 }
 .all-section-skill-container{
     display: flex;

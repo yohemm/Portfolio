@@ -39,5 +39,13 @@ export default function Home() {
         Je me suis ensuite spécialisé durant mes études supérieures afin de mieux connaître les langages de bas niveau et les systèmes. J&apos;ai ainsi appris à créer des scripts complexes en Bash, comme des explorateurs de fichiers, et à installer différents types de serveurs. Lors de cet apprentissage, j&apos;ai également découvert les bases de la mise en place d&apos;une infrastructure réseau professionnelle sécurisée.
       </p>
     </section>
+    <section id="about-portfolio">
+      <p>
+        Ce portfolio utilise React ainsi que React Router. La mise en production du site est automatiquement gérée par un pipeline CI/CD qui inspecte et vérifie le code, versionne l&apos;application avec Semantic Release, génère et envoie la nouvelle image Docker vers des repositories, puis met à jour le serveur de production via une connexion SSH.
+      </p>
+      <p>
+        L&apos;utilisation de React Router pourrait sembler superflue, mais j&apos;ai souhaité profiter de la création de ce portfolio pour découvrir la version 7 de la librairie.
+      </p>
+    </section>
     </>);
 }

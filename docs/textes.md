@@ -12,6 +12,13 @@ L’univers des technologies IT me fascine, mais pour me professionnaliser, j’
 J'ai commencé à créer des sites web durant mon collège et, depuis, je ne me suis jamais arrêté. J’ai pu développer mes compétences, notamment en UX/UI design, en référencement et en optimisation SEO. J’ai également appris les logiques et le fonctionnement du backend afin d’être capable de créer des applications complexes intégrant la gestion des utilisateurs, des pages d’administration, des middlewares et des API.
 
 Je me suis ensuite spécialisé durant mes études supérieures afin de mieux connaître les langages de bas niveau et les systèmes. J’ai ainsi appris à créer des scripts complexes en Bash, comme des explorateurs de fichiers, et à installer différents types de serveurs. Lors de cet apprentissage, j’ai également découvert les bases de la mise en place d’une infrastructure réseau professionnelle sécurisée.
+## About Portfolio
+- React X React-Router
+- CI-CD Pipeline
+
+Ce portfolio utilise React ainsi que React Router. La mise en production du site est automatiquement gérée par un pipeline CI/CD qui inspecte et vérifie le code, versionne l’application avec Semantic Release, génère et envoie la nouvelle image Docker vers des repositories, puis met à jour le serveur de production via une connexion SSH.
+
+L’utilisation de React Router pourrait sembler superflue, mais j’ai souhaité profiter de la création de ce portfolio pour découvrir la version 7 de la librairie.
 
 # Project
 

@@ -15,6 +15,7 @@ import "./app.css";
 import { NavBar } from "./components/NavBar";
 import { useEffect, useRef } from "react";
 import { FooterContact } from "./components/FooterContact";
+import { Loader } from './components/Loader';
 
 export const links: Route.LinksFunction = () => [
   // { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -28,12 +29,6 @@ export const links: Route.LinksFunction = () => [
     href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css",
   },
 ];
-
-// export const meta: Route.MetaFunction = () => [
-//   {
-
-//   }
-// ]
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -55,9 +50,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const navigate = useNavigate();
+  
+  const [ isLoading, setIsLoading ] = useState(true);
+
+  useEffect(()=>{
+    setIsLoading(false);
+    return () => { setIsLoading(true);}
+  }, [])
 
   return (
-    <>
+  <>
+    {
+      isLoading? (
+        <Loader/>
+      ):(
+      <>
+      {/* <Loader/> */}
       <header>
         <NavBar/>
         <div className="" id="header">
@@ -73,9 +81,12 @@ export default function App() {
         <Outlet />
         <FooterContact linkAndName={ {"About me":"/","Linkedin":"https://www.linkedin.com/in/yohem-vaxelaire/", "GitHub":"https://github.com/yohemm", "Contact":"/#my-contact"} }/>
       </main>
-      {" "}
-    </>
-  );
+      </>
+      )
+    }
+    {" "}
+  </>
+  )
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

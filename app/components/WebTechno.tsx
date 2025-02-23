@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from "./ToolsAndServices";
+import { getIcon } from '~/data';
 
 export interface WebTechno {
     front: string[];
@@ -16,7 +16,7 @@ const Techno = (props: Techno) => {
     return (
         <>
             <div className={"skill-container pos-"+ props.position }>
-                <i className={Icon[props.name]}></i>
+                <i className={getIcon(props.name)}></i>
                 <p>{props.name}</p>
             </div>
             { props.position == 1 ? <span className="vert"></span> : props.position == 2 ? <span className="horiz"></span> : "" }

@@ -36,5 +36,5 @@ export const ProjectShowcase = (props:ProjectShowcase) => {
 }
 
 export const ProjectShowcases = () => {
-    return <>{projects.map(project => <ProjectShowcase key={project.name + "-card"} name={project.displayName} image={project.image} technos={project.getTechnos()} displayName={project.displayName} >{project.presentation}</ProjectShowcase>)}</>
+    return <>{projects.map(project => <ProjectShowcase key={project.name + "-card"} name={project.name} image={project.image} technos={project.getTechnos()} displayName={project.displayName} >{project.presentation}</ProjectShowcase>)}</>
 }

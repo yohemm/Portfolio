@@ -18,7 +18,9 @@
 .card .card-header .card-header-content {
     backdrop-filter: blur(1px);
     /* height: 100%; */
-    width: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
 }
 .card .card-header{
     background-repeat: no-repeat;
@@ -27,12 +29,12 @@
     backdrop-filter: blur(2px);
     flex-grow: 1;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     overflow: hidden;
 }
 .card .card-header h4{
-    margin: 0  auto;
-    width: max(20%, 200px);
+    width: fit-content;
+    text-align: center;
     border-radius: 15px;
     box-shadow: 10px 0 5px #555555c0,  -10px 0 5px #555555c0;
     height: 100%;
