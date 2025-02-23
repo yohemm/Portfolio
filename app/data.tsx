@@ -2,54 +2,66 @@ import type React from "react";
 import { getWebTechno, type WebTechno } from "~/components/WebTechno";
 import { getToolsAndServices, type ToolsAndServices } from "~/components/ToolsAndServices";
 import { Project, WebProject } from "~/elements/Project";
-export const projects: (WebProject | Project)[] = [
+// export const PROJECTS: (WebProject | Project)[] = [
+//     {
+//         name: "",
+//         displayName: "",
+//         image: "",
+//         presentation: <></>,
+//         intro: <></>,
+//         mainContent: "",
+//         toolsAndServices: {services:[], tools:[]},
+//     }
+// ]
+
+export const PROJECTS: (WebProject | Project)[] = [
     new Project("vps", 
         "Gestion d'un Server VPS multi services", 
         "/assets/docker/0.png", 
         (<>presentation</>), 
         (<>intro</>), 
         (<>node</>),
-        getToolsAndServices(["Docker", "Git", "Nginx", "Bash" ,"Postfix", "Serveurs Web"],["Grafana","Prometheus","Gitea","Portainer","PostgreSQL", "Mongo", "Mysql","DNS"])),
+        ({tools:["Docker", "Git", "Nginx", "Bash" ,"Postfix", "Serveurs Web"],services:["Grafana","Prometheus","Gitea","Portainer","PostgreSQL", "Mongo", "Mysql","DNS"]})),
     new WebProject("web-community", 
         "Aplication Web pour créer des cours sur l’IT", 
         "/assets/JDD/0.png", 
         (<>presentation</>), 
         (<>intro</>), 
         (<>node</>),
-        getWebTechno(["JavaScript", "CSS"],["NodeJS", "MySQL", "Express"])),
+        {front:["JavaScript", "CSS"], back:["NodeJS", "MySQL", "Express"]}),
     new WebProject("gites-hautes-vosges", 
         "Creation de site profesionnelle", 
         "/assets/location/0.png", 
         (<>presentation</>), 
         (<>intro</>), 
         (<>node</>),
-        getWebTechno(["JavaScript", "CSS"],["PHP","PostGreSQL", "Hébergement"])),
+        {front:["JavaScript", "CSS"], back:["PHP","PostGreSQL", "Hébergement"]}),
     new Project("minepiece", 
         "Développement bénevol pour un communité", 
         "/assets/docker/0.png", 
         (<>presentation</>), 
         (<>intro</>), 
         (<>node</>),
-        getToolsAndServices(["Java", "Spigot", "Hébergement",],[])),
+        {tools:["Java", "Spigot", "Hébergement",], services:[]}),
     new WebProject("flash-card", 
         "Creation de site profesionnelle", 
         "/assets/location/0.png", 
         (<>presentation</>), 
         (<>intro</>), 
         (<>node</>),
-        getWebTechno(["JavaScript", "CSS"],["Laravel","MySQL"])),
+        {front:["JavaScript", "CSS"], back:["Laravel","MySQL"]}),
     new Project("games", 
         "Creation de Petit Jeux video", 
         "/assets/game/0.png", 
         (<>presentation</>), 
         (<>intro</>), 
         (<>node</>),
-        getToolsAndServices(["Python", "Java", "NumPy"],[])),
+        {tools:["Python", "Java", "NumPy"], services:[]}),
 ]
 
 export function getProjectByName(name:string) : Project|WebProject|null {
-    for( let index=0; index < projects.length; index++){
-        const project = projects[index];
+    for( let index=0; index < PROJECTS.length; index++){
+        const project = PROJECTS[index];
         // console.log(project.name);
         if (project.name === name){
             return project;
@@ -60,7 +72,7 @@ export function getProjectByName(name:string) : Project|WebProject|null {
 
 
 
-export const icons: {[id:string]:string} = {
+export const ICONS: {[id:string]:string} = {
     "MySQL": "devicon-mysql-plain colored",
     "PostGreSQL":"devicon-postgresql-plain colored",
     "MongoDB": "devicon-mongodb-plain colored",
@@ -89,4 +101,4 @@ export const icons: {[id:string]:string} = {
     "Apache": "devicon-apache-plain colored",
     "Nginx": "devicon-nginx-original colored",
 }
-export const getIcon = (name:string):string => icons[name]?icons[name]:"";
+export const getIcon = (name:string):string => ICONS[name]?ICONS[name]:"";

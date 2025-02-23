@@ -1,4 +1,4 @@
-import { projects } from "~/data";
+import { PROJECTS } from "~/data";
 import React from 'react';
 import { NavLink, useNavigate } from "react-router";
 
@@ -36,5 +36,5 @@ export const ProjectShowcase = (props:ProjectShowcase) => {
 }
 
 export const ProjectShowcases = () => {
-    return <>{projects.map(project => <ProjectShowcase key={project.name + "-card"} name={project.name} image={project.image} technos={project.getTechnos()} displayName={project.displayName} >{project.presentation}</ProjectShowcase>)}</>
+    return <>{PROJECTS.map(project => <ProjectShowcase key={project.name + "-card"} name={project.name} image={project.image} technos={project.getTechnos()} displayName={project.displayName} >{project.presentation}</ProjectShowcase>)}</>
 }
