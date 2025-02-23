@@ -21,6 +21,7 @@
   - [x] ajout de l'attribut, "text-presentation" dans Projects
 - [] Ajout de la section contact sur l'accueil
 - [ ] Compétances
+- [ ] Configurer Nav et Footer en temps que Layer
 
 ### Redaction
 - [ ] homepage

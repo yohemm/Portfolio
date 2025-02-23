@@ -1,4 +1,4 @@
-import { projects } from "~/elements/data";
+import { projects } from "~/data";
 import React from 'react';
 import { NavLink, useNavigate } from "react-router";
 

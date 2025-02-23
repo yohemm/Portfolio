@@ -1,7 +1,7 @@
 import type React from "react";
 import { getWebTechno, type WebTechno } from "~/components/WebTechno";
 import { getToolsAndServices, type ToolsAndServices } from "~/components/ToolsAndServices";
-import { Project, WebProject } from "./Project";
+import { Project, WebProject } from "~/elements/Project";
 export const projects: (WebProject | Project)[] = [
     new WebProject("test1", 
         "test1", 

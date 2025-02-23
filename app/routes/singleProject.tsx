@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate, useParams } from "react-router"
 import { ToolsAndServices } from "~/components/ToolsAndServices";
 import { WebTechno } from "~/components/WebTechno";
-import { getProjectByName } from '~/elements/data';
+import { getProjectByName } from '~/data';
 import { Project, WebProject } from "~/elements/Project";
 
 import "~/style/singleProject.css"
@@ -14,6 +14,11 @@ export function meta({}:Route.MetaArgs){
         {name: 'description', content: 'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'}
     ]
 }
+
+
+// export async function clientLoader() {
+//     const projects = await getProjects(){}
+// }
 
 export default function SingleProject(){
     const navigate = useNavigate();
