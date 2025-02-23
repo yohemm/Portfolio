@@ -10,7 +10,8 @@
     "clean": "rm -rf node_modules && npm ci",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "ci": "npm run typecheck && npm run lint"
   },
   "dependencies": {
     "@react-router/dev": "^7.1.5",
