@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Route } from '../+types/root';
+import type { Route } from './+types/skills';
 
 export function meta({}:Route.MetaArgs){
     return [

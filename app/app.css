@@ -257,6 +257,25 @@ footer address a:hover {
 
 
 
+
+
+@keyframes h3Spacer{
+    from{
+        background-position-x: 100%;
+    }
+    25%{
+        background-position-x: 85%;
+    }
+    50%{
+        background-position-x: 90%;
+    }
+    75%{
+        background-position-x: 70%;
+    }
+    to{
+        background-position-x: 80%;
+    }
+}
 @media screen and (max-width: 740px) {
     fieldset{
         display: block;

@@ -36,30 +36,6 @@ export const links: Route.LinksFunction = () => [
 // ]
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    // const svgScript = document.createElement("script");
-    // svgScript.src = "/js/formationSvg.js";
-    // svgScript.async = true;
-    // document.body.appendChild(svgScript);
-
-    const menuScript = document.createElement("script");
-    menuScript.src = "/js/menuNav.js";
-    menuScript.async = true;
-    document.body.appendChild(menuScript);
-    
-
-    // const bgScript = document.createElement("script");
-    // bgScript.src = "/js/background.js";
-    // bgScript.async = true;
-    // document.body.appendChild(bgScript);
-
-
-    return () => {
-      document.body.removeChild(menuScript);
-      // document.body.removeChild(bgScript);
-      // document.body.removeChild(svgScript);
-    };
-  }, []);
   return (
     <html lang="fr">
       <head>

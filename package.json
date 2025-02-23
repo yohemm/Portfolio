@@ -17,6 +17,7 @@
     "@react-router/node": "^7.1.5",
     "@react-router/serve": "^7.1.5",
     "@types/react-router-dom": "^5.3.3",
+    "@uidotdev/usehooks": "^2.4.1",
     "isbot": "^5.1.17",
     "portfolio-react-router": "file:",
     "react": "^19.0.0",

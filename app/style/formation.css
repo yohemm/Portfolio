@@ -14,23 +14,23 @@
 }
 .school-step .text{
     position: relative;
-            z-index: 3; 
-        }
-        .school-step svg{
-            /* .formation a changer aussi pour br */
-            border-radius: 10px;
-            overflow: hidden;
-            position: absolute;
-            display: block;
-            top: 0px;bottom: 0px;right: 0px;left: 0px;
-            z-index: 1;
-        }
-        .school-step svg path{
-            stroke-width: 15px;
-            vector-effect: non-scaling-stroke;
-            stroke: #fff;
-        }
-        .path {
+    z-index: 3; 
+}
+.school-step svg{
+    /* .formation a changer aussi pour br */
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    top: 0px;bottom: 0px;right: 0px;left: 0px;
+    z-index: 1;
+}
+.school-step svg path{
+    stroke-width: 15px;
+    vector-effect: non-scaling-stroke;
+    stroke: #fff;
+}
+.path {
     stroke-dasharray: 50;
     stroke-dashoffset: 400;
     animation: progress 8s linear forwards infinite;
@@ -75,10 +75,12 @@ section#schoolcuriculum .school-step:nth-child(even)::after{
 }
 section#schoolcuriculum .school-step:nth-child(even){
     margin-left: auto;
-    /* text-align: right; */
-    /* float: right; */
 
 }
 
 
-
+@keyframes progress {
+    to {
+    stroke-dashoffset: 0;
+  }
+}

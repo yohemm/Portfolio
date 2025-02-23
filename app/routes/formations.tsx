@@ -1,7 +1,7 @@
 import React  from 'react';
 import { useEffect } from "react";
+import type { Route } from './+types/formations';
 import { SchoolCuriculum } from "~/components/SchoolCurriculum";
-import type { Route } from '../+types/root';
 
 import "~/style/formation.css"
 

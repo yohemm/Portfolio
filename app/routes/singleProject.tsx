@@ -1,4 +1,3 @@
-import type { Route } from '../+types/root';
 import React from 'react';
 import { useNavigate, useParams } from "react-router"
 import { ToolsAndServices } from "~/components/ToolsAndServices";
@@ -7,6 +6,7 @@ import { getProjectByName } from '~/elements/data';
 import { Project, WebProject } from "~/elements/Project";
 
 import "~/style/singleProject.css"
+import type { Route } from './+types/singleProject';
 
 export function meta({}:Route.MetaArgs){
     return [
