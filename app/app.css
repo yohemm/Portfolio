@@ -198,7 +198,7 @@ h3.subtitle::before{
     background-image: linear-gradient(to bottom, transparent 50%,  var(--black) 50%, var(--black));
     background-size: 100% 200%;
     animation-name: moveToUp;
-    animation-duration : 5s;
+    animation-duration : 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 }
