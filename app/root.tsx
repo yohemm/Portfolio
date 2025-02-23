@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import {
   isRouteErrorResponse,
   Links,
@@ -10,10 +10,10 @@ import {
   useNavigate,
 } from "react-router";
 import type { Route } from "./+types/root";
+
 import "./app.css";
 
 import { NavBar } from "./components/NavBar";
-import { useEffect, useRef } from "react";
 import { FooterContact } from "./components/FooterContact";
 import { Loader } from './components/Loader';
 

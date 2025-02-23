@@ -13,17 +13,22 @@ export const NavBar = () => {
     const [ githubHide, setGithubHide] = useState("");
     const [ logoDown, setLogoDown] = useState("");
 
+    const resetNavBar = () => {
+        setNameHide("hide");
+        setNavSticked("");
+        setGithubHide("");
+        setLogoDown("");
+    }
+
     useEffect(() => {
         if (y != null && y > 120){
             setNameHide("");
             setNavSticked('nav-sticked');
             setGithubHide('hide');
             setLogoDown('down');
-        }else {
-            setNameHide("hide");
-            setNavSticked("");
-            setGithubHide("");
-            setLogoDown("");
+        }
+        return () =>  {
+            resetNavBar();
         }
     }, [y])
 

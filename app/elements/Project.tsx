@@ -1,6 +1,5 @@
 
 import type React from "react";
-import type { ReactNode } from "react";
 import type { ToolsAndServices } from "~/components/ToolsAndServices";
 import { WebTechno } from "~/components/WebTechno";
 

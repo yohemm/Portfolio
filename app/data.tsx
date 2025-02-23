@@ -1,18 +1,6 @@
 import type React from "react";
-import { getWebTechno, type WebTechno } from "~/components/WebTechno";
-import { getToolsAndServices, type ToolsAndServices } from "~/components/ToolsAndServices";
 import { type Project } from "~/elements/Project";
-// export const PROJECTS: (WebProject | Project)[] = [
-//     {
-//         name: "",
-//         displayName: "",
-//         image: "",
-//         presentation: <></>,
-//         intro: <></>,
-//         mainContent: "",
-//         toolsAndServices: {services:[], tools:[]},
-//     }
-// ]
+
 
 export const PROJECTS: Project[] = [
     { name :"vps", 

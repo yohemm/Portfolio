@@ -33,12 +33,12 @@ export default function SingleProject(){
     useEffect(()=>{
         if(project){
             setIsToolsAndTServcices(project.toolsAndServices?true:false);
-            if(project.webTechnos){
-                if(project.webTechnos.back.length < 2 || project.webTechnos.front.length < 2)setIsWebProject(false);
-                else setIsWebProject(true)
-            }
+            setIsWebProject(project.webTechnos && project.webTechnos.back.length > 1 && project.webTechnos.front.length > 1?true:false);
         }
-        return ;
+        return () => {
+            setIsToolsAndTServcices(false);
+            setIsWebProject(false);
+        }
     }, [])
     
     return(
