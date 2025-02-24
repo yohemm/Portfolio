@@ -70,10 +70,12 @@ jobs:
     
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Test
+      - name: Build & Run container
         run: |
           docker build -t test .
           docker run -d --rm -p 3000:3000 test
+      - name: Test container
+        run: |
           curl -m 60 http://127.0.0.1:3000/
 
   # Release For Auto Versionning
