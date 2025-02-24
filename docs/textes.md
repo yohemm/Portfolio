@@ -122,12 +122,6 @@ Avec un ORM et un CRUD.
 
 # Compétances
 
-Cv:
-J'ai aquérir mon bac géneral mention assés bien avec comme spécialité Specialité NSI (Numérique et sciences informatiques) et maths.
-J() 20/20 sur cette specialité pour le bac.
-
-Parcourt reseau et systeme informatique afin d'etre capable de mettre en place de serveur profesionnelle diversifié mes compétances dans l'IT.
-
 Competances:
 - Git
 - github
@@ -162,5 +156,16 @@ Quand je faisait mes premiers projects personnelles, j'avais un probleme concera
 Pour cela, j'ai mis en place docker avec un docker compose par applications qui contient plusieur container par applications. Les applications qui sont accessible depuis l'extérieur ont leur access ouvert grace un services reverse-proxy nginx sur un container docker qui est associer à certbot afin de gerer les certificats letsencrypt de tous les dommains prealablements configuré dans des variables d'enviroment de maniere automatique, via un script bash.
 J'ai aussi pu mettre un réseau de supervision et monitoring sur mes docker-compose afin de pouvoir surveiller les ressources et le trafics de chaques containers.
 
+# Formations
 
---- 
+## Scolaire
+Avec comme spécialitées maths et NSI (Numérique et sciences informatiques), ou j'ai eu 20/20 aux 2 épreuves du bac TP pratique et TP théorique sur papier sur cette derniere spécialité.
+
+Parcourt reseau et systeme informatique afin d'etre capable de mettre en place des serveurs profesionnelles et des réseaux pour diversifié mes compétances dans l'IT.
+## Autodidact
+
+Dés mon colleges, avant même d'entamé se cursus dans l'IT, j'ai commencé a me former et apprendre la programmation, notament en creant de petit jeux video avec l'aide de moteur graphique ou bien en créant des sites web, puis de réel applications web.
+
+De plus, tout au long de mes formations, j'ai continué à me renseigné à approndir les sujets, tout en créant de nouveau project personel en paralléle.
+
+Vous pouvez notament en voir un partie sur mon profil GitHub.

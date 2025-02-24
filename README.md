@@ -22,6 +22,9 @@
 - [ ] Ajout de la section contact sur l'accueil
 - [ ] Compétances
 - [ ] Configurer Nav et Footer en temps que Layer
+- [ ] Home Page
+  - [ ] Faire un schema de la CI-CD du site
+  - [ ] Ajouté WebTechno
 
 ### Redaction
 - [ ] homepage
