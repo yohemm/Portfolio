@@ -143,7 +143,7 @@ Competances:
 - Nginx
 - Cerbot
 - outils de supervision et monitoring
-- Configuration d'equipemt reseau
+- Configuration d'equipement reseau
 
 J'ai debuté la programmation sur des projects personnelles,
 j'ai donc appris au fur et a mesure de mes projects la chain de mise en production.
@@ -160,3 +160,7 @@ Lors de ma licience proffesionnelle en informatique et mon apprentissage au sein
 
 Quand je faisait mes premiers projects personnelles, j'avais un probleme concerant la mise en production, car je ne détenait pas de serveur, suite à cela, j'ai louer un VPS, et configurer le systeme afin gerer toutes mes applications.
 Pour cela, j'ai mis en place docker avec un docker compose par applications qui contient plusieur container par applications. Les applications qui sont accessible depuis l'extérieur ont leur access ouvert grace un services reverse-proxy nginx sur un container docker qui est associer à certbot afin de gerer les certificats letsencrypt de tous les dommains prealablements configuré dans des variables d'enviroment de maniere automatique, via un script bash.
+J'ai aussi pu mettre un réseau de supervision et monitoring sur mes docker-compose afin de pouvoir surveiller les ressources et le trafics de chaques containers.
+
+
+--- 

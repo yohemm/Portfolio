@@ -31,6 +31,9 @@ jobs:
       - name: Check Type
         run: npm run typecheck
       
+      - name: Jest Test for react
+        run: npm run test:ci
+
       - name: Build App
         run: npm run build
       
@@ -38,6 +41,39 @@ jobs:
         with:
           name: build
           path: build/
+
+  # test du build et run du DockerFile
+  test-docker-image:
+    name: Test Docker File
+    runs-on: ubuntu-latest
+    needs: ci-and-build-artifact
+    steps:
+      
+      # Recup les fichiers de travaille
+      - uses: actions/checkout@v4
+      
+      # utilise node
+      - name: Use Node.js  22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+        # execute des commandes
+      - name: Clean install NPM
+        run: npm ci
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+        # Multi platforms
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+    
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Test
+        run: |
+          docker build -t test .
+          docker run --rm test
 
   # Release For Auto Versionning
   release:
@@ -58,7 +94,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-
 
       - name: Clean install NPM
         run: npm ci
@@ -110,7 +145,7 @@ jobs:
   build-image-github:
     name: GitHub Build docker image
     runs-on: ubuntu-latest
-    needs: ci-and-build-artifact
+    needs: test-docker-image
     
     if: ${{ ((github.event_name == 'push' || github.event_name == 'pull_request') && github.ref_name == 'master' && success()) || github.event_name == 'workflow_dispatch' }}
 
@@ -131,6 +166,9 @@ jobs:
       - name: Login in to registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
       
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
       - name: Build the docker image
         uses: docker/build-push-action@v6
         with:
@@ -143,7 +181,7 @@ jobs:
   #### docker hub image registry pipeline
   build-image-dockerhub:
     name: Push Image on dockerHub
-    needs: ci-and-build-artifact
+    needs: test-docker-image
 
     if: ${{ ((github.event_name == 'push' || github.event_name == 'pull_request') && github.ref_name == 'master' && success()) || github.event_name == 'workflow_dispatch' }}
     permissions: 
@@ -163,6 +201,9 @@ jobs:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 

@@ -11,7 +11,7 @@ export const getToolsAndServices = (tools: string[], services: string[]): ToolsA
 }
 export const ToolsAndServices = (props:ToolsAndServices) => {
     return (
-        <div id="used-skills" className="">
+        <div id="used-skills">
             <div id="tools-skills" className="container-subtitle-async">
                 <div className="skill-title-container">
                     <h3 className="subtitle">Les outils que j&apos;ai pu utilisé : </h3>

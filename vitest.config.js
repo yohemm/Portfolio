@@ -11,15 +11,15 @@ export default defineConfig({
       test: {
         globals: true,
         environment: "jsdom",
-        setupFiles: [path.resolve(__dirname, 'test/setup.ts')],
+        setupFiles: [path.resolve('./tests/setup.ts')],
         env: {
             IS_REACT_ACT_ENVIRONMENT: 'true',
         },
-        // include: ['__tests__/**/*.[tj]s?(x)']
+        include: ['./tests/**/*.test.[tj]s?(x)']
       },
       resolve: {
         alias: {
-            '~': "./app/"
+            '~':  new URL("./app/", import.meta.url).pathname,
         }
       }
   });

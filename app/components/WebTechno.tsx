@@ -35,7 +35,7 @@ export const WebTechno = (props:WebTechno) => {
     return (
         <div id="main-skills" className="container-skills">
             <div id="back-skills">
-                <h3 className="">Back-end</h3>
+                <h3>Back-end</h3>
                 <div className="all-section-skill-container">
                     {
                         props.back.map(function(name, index){
@@ -46,7 +46,7 @@ export const WebTechno = (props:WebTechno) => {
             </div>
             <span></span>
             <div id="front-skills">
-                <h3 className="">Front-end</h3>
+                <h3>Front-end</h3>
                 <div className="all-section-skill-container">
                     <span className="anim"></span>
                     {
