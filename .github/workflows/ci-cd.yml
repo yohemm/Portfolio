@@ -76,6 +76,7 @@ jobs:
           docker run -d --rm -p 3000:3000 test
       - name: Test container
         run: |
+          sleep 10
           curl -m 60 http://127.0.0.1:3000/
 
   # Release For Auto Versionning
