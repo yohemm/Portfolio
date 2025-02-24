@@ -74,7 +74,7 @@ jobs:
         run: |
           docker build -t test .
           docker run -d --rm -p 3000:3000 test
-          curl -m 60 http://localhost:3000/
+          curl -m 60 http://127.0.0.1:3000/
 
   # Release For Auto Versionning
   release:
