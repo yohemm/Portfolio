@@ -73,7 +73,8 @@ jobs:
       - name: Test
         run: |
           docker build -t test .
-          docker run --rm test
+          docker run -d --rm -p 3000:3000 test
+          curl http://localhost:3000/
 
   # Release For Auto Versionning
   release:
