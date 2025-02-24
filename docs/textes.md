@@ -121,3 +121,42 @@ Avec un ORM et un CRUD.
     Jeux dans le style rogue lite incluant de la géneration procédural.
 
 # Compétances
+
+Cv:
+J'ai aquérir mon bac géneral mention assés bien avec comme spécialité Specialité NSI (Numérique et sciences informatiques) et maths.
+J() 20/20 sur cette specialité pour le bac.
+
+Parcourt reseau et systeme informatique afin d'etre capable de mettre en place de serveur profesionnelle diversifié mes compétances dans l'IT.
+
+Competances:
+- Git
+- github
+- CI-CD pipeline
+- NodeJs
+- React
+- Testing
+- Programmation systeme bash et powershell
+- mise en place de serveur
+- herbergement
+- DNS
+- Docker
+- Nginx
+- Cerbot
+- outils de supervision et monitoring
+- Configuration d'equipemt reseau
+
+J'ai debuté la programmation sur des projects personnelles,
+j'ai donc appris au fur et a mesure de mes projects la chain de mise en production.
+
+Actuellement, je suis capable de mettre un place un project qui inclue des pipelines CI-CD avec Github Actions permetant de gerer le versionning des releases, envoyer des images sur des repositories et deployer le project sur un serveur. 
+
+Passionné par le developpement systeme et le back, j'ai appris a manager des serveurs multi-hosting avec automatisation des taches.
+
+J'ai choisi de me Specialisé sur la librarie de backend nodeJs car j'aime sont paradingme et fonctionnement asynchrone avec les systemes de callback, bien que fonctionnement du JavaScrit semble etrange dans certain cas, avec typeScript, eslint ainsi que des tests bien confugurer, cela resout en parti les soucis intrasec a JavaScript.
+
+Bien que le backend sois ma priorité, j'ai aussi appris le reactJs afin d'approfondir un framework frontend, j'ai choisit react car il utilise nodeJs mais aussi pour ca popularité dans marché profesionelle, de plus j'ai etait sedui par le system de composant et render ansi que la surcouche du dom react qui est pratique à utilisé.
+
+Lors de ma licience proffesionnelle en informatique et mon apprentissage au sein de la polyclinique de Grande-Synthe en temps que technicien réseau, j'ai pu dévelloper mes compétances dans le milieu des serveurs windows tel que l'AD, la GPO, les applications RDS, et les serveurs IIS. J'ai aussi découvert les réseaux d'entreprises ainsi que les normes de sécurité informatique qui y sont associé, notament en participant à la refonte architectural du réseau.
+
+Quand je faisait mes premiers projects personnelles, j'avais un probleme concerant la mise en production, car je ne détenait pas de serveur, suite à cela, j'ai louer un VPS, et configurer le systeme afin gerer toutes mes applications.
+Pour cela, j'ai mis en place docker avec un docker compose par applications qui contient plusieur container par applications. Les applications qui sont accessible depuis l'extérieur ont leur access ouvert grace un services reverse-proxy nginx sur un container docker qui est associer à certbot afin de gerer les certificats letsencrypt de tous les dommains prealablements configuré dans des variables d'enviroment de maniere automatique, via un script bash.
