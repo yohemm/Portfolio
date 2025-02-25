@@ -51,7 +51,7 @@ export const NavBar = () => {
                 <NavLink to="/skills"
                     style={({isActive}) => ({
                         textDecoration: isActive?"underline":"none",
-                    })}>Compétances</NavLink>
+                    })}>Compétences</NavLink>
                 </li>
                 <li className={"skills-projects"}>
                 <NavLink to="/projects"

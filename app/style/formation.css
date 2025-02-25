@@ -66,11 +66,11 @@ section#schoolcuriculum .school-step::after{
     width: 1.5vw;
     height: 1.5vw;
     top: 0;
-    right: 0;
+    right: -0.4%;
     transform: translate(100%, 50%);
 }
 section#schoolcuriculum .school-step:nth-child(even)::after{
-    left: 0;
+    left: -0.4%;
     transform: translate(-100%, 50%);
 }
 section#schoolcuriculum .school-step:nth-child(even){
