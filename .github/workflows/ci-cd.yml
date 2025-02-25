@@ -231,7 +231,7 @@ jobs:
           
   #### VPS Pipeline
   deploy-server:
-    name: Deployment on server
+    name: Deployment on Server with SSH Connection
     runs-on: ubuntu-latest
     needs: build-image-dockerhub
     # needs: ci-and-build-artifact

@@ -1,3 +1,5 @@
+'use client';
+
 import { NavLink, useNavigate } from "react-router";
 import React, { useEffect, useState } from 'react';
 import { useWindowScroll } from "@uidotdev/usehooks";
