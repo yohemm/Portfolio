@@ -1,3 +1,5 @@
+'use client';
+
 import { PROJECTS } from "~/data";
 import React from 'react';
 import { NavLink, useNavigate } from "react-router";

@@ -34,6 +34,10 @@ L’utilisation de React Router pourrait sembler superflue, mais j’ai souhait�
 Hebergement de serveur et base de donnée
 Création d'un site PHP incluant un panel admin no code permettant de modifier les pages et object du site comme désiré par le manager du site.
 
+### Presentation
+
+Site vitrine professionnel destiné à la prise de contact pour la location d’hébergements, avec un panel d’administration no-code pour une gestion simplifiée.
+
 ## MP
 
     Technos:
@@ -43,7 +47,12 @@ Création d'un site PHP incluant un panel admin no code permettant de modifier l
 
 Hebergement de plusieurs serveur webs et base de donnée
 Création de plusieur plugin minecraft dévelopé en JAVA 8.
+
+### Presentation
+
+Mise en place de serveurs de production ainsi que développement en Java 8.
 ## Alternance PGS
+
 
     Technos:
         - Servers Windows (AD, Domain, RDS, Remote APP)
@@ -74,6 +83,42 @@ Découvrir les serveur Windows (AD, IIS, DNS, GPO, Remote App, ...)
 
 Configuration d'un VPS utilisé par plusieur personne pouvant se connecté par ssh. Plusieur site profesionnelles ainsi que des project personnelle sont hébergé dessus, comme par exemple se portfolio. Le serveur utilise nginx entant que reverse proxy et docker pour pour lancé de multiple application. 
 
+### Presentation
+
+Serveur de multi-herbergements avec auto-certifation ssl, supervision et management des containers
+
+## Alternance PGS
+
+    Technos:
+      - Servers Windows (AD, Domain, RDS, Remote APP)
+      - Document de Sécu
+      - ISO/image CloneZilla
+      - mise en place de serveur sous débian
+      - mise en place de GLPI avec IIS
+Alertance pour ma 2eme et 3eme année de licence professionnelle en temps que technicien réseau et systeme.
+J'ai pu approfondir mes connaissances en réseau.
+Découvrir le monde proffessionnelle de l'IT.
+Participer à la réalisation de Plan de sécurité et autre document officielle.
+Découvrir les serveur Windows (AD, IIS, DNS, GPO, Remote App, ...)
+
+## Presentation
+
+Alternance en tant que Technicien Système et Réseau au sein de la Polyclinique de Grande-Synthe.
+
+## [JournalDuDev](https://github.com/yohemm/journal-du-dev)
+    Technos:
+      - NodeJS
+      - CSS
+      - JS
+      - Express
+      - mysql
+Projects personnelle ayant pour but de créer une communauté autour de la programmation dans le milieu francophone.
+Cette application n'est pas pas encore terminé bien qu'elle inclue deja un system de d'utilisateur avec des droits et images de profiles, l'ajout de commentaire et la creation de nouveau cours. 
+
+### Presentation
+
+Project Web Personnel incluant un un gestion des utilisateurs et leur profile, section commentaire, création de cours/articles. Suivant un diagramme UML.
+
 ## [JournalDuDev](https://github.com/yohemm/journal-du-dev)
 
     Technos:
@@ -98,6 +143,10 @@ Cette application n'est pas pas encore terminé bien qu'elle inclue deja un syst
 Application de carte de memorisation créer pour un project lors de ma licence professionnelle.
 Avec un ORM et un CRUD. 
 
+### Presentation
+
+Application de révision basée sur un système de flashcards, incluant une gestion des utilisateurs via un ORM et une structure CRUD.
+
 ## Jeux Video
 
   - [peacefull RPG](https://github.com/yohemm/peace-full-rpg)
@@ -119,6 +168,10 @@ Avec un ORM et un CRUD.
       - Java
       - Java FX
     Jeux dans le style rogue lite incluant de la géneration procédural.
+
+### Presentation
+
+Création de multiples jeux vidéo, intégrant de la génération procédurale ainsi qu’une architecture client-serveur communiquant via des sockets.
 
 # Compétances
 

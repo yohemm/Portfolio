@@ -1,3 +1,5 @@
+'use client';
+
 import { NavLink, useNavigate } from "react-router";
 import React, { useEffect, useState } from 'react';
 import { useWindowScroll } from "@uidotdev/usehooks";
@@ -49,7 +51,7 @@ export const NavBar = () => {
                 <NavLink to="/skills"
                     style={({isActive}) => ({
                         textDecoration: isActive?"underline":"none",
-                    })}>Compétances</NavLink>
+                    })}>Compétences</NavLink>
                 </li>
                 <li className={"skills-projects"}>
                 <NavLink to="/projects"

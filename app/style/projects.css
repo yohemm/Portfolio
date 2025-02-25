@@ -17,28 +17,21 @@
 
 .card .card-header .card-header-content {
     backdrop-filter: blur(1px);
-    /* height: 100%; */
-    width: fit-content;
-    display: flex;
-    justify-content: center;
+    align-self: center;
 }
 .card .card-header{
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     backdrop-filter: blur(2px);
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
     overflow: hidden;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
 }
 .card .card-header h4{
-    width: fit-content;
-    text-align: center;
     border-radius: 15px;
     box-shadow: 10px 0 5px #555555c0,  -10px 0 5px #555555c0;
-    height: 100%;
-    z-index: 2;
     text-align: center;
     font-size: 2.5rem;
     backdrop-filter: grayscale(1);

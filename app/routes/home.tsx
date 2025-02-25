@@ -1,6 +1,8 @@
 import type { Route } from "./+types/home";
 import React from 'react';
 
+import "~/style/home.css"
+
 export function meta({}: Route.MetaArgs) {
   return [
     {title: "Yohem | Portfolio"},
@@ -43,6 +45,9 @@ export default function Home() {
       <p>
         Ce portfolio utilise React ainsi que React Router. La mise en production du site est automatiquement gérée par un pipeline CI/CD qui inspecte et vérifie le code, versionne l&apos;application avec Semantic Release, génère et envoie la nouvelle image Docker vers des repositories, puis met à jour le serveur de production via une connexion SSH.
       </p>
+      <div className="ci-cd-container">
+        <img src="/assets/github_actions.png" alt="Plan du la CI-CD de github" />
+      </div>
       <p>
         L&apos;utilisation de React Router pourrait sembler superflue, mais j&apos;ai souhaité profiter de la création de ce portfolio pour découvrir la version 7 de la librairie.
       </p>

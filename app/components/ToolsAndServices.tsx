@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { getIcon } from '~/data';
 
@@ -12,7 +14,7 @@ export const getToolsAndServices = (tools: string[], services: string[]): ToolsA
 export const ToolsAndServices = (props:ToolsAndServices) => {
     return (
         <div id="used-skills">
-            <div id="tools-skills" className="container-subtitle-async">
+            {props.tools.length == 0?"":(<div id="tools-skills" className="container-subtitle-async">
                 <div className="skill-title-container">
                     <h3 className="subtitle">Les outils que j&apos;ai pu utilisé : </h3>
                 </div>
@@ -28,8 +30,8 @@ export const ToolsAndServices = (props:ToolsAndServices) => {
                         })
                     }
                 </div>
-            </div>
-            <div id="service-skills" className="container-subtitle-async">
+            </div>)}
+            {props.services.length==0?"":(<div id="service-skills" className="container-subtitle-async">
                 <div className="skill-title-container">
                     <h3 className="subtitle">Les services que j&apos;ai pu utilisé : </h3>
                 </div>
@@ -45,7 +47,7 @@ export const ToolsAndServices = (props:ToolsAndServices) => {
                         })
                     }
                 </div>
-            </div>
+            </div>)}
         </div>
     );
 }
