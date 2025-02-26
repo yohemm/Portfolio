@@ -1,21 +1,25 @@
 import React from 'react';
 import type { Route } from './+types/projects';
-import { ProjectShowcases } from "~/components/ProjectShowcase";
+import { ProjectShowcases } from '~/components/ProjectShowcase';
 
-import "~/style/projects.css"
+import '~/style/projects.css';
 
-export function meta({}:Route.MetaArgs){
-    return [
-        {title: "Yohem | Projects"},
-        {name: 'description', content: 'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'}
-    ]
+export function meta() {
+  return [
+    { title: 'Yohem | Projects' },
+    {
+      name: 'description',
+      content:
+        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.',
+    },
+  ];
 }
 
 export default function Projects() {
-    return (
-        <div className="projects-container">
-            { <ProjectShowcases/> }
-            {/* { projects.map(project => <ProjectShowcase key={project.name} name={project.displayName} image={project.image} technos={project.getTechnos()}>{project.presentation}</ProjectShowcase>) } */}
-        </div>
-    );
+  return (
+    <div className="projects-container">
+      {<ProjectShowcases />}
+      {/* { projects.map(project => <ProjectShowcase key={project.name} name={project.displayName} image={project.image} technos={project.getTechnos()}>{project.presentation}</ProjectShowcase>) } */}
+    </div>
+  );
 }

@@ -1,17 +1,21 @@
 # Portfolio Yohem
+
 ## Dev init
 
-1. Clone the  repo
+1. Clone the repo
 2. `npm install` for node dependancies
 3. `npm run dev` for start server in dev mode
+
 # In dev
+
 [Listing des expériences](./docs/experience.md)
 
 [Update web/Composants react](./docs/Front.md)
 
 ## A faire
 
-### Dev 
+### Dev
+
 - [x] ProjectShowing
   - [x] Redisign
   - [x] liens
@@ -27,6 +31,7 @@
   - [ ] Ajouté WebTechno
 
 ### Redaction
+
 - [ ] homepage
 - [ ] Projects:
 - [ ] formation
@@ -37,21 +42,22 @@
 # CI-CD
 
 ## [Format](https://semantic-release.gitbook.io/semantic-release#commit-message-format)
+
     <type>(<scope>): <subject>
     <BLANK LINE>
     <body>
     <BLANK LINE>
     <footer>
 
-exemple avec un changement de version: 
-  
+exemple avec un changement de version:
+
     feat: Changes welcome message
 
     BREAKING CHANGE:
       My message to describe new version
 
-
 type de commit :
+
 - build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
 - ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
 - docs: Documentation only changes
@@ -63,6 +69,7 @@ type de commit :
 - test: Adding missing tests or correcting existing tests
 
 changement de version
+
 - _BREAKING CHANGE: major version_, à ecrire dans le body du commit
 - _feat: minor version_
 - _fix: fix index_

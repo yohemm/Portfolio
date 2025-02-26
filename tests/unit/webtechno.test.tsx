@@ -1,40 +1,44 @@
 import React from 'react';
-import { render, screen } from "@testing-library/react";
-import { WebTechno } from "~/components/WebTechno"
+import { render, screen } from '@testing-library/react';
+import { WebTechno } from '~/components/WebTechno';
 
-describe('<WebTechno>', ()=>{
-    it('should render error paragraph', ()=> {
-        const fullEmpty = render(<WebTechno back={[]} front={[]}/>).container;
-        const frontEmpty = render(<WebTechno back={["NodeJs", "Express", "PostGreSQL"]} front={[]}/>).container;
-        const backEmpty = render(<WebTechno back={[]} front={[ "CSS", "JavaScript" ]}/>).container;
+describe('<WebTechno>', () => {
+  it('should render error paragraph', () => {
+    const fullEmpty = render(<WebTechno back={[]} front={[]} />).container;
+    const frontEmpty = render(
+      <WebTechno back={['NodeJs', 'Express', 'PostGreSQL']} front={[]} />,
+    ).container;
+    const backEmpty = render(<WebTechno back={[]} front={['CSS', 'JavaScript']} />).container;
 
-        expect(fullEmpty).toMatchInlineSnapshot(`
+    expect(fullEmpty).toMatchInlineSnapshot(`
           <div>
             <p>
               Error front nb agrs
             </p>
           </div>
         `);
-        expect(frontEmpty).toMatchInlineSnapshot(`
+    expect(frontEmpty).toMatchInlineSnapshot(`
           <div>
             <p>
               Error front nb agrs
             </p>
           </div>
         `);
-        expect(backEmpty).toMatchInlineSnapshot(`
+    expect(backEmpty).toMatchInlineSnapshot(`
           <div>
             <p>
               Error back nb agrs
             </p>
           </div>
         `);
-    })
-    it('should render correctly', ()=> {
-        const {container} = render(<WebTechno back={["NodeJs", "Express", "PostGreSQL"]} front={[ "CSS", "JavaScript" ]}/>);
-        // const mainDiv = screen.getByText('PostGreSQL');
-        // expect(mainDiv).toBeInTheDocument();
-        expect(container).toMatchInlineSnapshot(`
+  });
+  it('should render correctly', () => {
+    const { container } = render(
+      <WebTechno back={['NodeJs', 'Express', 'PostGreSQL']} front={['CSS', 'JavaScript']} />,
+    );
+    // const mainDiv = screen.getByText('PostGreSQL');
+    // expect(mainDiv).toBeInTheDocument();
+    expect(container).toMatchInlineSnapshot(`
           <div>
             <div
               class="web-techno-main"
@@ -128,5 +132,5 @@ describe('<WebTechno>', ()=>{
             </div>
           </div>
         `);
-    })
-})
+  });
+});

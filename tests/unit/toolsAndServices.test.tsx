@@ -1,16 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { render } from "@testing-library/react";
+import { render } from '@testing-library/react';
 
-import { ToolsAndServices } from "~/components/ToolsAndServices";
+import { ToolsAndServices } from '~/components/ToolsAndServices';
 
-describe('<ToolsAndServices>', ()=>{
-    it('should render correctly',  ()=>{
-        const toolsAndServices = render(<ToolsAndServices services={["Grafana"]} tools={["Git"]} />).container
-        const tools = render(<ToolsAndServices services={[]} tools={["Git"]} />).container
-        const services = render(<ToolsAndServices services={["Grafana"]} tools={[]} />).container
-        
-        expect(toolsAndServices).toMatchInlineSnapshot(`
+describe('<ToolsAndServices>', () => {
+  it('should render correctly', () => {
+    const toolsAndServices = render(
+      <ToolsAndServices services={['Grafana']} tools={['Git']} />,
+    ).container;
+    const tools = render(<ToolsAndServices services={[]} tools={['Git']} />).container;
+    const services = render(<ToolsAndServices services={['Grafana']} tools={[]} />).container;
+
+    expect(toolsAndServices).toMatchInlineSnapshot(`
           <div>
             <div
               id="container-subtitle-async tools-and-services-container"
@@ -74,7 +76,7 @@ describe('<ToolsAndServices>', ()=>{
             </div>
           </div>
         `);
-        expect(tools).toMatchInlineSnapshot(`
+    expect(tools).toMatchInlineSnapshot(`
           <div>
             <div
               id="container-subtitle-async tools-and-services-container"
@@ -110,7 +112,7 @@ describe('<ToolsAndServices>', ()=>{
             </div>
           </div>
         `);
-        expect(services).toMatchInlineSnapshot(`
+    expect(services).toMatchInlineSnapshot(`
           <div>
             <div
               id="container-subtitle-async tools-and-services-container"
@@ -146,5 +148,5 @@ describe('<ToolsAndServices>', ()=>{
             </div>
           </div>
         `);
-    })
-})
+  });
+});

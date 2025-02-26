@@ -1,18 +1,17 @@
-
-import type React from "react";
-import type { ToolsAndServices } from "~/components/ToolsAndServices";
-import { WebTechno } from "~/components/WebTechno";
+import type React from 'react';
+import type { ToolsAndServices } from '~/components/ToolsAndServices';
+import { WebTechno } from '~/components/WebTechno';
 
 // const mergeArrayString = (arrays:string[][]): string[] => {
 //     const res:string[] = [];
 //     for (const arrayId in arrays) {
 //         if (Object.prototype.hasOwnProperty.call(arrays, arrayId)) {
 //             const array = arrays[arrayId];
-            
+
 //             for (const elementId in array) {
 //                 if (Object.prototype.hasOwnProperty.call(array, elementId)) {
 //                     const element = array[elementId];
-                    
+
 //                     res.push(element);
 
 //                 }
@@ -21,7 +20,7 @@ import { WebTechno } from "~/components/WebTechno";
 //         }
 //     }
 //     return res;
-    
+
 // }
 
 // export interface IProject {
@@ -34,15 +33,15 @@ import { WebTechno } from "~/components/WebTechno";
 //     getTechnos(): string[];
 // }
 export interface Project {
-    name:string;
-    displayName:string;
-    image:string;
-    presentation: React.ReactNode;
-    presentationTechnos:string[];
-    webTechnos:WebTechno | null;
-    toolsAndServices: ToolsAndServices | null;
-    intro: React.ReactNode;
-    children: React.ReactNode;
+  name: string;
+  displayName: string;
+  image: string;
+  presentation: React.ReactNode;
+  presentationTechnos: string[];
+  webTechnos: WebTechno | null;
+  toolsAndServices: ToolsAndServices | null;
+  intro: React.ReactNode;
+  children: React.ReactNode;
 }
 
 // export class WebProject implements IProject{
@@ -75,7 +74,7 @@ export interface Project {
 //     mainContent: ReactNode;
 //     intro: React.ReactNode;
 //     toolsAndServices : ToolsAndServices;
-    
+
 //     constructor(name:string, displayName:string, image:string, presentation: React.ReactNode, intro: React.ReactNode, mainContent:ReactNode, toolsAndServices:ToolsAndServices) {
 //         this.name = name;
 //         this.displayName = displayName;
@@ -91,10 +90,10 @@ export interface Project {
 // }
 
 // export function isAnProject(obj: any): obj is Project {
-    //     return 'name' in obj && 'mainContent' in obj && 'toolsAndServices' in obj;
-    // }
-    
-    // export function isAnWebProject(obj: any): obj is Project {
+//     return 'name' in obj && 'mainContent' in obj && 'toolsAndServices' in obj;
+// }
+
+// export function isAnWebProject(obj: any): obj is Project {
 //     return 'name' in obj && 'mainContent' in obj && 'webTechno' in obj;
 // }
 

@@ -1,13 +1,13 @@
 'use client';
 
-import React from "react";
+import React from 'react';
 
-import "~/style/loader.css";
+import '~/style/loader.css';
 
 export const Loader = () => {
-    return (
-        <div className="Loader">
-            <p>Loading ...</p>
-        </div>
-    )
-}
+  return (
+    <div className="Loader">
+      <p>Loading ...</p>
+    </div>
+  );
+};

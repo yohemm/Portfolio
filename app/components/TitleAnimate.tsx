@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import "~/style/TitleAnimate.css";
+import '~/style/TitleAnimate.css';
 
 interface TitleAnimate {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 
-export const TitleAnimate = (props: TitleAnimate)=>{
-    return (
-        <div className="subtitle-container">
-            <h3 className="subtitle"> { props.children }</h3>
-        </div>
-    )
-}
+export const TitleAnimate = (props: TitleAnimate) => {
+  return (
+    <div className="subtitle-container">
+      <h3 className="subtitle"> {props.children}</h3>
+    </div>
+  );
+};

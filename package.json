@@ -13,7 +13,8 @@
     "typecheck": "react-router typegen && tsc",
     "test": "vitest",
     "test:ci": "vitest run",
-    "ci": "npm run typecheck && npm run lint && npm run test:ci"
+    "ci": "npm run typecheck && npm run lint && npm run test:ci",
+    "format": "prettier --write \"**/*.+(tjs|tjsx|mjs|json|css|md)\""
   },
   "dependencies": {
     "@react-router/node": "^7.1.5",
@@ -40,9 +41,12 @@
     "@types/testing-library__jest-dom": "^5.14.9",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^16.0.0",
     "jsdom": "^26.0.0",
+    "prettier": "^3.5.2",
     "react-router-devtools": "^1.1.0",
     "semantic-release": "^24.2.3",
     "typescript": "^5.7.2",

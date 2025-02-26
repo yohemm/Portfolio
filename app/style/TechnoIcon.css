@@ -1,11 +1,11 @@
-.technos-container{
-    margin: 0 15px;
-    text-align: center;
+.technos-container {
+  margin: 0 15px;
+  text-align: center;
 }
-.technos-container i{
-    font-size: 2rem;
-    margin: 0 auto;
-    width: fit-content;
-    display: flex;
-    height: 2rem;
+.technos-container i {
+  font-size: 2rem;
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  height: 2rem;
 }

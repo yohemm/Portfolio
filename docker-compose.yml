@@ -1,4 +1,4 @@
 services:
   portfolio:
-    build: 
+    build:
       context: .

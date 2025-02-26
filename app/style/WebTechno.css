@@ -1,159 +1,158 @@
-
-#web-techno-main h3{
-    text-align: center;
+#web-techno-main h3 {
+  text-align: center;
 }
-#web-techno-main h3::before{
-    content: none!important;
+#web-techno-main h3::before {
+  content: none !important;
 }
 #web-techno-main #web-techno-backend .web-techno-icons-container,
-#web-techno-main #web-techno-frontend .web-techno-icons-container{
-    border-top: 1px solid var(--black);
-    border-bottom: 1px solid var(--black);
-    min-height: 10rem;
-    height: 50vh;
-    position: relative;
-    
+#web-techno-main #web-techno-frontend .web-techno-icons-container {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  min-height: 10rem;
+  height: 50vh;
+  position: relative;
 }
-#web-techno-main #web-techno-backend .web-techno-icons-container{
-    border-left: 1px solid var(--black);
+#web-techno-main #web-techno-backend .web-techno-icons-container {
+  border-left: 1px solid var(--black);
 }
-#web-techno-main #web-techno-frontend .web-techno-icons-container{
-    border-right: 1px solid var(--black);
+#web-techno-main #web-techno-frontend .web-techno-icons-container {
+  border-right: 1px solid var(--black);
 }
 
 #web-techno-main #web-techno-backend .web-techno-icons-container::before,
-#web-techno-main #web-techno-backend .web-techno-icons-container::after{
-    content: "";
-    position: absolute;
-    height: 30%;
-    border-right: 1px solid var(--black);
-    right: 0;
+#web-techno-main #web-techno-backend .web-techno-icons-container::after {
+  content: '';
+  position: absolute;
+  height: 30%;
+  border-right: 1px solid var(--black);
+  right: 0;
 }
-#web-techno-main #web-techno-backend .web-techno-icons-container::after{
-    top: 0;
+#web-techno-main #web-techno-backend .web-techno-icons-container::after {
+  top: 0;
 }
-#web-techno-main #web-techno-backend .web-techno-icons-container::before{
-    bottom: 0;
+#web-techno-main #web-techno-backend .web-techno-icons-container::before {
+  bottom: 0;
 }
 
 #web-techno-main #web-techno-frontend .web-techno-icons-container::before,
-#web-techno-main #web-techno-frontend .web-techno-icons-container::after{
-        content: "";
-        position: absolute;
-        left: 0;
-        height: 30%;
-        border-left: 1px solid var(--black);
+#web-techno-main #web-techno-frontend .web-techno-icons-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 30%;
+  border-left: 1px solid var(--black);
 }
-#web-techno-main #web-techno-frontend .web-techno-icons-container::after{
-    top: 0;
+#web-techno-main #web-techno-frontend .web-techno-icons-container::after {
+  top: 0;
 }
-#web-techno-main #web-techno-frontend .web-techno-icons-container::before{
-    bottom: 0;
+#web-techno-main #web-techno-frontend .web-techno-icons-container::before {
+  bottom: 0;
 }
 
-#web-techno-main span{
-    z-index: 2;
-    
+#web-techno-main span {
+  z-index: 2;
 }
-#web-techno-main .pos-0, #web-techno-main .pos-1,
+#web-techno-main .pos-0,
+#web-techno-main .pos-1,
 #web-techno-main .pos-2 {
-    position: absolute;
-
+  position: absolute;
 }
-#web-techno-main .pos-0, #web-techno-main .pos-1{
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+#web-techno-main .pos-0,
+#web-techno-main .pos-1 {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
-#web-techno-main .pos-0{
-    bottom: 0;
+#web-techno-main .pos-0 {
+  bottom: 0;
 }
-#web-techno-main .pos-1{
-    top: 0;
+#web-techno-main .pos-1 {
+  top: 0;
 }
-#web-techno-main .pos-2{
-    top: 50%;
-    transform: translate(0, -50%);
-
+#web-techno-main .pos-2 {
+  top: 50%;
+  transform: translate(0, -50%);
 }
-#web-techno-main #web-techno-backend .pos-2{
-    left: 0;
+#web-techno-main #web-techno-backend .pos-2 {
+  left: 0;
 }
-#web-techno-main #web-techno-frontend .pos-2{
-    right: 0;
+#web-techno-main #web-techno-frontend .pos-2 {
+  right: 0;
 }
 #web-techno-main span::before,
-#web-techno-backend span.vert,#web-techno-backend span.horiz,
-#web-techno-frontend span{
-    position: absolute;
-    background: var(--black);
+#web-techno-backend span.vert,
+#web-techno-backend span.horiz,
+#web-techno-frontend span {
+  position: absolute;
+  background: var(--black);
 }
 #web-techno-backend span.vert,
-#web-techno-frontend span.vert{
-    top: calc(2rem + 1.5rem + 10px);
-    height: calc(100% - 2*calc(2rem + 1.5rem + 10px));
-    width: 4px;
-    right: 50%;
-    left: 50%;
+#web-techno-frontend span.vert {
+  top: calc(2rem + 1.5rem + 10px);
+  height: calc(100% - 2 * calc(2rem + 1.5rem + 10px));
+  width: 4px;
+  right: 50%;
+  left: 50%;
 }
-#web-techno-backend span.horiz{
-    top: 50%;
-    bottom: 50%;
-    right: 50%;
-    height: 4px;
-    width: calc(50% - 140px);
+#web-techno-backend span.horiz {
+  top: 50%;
+  bottom: 50%;
+  right: 50%;
+  height: 4px;
+  width: calc(50% - 140px);
 }
-#web-techno-frontend span.horiz{
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    height: 4px;
-    width: calc(50% - 140px);
+#web-techno-frontend span.horiz {
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  height: 4px;
+  width: calc(50% - 140px);
 }
 #web-techno-backend span.vert::before,
-#web-techno-frontend span.vert::before{
-    content: "";
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    right: 50%;
-    width: 20px;height: 20px;
-    border-radius: 50%;
-    transform: translate(-50%,-50%);
+#web-techno-frontend span.vert::before {
+  content: '';
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
-#web-techno-frontend span.anim{
-    position: absolute;
-    z-index: 0;
-    width: 150%;
-    height: 4px;
-    top: 50%;
-    bottom: 50%;
-    left: -100%;
-    background: linear-gradient(to left, transparent 90%,  var(--black) 90%, var(--black));
-    background-size: 200%;
-    animation: backToFront 3s 0s infinite ease-in-out;
-}
-
-#web-techno-main{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-#web-techno-main #web-techno-backend, #web-techno-main #web-techno-frontend{
-    width: 40%;
+#web-techno-frontend span.anim {
+  position: absolute;
+  z-index: 0;
+  width: 150%;
+  height: 4px;
+  top: 50%;
+  bottom: 50%;
+  left: -100%;
+  background: linear-gradient(to left, transparent 90%, var(--black) 90%, var(--black));
+  background-size: 200%;
+  animation: backToFront 3s 0s infinite ease-in-out;
 }
 
+#web-techno-main {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#web-techno-main #web-techno-backend,
+#web-techno-main #web-techno-frontend {
+  width: 40%;
+}
 
 /* ANIMATION */
 
 @keyframes backToFront {
-    0%{
-        background-position: 220%;
-    }
-    50%{
-        background-position: 100%;
-    }
-    100%{
-        background-position: 220%;
-    }
+  0% {
+    background-position: 220%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 220%;
+  }
 }
