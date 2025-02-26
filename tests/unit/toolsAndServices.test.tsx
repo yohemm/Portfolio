@@ -13,26 +13,26 @@ describe('<ToolsAndServices>', ()=>{
         expect(toolsAndServices).toMatchInlineSnapshot(`
           <div>
             <div
-              id="used-skills"
+              id="container-subtitle-async tools-and-services-container"
             >
               <div
-                class="container-subtitle-async"
-                id="tools-skills"
+                class="technos-listing-container"
               >
                 <div
-                  class="skill-title-container"
+                  class="subtitle-container"
                 >
                   <h3
                     class="subtitle"
                   >
-                    Les outils que j'ai pu utilisé : 
+                     
+                    Les outils que j'ai pu utilisé :
                   </h3>
                 </div>
                 <div
-                  class="all-section-skill-container"
+                  class="technos-listing-title"
                 >
                   <div
-                    class="skill-container"
+                    class="technos-container "
                   >
                     <i
                       class="devicon-git-plain colored"
@@ -44,23 +44,23 @@ describe('<ToolsAndServices>', ()=>{
                 </div>
               </div>
               <div
-                class="container-subtitle-async"
-                id="service-skills"
+                class="technos-listing-container"
               >
                 <div
-                  class="skill-title-container"
+                  class="subtitle-container"
                 >
                   <h3
                     class="subtitle"
                   >
-                    Les services que j'ai pu utilisé : 
+                     
+                    Les services que j'ai pu utilisé :
                   </h3>
                 </div>
                 <div
-                  class="all-section-skill-container"
+                  class="technos-listing-title"
                 >
                   <div
-                    class="skill-container"
+                    class="technos-container "
                   >
                     <i
                       class="devicon-grafana-plain colored"
@@ -77,26 +77,26 @@ describe('<ToolsAndServices>', ()=>{
         expect(tools).toMatchInlineSnapshot(`
           <div>
             <div
-              id="used-skills"
+              id="container-subtitle-async tools-and-services-container"
             >
               <div
-                class="container-subtitle-async"
-                id="tools-skills"
+                class="technos-listing-container"
               >
                 <div
-                  class="skill-title-container"
+                  class="subtitle-container"
                 >
                   <h3
                     class="subtitle"
                   >
-                    Les outils que j'ai pu utilisé : 
+                     
+                    Les outils que j'ai pu utilisé :
                   </h3>
                 </div>
                 <div
-                  class="all-section-skill-container"
+                  class="technos-listing-title"
                 >
                   <div
-                    class="skill-container"
+                    class="technos-container "
                   >
                     <i
                       class="devicon-git-plain colored"
@@ -113,26 +113,26 @@ describe('<ToolsAndServices>', ()=>{
         expect(services).toMatchInlineSnapshot(`
           <div>
             <div
-              id="used-skills"
+              id="container-subtitle-async tools-and-services-container"
             >
               <div
-                class="container-subtitle-async"
-                id="service-skills"
+                class="technos-listing-container"
               >
                 <div
-                  class="skill-title-container"
+                  class="subtitle-container"
                 >
                   <h3
                     class="subtitle"
                   >
-                    Les services que j'ai pu utilisé : 
+                     
+                    Les services que j'ai pu utilisé :
                   </h3>
                 </div>
                 <div
-                  class="all-section-skill-container"
+                  class="technos-listing-title"
                 >
                   <div
-                    class="skill-container"
+                    class="technos-container "
                   >
                     <i
                       class="devicon-grafana-plain colored"

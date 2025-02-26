@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { getIcon } from '~/data';
+
+import { TechnosListing } from './TechnosListing';
 
 
 export interface ToolsAndServices {
@@ -13,41 +14,13 @@ export const getToolsAndServices = (tools: string[], services: string[]): ToolsA
 }
 export const ToolsAndServices = (props:ToolsAndServices) => {
     return (
-        <div id="used-skills">
-            {props.tools.length == 0?"":(<div id="tools-skills" className="container-subtitle-async">
-                <div className="skill-title-container">
-                    <h3 className="subtitle">Les outils que j&apos;ai pu utilisé : </h3>
-                </div>
-                <div className="all-section-skill-container">
-                    { 
-                        props.tools.map( (name)=>{
-                            return (
-                                <div className="skill-container" key={name}>
-                                    <i className={getIcon(name)}></i>
-                                    <p>{ name }</p>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </div>)}
-            {props.services.length==0?"":(<div id="service-skills" className="container-subtitle-async">
-                <div className="skill-title-container">
-                    <h3 className="subtitle">Les services que j&apos;ai pu utilisé : </h3>
-                </div>
-                <div className="all-section-skill-container">
-                    { 
-                        props.services.map( (name)=>{
-                            return (
-                                <div className="skill-container" key={name}>
-                                    <i className={getIcon(name)}></i>
-                                    <p>{ name }</p>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </div>)}
+        <div id="container-subtitle-async tools-and-services-container">
+            {props.tools.length == 0?"":(
+                <TechnosListing technos={props.tools} title='Les outils que j&apos;ai pu utilisé :'/>
+            )}
+            {props.services.length==0?"":(
+                <TechnosListing technos={props.services} title='Les services que j&apos;ai pu utilisé :'/>
+            )}
         </div>
     );
 }

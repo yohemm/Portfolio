@@ -184,26 +184,6 @@ section:nth-last-of-type(1){
     margin-bottom: 80px;
 }
 
-h3.subtitle{
-    position: relative;
-    width: auto;
-}
-h3.subtitle::before{
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    right: 15px;left: 15px;
-    width: calc(100% - 30px);
-    height: 4px;
-    background-image: linear-gradient(to bottom, transparent 50%,  var(--black) 50%, var(--black));
-    background-size: 100% 200%;
-    animation-name: moveToUp;
-    animation-duration : 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-}
-
-
 #about-me h2{
     margin-left: 0 ;
 }
@@ -258,24 +238,6 @@ footer address a:hover {
 
 
 
-
-@keyframes h3Spacer{
-    from{
-        background-position-x: 100%;
-    }
-    25%{
-        background-position-x: 85%;
-    }
-    50%{
-        background-position-x: 90%;
-    }
-    75%{
-        background-position-x: 70%;
-    }
-    to{
-        background-position-x: 80%;
-    }
-}
 @media screen and (max-width: 740px) {
     fieldset{
         display: block;

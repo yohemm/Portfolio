@@ -2,6 +2,9 @@
 
 import React from 'react';
 import { getIcon } from '~/data';
+import { TechnoIcon } from './TechnoIcon';
+
+import "~/style/WebTechno.css"
 
 export interface WebTechno {
     front: string[];
@@ -17,10 +20,7 @@ interface Techno {
 const Techno = (props: Techno) => {
     return (
         <>
-            <div className={"skill-container pos-"+ props.position }>
-                <i className={getIcon(props.name)}></i>
-                <p>{props.name}</p>
-            </div>
+            <TechnoIcon name={props.name} className={"pos-"+ props.position} />
             { props.position == 1 ? <span className="vert"></span> : props.position == 2 ? <span className="horiz"></span> : "" }
         </>
     )
@@ -35,10 +35,10 @@ export const WebTechno = (props:WebTechno) => {
     );
     
     return (
-        <div id="main-skills" className="container-skills">
-            <div id="back-skills">
+        <div id="web-techno-main" className="web-techno-main">
+            <div id="web-techno-backend">
                 <h3>Back-end</h3>
-                <div className="all-section-skill-container">
+                <div className="web-techno-icons-container">
                     {
                         props.back.map(function(name, index){
                             return (<Techno key={name+" "+index} name={name} position={index}/>);
@@ -47,9 +47,9 @@ export const WebTechno = (props:WebTechno) => {
                 </div>
             </div>
             <span></span>
-            <div id="front-skills">
+            <div id="web-techno-frontend">
                 <h3>Front-end</h3>
-                <div className="all-section-skill-container">
+                <div className="web-techno-icons-container">
                     <span className="anim"></span>
                     {
                         props.front.map(function(name, index){

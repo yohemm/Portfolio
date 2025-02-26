@@ -37,20 +37,20 @@ describe('<WebTechno>', ()=>{
         expect(container).toMatchInlineSnapshot(`
           <div>
             <div
-              class="container-skills"
-              id="main-skills"
+              class="web-techno-main"
+              id="web-techno-main"
             >
               <div
-                id="back-skills"
+                id="web-techno-backend"
               >
                 <h3>
                   Back-end
                 </h3>
                 <div
-                  class="all-section-skill-container"
+                  class="web-techno-icons-container"
                 >
                   <div
-                    class="skill-container pos-0"
+                    class="technos-container pos-0"
                   >
                     <i
                       class=""
@@ -60,7 +60,7 @@ describe('<WebTechno>', ()=>{
                     </p>
                   </div>
                   <div
-                    class="skill-container pos-1"
+                    class="technos-container pos-1"
                   >
                     <i
                       class="devicon-express-original colored"
@@ -73,7 +73,7 @@ describe('<WebTechno>', ()=>{
                     class="vert"
                   />
                   <div
-                    class="skill-container pos-2"
+                    class="technos-container pos-2"
                   >
                     <i
                       class="devicon-postgresql-plain colored"
@@ -89,19 +89,19 @@ describe('<WebTechno>', ()=>{
               </div>
               <span />
               <div
-                id="front-skills"
+                id="web-techno-frontend"
               >
                 <h3>
                   Front-end
                 </h3>
                 <div
-                  class="all-section-skill-container"
+                  class="web-techno-icons-container"
                 >
                   <span
                     class="anim"
                   />
                   <div
-                    class="skill-container pos-0"
+                    class="technos-container pos-0"
                   >
                     <i
                       class="devicon-css3-plain colored"
@@ -111,7 +111,7 @@ describe('<WebTechno>', ()=>{
                     </p>
                   </div>
                   <div
-                    class="skill-container pos-1"
+                    class="technos-container pos-1"
                   >
                     <i
                       class="devicon-javascript-plain colored"

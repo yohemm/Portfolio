@@ -9,7 +9,6 @@
     margin: 20vh 0;
     border: 1px solid;
     border-radius: 5px;
-    max-height: 20vh;
     min-height: 450px;
     display: flex;
     flex-direction: column;

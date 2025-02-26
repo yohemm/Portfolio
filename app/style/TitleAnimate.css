@@ -1,0 +1,63 @@
+.subtitle-container {
+    display: flex;
+}
+
+.container-subtitle-async:nth-child(2n) h3.subtitle::before{
+    animation-delay: 1.5s;
+}
+
+h3.subtitle{
+    position: relative;
+    width: auto;
+}
+h3.subtitle::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 15px;left: 15px;
+    width: calc(100% - 30px);
+    height: 4px;
+    background-image: linear-gradient(to bottom, transparent 50%,  var(--black) 50%, var(--black));
+    background-size: 100% 200%;
+    animation-name: moveToUp;
+    animation-duration : 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+
+
+/* @keyframes h3Spacer{
+    from{
+        background-position-x: 100%;
+    }
+    25%{
+        background-position-x: 85%;
+    }
+    50%{
+        background-position-x: 90%;
+    }
+    75%{
+        background-position-x: 70%;
+    }
+    to{
+        background-position-x: 80%;
+    }
+} */
+@keyframes moveToUp {
+    0%{
+        background-position-y: 0%;
+    }
+    10%{
+        background-position-y: 0%;
+    }
+    45%{
+        background-position-y: 100%;
+    }
+    65%{
+        background-position-y: 100%;
+    }
+    100%{
+        background-position-y: 200%;
+    }
+}

@@ -23,7 +23,7 @@ export const NavBar = () => {
     }
 
     useEffect(() => {
-        if (y != null && y > 120){
+        if (y != null && y > 105){
             setNameHide("");
             setNavSticked('nav-sticked');
             setGithubHide('hide');
