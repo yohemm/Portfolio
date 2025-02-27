@@ -1,4 +1,3 @@
-import type { Route } from './+types/home';
 import React from 'react';
 
 import '~/style/home.css';
@@ -9,8 +8,8 @@ export function meta() {
     {
       name: 'description',
       content:
-        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.',
-    },
+        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'
+    }
   ];
 }
 

@@ -22,7 +22,7 @@ export default {
   ssr: false,
   async prerender() {
     return ['/', '/skills', '/projects', '/formations'];
-  },
+  }
 } satisfies Config;
 ```
 
@@ -65,7 +65,7 @@ Les layouts et route peuvent détenir des préfix qui permettent de groupé des 
 ```js
 layout('dashbord', [
   ...prefix('exemple1', [route('a', 'routes/a'), route('b', 'routes/b')]),
-  ...prefix('exemple2', [route('c', 'routes/c'), route('d', 'routes/d')]),
+  ...prefix('exemple2', [route('c', 'routes/c'), route('d', 'routes/d')])
 ]);
 ```
 

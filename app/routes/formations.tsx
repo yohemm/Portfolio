@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Route } from './+types/formations';
 import { SchoolCuriculum } from '~/components/SchoolCurriculum';
 
 import '~/style/formation.css';
@@ -11,8 +10,8 @@ export function meta() {
     {
       name: 'description',
       content:
-        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.',
-    },
+        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'
+    }
   ];
 }
 
@@ -31,7 +30,7 @@ export default function Formations() {
                 j’ai obtenu 20/20 aux deux épreuves du baccalauréat, aussi bien en TP pratique qu’en
                 TP théorique sur papier dans cette derniére spécialité.
               </p>
-            ),
+            )
           },
           {
             diploma: 'BUT',
@@ -43,8 +42,8 @@ export default function Formations() {
                 capable de mettre en place des serveurs professionnels et des infrastructures
                 réseau, dans le but de diversifier mes compétences dans l’IT.
               </p>
-            ),
-          },
+            )
+          }
         ]}
       />
       <section>

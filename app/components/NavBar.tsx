@@ -5,9 +5,9 @@ import React, { useEffect, useState } from 'react';
 import { useWindowScroll } from '@uidotdev/usehooks';
 
 export const NavBar = () => {
-  const navigate = useNavigate();
+  useNavigate();
 
-  const [{ x, y }, scrollTo] = useWindowScroll();
+  const y = useWindowScroll()[0].y;
 
   const [nameHide, setNameHide] = useState('hide');
   const [navSticked, setNavSticked] = useState('');
@@ -60,7 +60,7 @@ export const NavBar = () => {
           <NavLink
             to="/skills"
             style={({ isActive }) => ({
-              textDecoration: isActive ? 'underline' : 'none',
+              textDecoration: isActive ? 'underline' : 'none'
             })}
           >
             Compétences
@@ -70,7 +70,7 @@ export const NavBar = () => {
           <NavLink
             to="/projects"
             style={({ isActive }) => ({
-              textDecoration: isActive ? 'underline' : 'none',
+              textDecoration: isActive ? 'underline' : 'none'
             })}
           >
             Projets
@@ -80,7 +80,7 @@ export const NavBar = () => {
           <NavLink
             to="/formations"
             style={({ isActive }) => ({
-              textDecoration: isActive ? 'underline' : 'none',
+              textDecoration: isActive ? 'underline' : 'none'
             })}
           >
             Formations

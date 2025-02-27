@@ -10,9 +10,9 @@ export default {
       '@semantic-release/git',
       {
         // "assets": ["app", "public","docs", "package.json", "*.ts", "*.md", "tsconfig.json", "Dockerfile", "docker-compose.yml", ".dockerignore",, "release.config.mjs"], // selection des fichiers (apres l'execution du gitgnore)
-        message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
-      },
+        message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
+      }
     ],
-    '@semantic-release/github', // automatic pull request
-  ],
+    '@semantic-release/github' // automatic pull request
+  ]
 };

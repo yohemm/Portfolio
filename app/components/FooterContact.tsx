@@ -10,7 +10,7 @@ interface FooterContact {
 const externalPatern: RegExp = /http/;
 
 export const FooterContact = (props: FooterContact) => {
-  const navigate = useNavigate();
+  useNavigate();
   return (
     <footer id="my-contact">
       <address>

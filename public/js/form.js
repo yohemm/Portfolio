@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const inputs = document.querySelectorAll('input, textarea');
 const formGroups = document.querySelectorAll('.form-group');
 const progressbar = document.querySelector('progress');

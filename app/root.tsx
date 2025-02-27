@@ -7,7 +7,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useNavigate,
+  useNavigate
 } from 'react-router';
 import type { Route } from './+types/root';
 
@@ -27,8 +27,8 @@ export const links: Route.LinksFunction = () => [
   {
     rel: 'stylesheet',
     href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css',
-    crossOrigin: 'anonymous',
-  },
+    crossOrigin: 'anonymous'
+  }
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -50,7 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const navigate = useNavigate();
+  useNavigate();
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -95,7 +95,7 @@ export default function App() {
                 'About me': '/',
                 Linkedin: 'https://www.linkedin.com/in/yohem-vaxelaire/',
                 GitHub: 'https://github.com/yohemm',
-                Contact: '/#my-contact',
+                Contact: '/#my-contact'
               }}
             />
           </main>

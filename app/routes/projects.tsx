@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Route } from './+types/projects';
 import { ProjectShowcases } from '~/components/ProjectShowcase';
 
 import '~/style/projects.css';
@@ -10,8 +9,8 @@ export function meta() {
     {
       name: 'description',
       content:
-        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.',
-    },
+        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'
+    }
   ];
 }
 

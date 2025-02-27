@@ -6,7 +6,6 @@ import { getProjectByName } from '~/data';
 import { type Project } from '~/elements/Project';
 
 import '~/style/singleProject.css';
-import type { Route } from './+types/singleProject';
 
 export function meta() {
   return [
@@ -14,8 +13,8 @@ export function meta() {
     {
       name: 'description',
       content:
-        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.',
-    },
+        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'
+    }
   ];
 }
 
@@ -47,7 +46,7 @@ export default function SingleProject() {
           project.webTechnos.back.length > 1 &&
           project.webTechnos.front.length > 1
           ? true
-          : false,
+          : false
       );
     }
     return () => {

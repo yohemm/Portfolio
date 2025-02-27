@@ -1,12 +1,12 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { WebTechno } from '~/components/WebTechno';
 
 describe('<WebTechno>', () => {
   it('should render error paragraph', () => {
     const fullEmpty = render(<WebTechno back={[]} front={[]} />).container;
     const frontEmpty = render(
-      <WebTechno back={['NodeJs', 'Express', 'PostGreSQL']} front={[]} />,
+      <WebTechno back={['NodeJs', 'Express', 'PostGreSQL']} front={[]} />
     ).container;
     const backEmpty = render(<WebTechno back={[]} front={['CSS', 'JavaScript']} />).container;
 
@@ -34,7 +34,7 @@ describe('<WebTechno>', () => {
   });
   it('should render correctly', () => {
     const { container } = render(
-      <WebTechno back={['NodeJs', 'Express', 'PostGreSQL']} front={['CSS', 'JavaScript']} />,
+      <WebTechno back={['NodeJs', 'Express', 'PostGreSQL']} front={['CSS', 'JavaScript']} />
     );
     // const mainDiv = screen.getByText('PostGreSQL');
     // expect(mainDiv).toBeInTheDocument();

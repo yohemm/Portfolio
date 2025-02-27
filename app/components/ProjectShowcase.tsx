@@ -13,10 +13,10 @@ interface ProjectShowcase {
 }
 
 export const ProjectShowcase = (props: ProjectShowcase) => {
-  const navigate = useNavigate();
+  useNavigate();
   const imageStyle: React.CSSProperties = {
     backgroundImage: `url(${props.image})`,
-    backgroundRepeat: 'no-repeat',
+    backgroundRepeat: 'no-repeat'
   };
   return (
     <div className="card">

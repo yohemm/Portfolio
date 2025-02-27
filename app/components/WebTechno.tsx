@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { getIcon } from '~/data';
 import { TechnoIcon } from './TechnoIcon';
 
 import '~/style/WebTechno.css';

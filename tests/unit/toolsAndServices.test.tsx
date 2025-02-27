@@ -7,7 +7,7 @@ import { ToolsAndServices } from '~/components/ToolsAndServices';
 describe('<ToolsAndServices>', () => {
   it('should render correctly', () => {
     const toolsAndServices = render(
-      <ToolsAndServices services={['Grafana']} tools={['Git']} />,
+      <ToolsAndServices services={['Grafana']} tools={['Git']} />
     ).container;
     const tools = render(<ToolsAndServices services={[]} tools={['Git']} />).container;
     const services = render(<ToolsAndServices services={['Grafana']} tools={[]} />).container;

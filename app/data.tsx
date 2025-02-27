@@ -24,11 +24,11 @@ export const PROJECTS: Project[] = [
         'PostgreSQL',
         'Mongo',
         'Mysql',
-        'DNS',
-      ],
+        'DNS'
+      ]
     },
     webTechnos: null,
-    presentationTechnos: ['Docker', 'Git', 'Nginx', 'Bash', 'Grafana', 'Prometheus'],
+    presentationTechnos: ['Docker', 'Git', 'Nginx', 'Bash', 'Grafana', 'Prometheus']
   },
   {
     name: 'web-community',
@@ -46,9 +46,9 @@ export const PROJECTS: Project[] = [
     toolsAndServices: null,
     webTechnos: {
       front: ['JavaScript', 'CSS'],
-      back: ['NodeJS', 'MySQL', 'Express'],
+      back: ['NodeJS', 'MySQL', 'Express']
     },
-    presentationTechnos: ['NodeJS', 'MySQL', 'Express'],
+    presentationTechnos: ['NodeJS', 'MySQL', 'Express']
   },
   {
     name: 'work-study',
@@ -70,8 +70,8 @@ export const PROJECTS: Project[] = [
       'IIS',
       'GLPSI',
       'Refonte réseau',
-      'Plan de sécurité',
-    ],
+      'Plan de sécurité'
+    ]
   },
   {
     name: 'gites-hautes-vosges',
@@ -89,9 +89,9 @@ export const PROJECTS: Project[] = [
     toolsAndServices: null,
     webTechnos: {
       front: ['JavaScript', 'CSS'],
-      back: ['PHP', 'PostGreSQL', 'Hébergement'],
+      back: ['PHP', 'PostGreSQL', 'Hébergement']
     },
-    presentationTechnos: ['PHP', 'PostGreSQL', 'Hébergement'],
+    presentationTechnos: ['PHP', 'PostGreSQL', 'Hébergement']
   },
   {
     name: 'minepiece',
@@ -102,10 +102,10 @@ export const PROJECTS: Project[] = [
     children: <>node</>,
     toolsAndServices: {
       tools: ['Java', 'Spigot', 'Hébergement'],
-      services: [],
+      services: []
     },
     webTechnos: null,
-    presentationTechnos: ['Java', 'Spigot', 'Serveurs Webs', 'Bases de Données'],
+    presentationTechnos: ['Java', 'Spigot', 'Serveurs Webs', 'Bases de Données']
   },
   {
     name: 'flash-card',
@@ -121,7 +121,7 @@ export const PROJECTS: Project[] = [
     children: <>node</>,
     toolsAndServices: null,
     webTechnos: { front: ['JavaScript', 'CSS'], back: ['Laravel', 'MySQL'] },
-    presentationTechnos: ['Laravel', 'MySQL', 'ORM & CRUD'],
+    presentationTechnos: ['Laravel', 'MySQL', 'ORM & CRUD']
   },
   {
     name: 'games',
@@ -137,8 +137,8 @@ export const PROJECTS: Project[] = [
     children: <>node</>,
     toolsAndServices: { tools: ['Java', 'Python', 'NumPy'], services: [] },
     webTechnos: null,
-    presentationTechnos: ['Java', 'JavaFX', 'Python', 'NumPy', 'Pygame'],
-  },
+    presentationTechnos: ['Java', 'JavaFX', 'Python', 'NumPy', 'Pygame']
+  }
 ];
 
 export function getProjectByName(name: string): Project | null {
@@ -179,6 +179,6 @@ export const ICONS: { [id: string]: string } = {
   'Windows Server': 'devicon-windows11-original colored',
   NumPy: 'devicon-numpy-plain colored',
   Apache: 'devicon-apache-plain colored',
-  Nginx: 'devicon-nginx-original colored',
+  Nginx: 'devicon-nginx-original colored'
 };
 export const getIcon = (name: string): string => (ICONS[name] ? ICONS[name] : '');

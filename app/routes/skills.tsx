@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Route } from './+types/skills';
 import { WebTechno } from '~/components/WebTechno';
 import { TechnosListing } from '~/components/TechnosListing';
 
@@ -9,8 +8,8 @@ export function meta() {
     {
       name: 'description',
       content:
-        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.',
-    },
+        'Portfolio de Yohem VAXELAIRE, programmeur Web Backend & System ayant pour objectif DevOps.'
+    }
   ];
 }
 
@@ -96,7 +95,7 @@ export default function Skills() {
             'Prometheus',
             'CertBot',
             'Postfix',
-            'Zone DNS',
+            'Zone DNS'
           ]}
         />
       </section>
