@@ -8,12 +8,6 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ['**/node_modules/**', 'build/**', '**/.react-router/**']
-  },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     plugins: {
       pluginJs,
@@ -21,11 +15,11 @@ export default [
       tseslint,
       globals
     },
-    settings: {
-      pluginReact: {
-        version: 'detect'
-      }
-    },
+    // settings: {
+    //   pluginReact: {
+    //     version: 'detect'
+    //   }
+    // },
     languageOptions: {
       ...pluginReact.configs.flat.recommended.languageOptions,
       parserOptions: {
@@ -35,6 +29,12 @@ export default [
       }
     }
   },
+  {
+    ignores: ['node_modules/**', 'build/**', '.react-router/**']
+  },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
   {
     name: 'eslint-config-for-config',
     rules: {
