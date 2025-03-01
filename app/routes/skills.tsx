@@ -1,6 +1,7 @@
 import React from 'react';
 import { WebTechno } from '~/components/WebTechno';
 import { TechnosListing } from '~/components/TechnosListing';
+import { TitleAnimate } from '~/components/TitleAnimate';
 
 export function meta() {
   return [
@@ -33,6 +34,7 @@ export default function Skills() {
       </section>
       <section>
         <div>
+          <TitleAnimate>Compétance et spécialisation Web</TitleAnimate>
           <p>
             J&apos;ai choisi de me spécialiser dans Node.js pour le développement backend, car
             j&apos;apprécie son paradigme asynchrone basé sur les callbacks et les promises. Bien
@@ -52,22 +54,21 @@ export default function Skills() {
             front={['React', 'TypeScript', 'CSS']}
           />
         </div>
-        <div>
-          <p>
-            Lors de ma licence professionnelle en informatique et de mon apprentissage au sein de la
-            polyclinique de Grande-Synthe en tant que technicien réseau, j&apos;ai pu développer mes
-            compétences sur les serveurs Windows, notamment Active Directory (AD), les GPO, les
-            applications RDS et les serveurs IIS. J&apos;ai également découvert les réseaux
-            d&apos;entreprise ainsi que les normes de sécurité informatique, en participant
-            notamment à la refonte architecturale du réseau.
-          </p>
-          <TechnosListing
-            title="Technologies aprisent lors de l'alternance"
-            technos={['Active Directory', 'PowerShell', 'GPO', 'RDS', 'IIS']}
-          />
-        </div>
       </section>
       <section>
+        <TitleAnimate>Technologies aprisent lors de l&apos;alternance</TitleAnimate>
+        <p>
+          Lors de ma licence professionnelle en informatique et de mon apprentissage au sein de la
+          polyclinique de Grande-Synthe en tant que technicien réseau, j&apos;ai pu développer mes
+          compétences sur les serveurs Windows, notamment Active Directory (AD), les GPO, les
+          applications RDS et les serveurs IIS. J&apos;ai également découvert les réseaux
+          d&apos;entreprise ainsi que les normes de sécurité informatique, en participant notamment
+          à la refonte architecturale du réseau.
+        </p>
+        <TechnosListing technos={['Active Directory', 'PowerShell', 'GPO', 'RDS', 'IIS']} />
+      </section>
+      <section>
+        <TitleAnimate>Mise en Place de Serveur</TitleAnimate>
         <p>
           Lorsque je réalisais mes premiers projets personnels, je me suis heurté à un problème de
           mise en production, car je ne disposais pas de serveur. Pour y remédier, j&apos;ai loué un
@@ -86,7 +87,6 @@ export default function Skills() {
           conteneur.
         </p>
         <TechnosListing
-          title="Mise en Place de Serveur"
           technos={[
             'Nginx',
             'Docker',

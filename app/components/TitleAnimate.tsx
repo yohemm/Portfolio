@@ -2,11 +2,11 @@ import React from 'react';
 
 import '~/style/TitleAnimate.css';
 
-interface TitleAnimate {
+type TitleAnimateProps = {
   children: React.ReactNode;
-}
+};
 
-export const TitleAnimate = (props: TitleAnimate) => {
+export const TitleAnimate = (props: TitleAnimateProps) => {
   return (
     <div className="subtitle-container">
       <h3 className="subtitle"> {props.children}</h3>

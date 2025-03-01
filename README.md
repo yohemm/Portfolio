@@ -30,6 +30,7 @@
   - [x] Faire un schema de la CI-CD du site
   - [ ] Ajouté WebTechno
 - [ ] Refractor toutes les props en type et non interface
+- [ ] Fix les titles animate aleternate
 
 ### Redaction
 

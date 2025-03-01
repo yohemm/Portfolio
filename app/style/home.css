@@ -1,5 +1,6 @@
 .ci-cd-container > img {
   align-self: center;
+  width: 80%;
 }
 .ci-cd-container {
   width: 100%;

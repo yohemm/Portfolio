@@ -2,13 +2,13 @@
 
 import type React from 'react';
 
-export interface Formation {
+export type FormationProps = {
   name: string;
   date: string;
   children: React.ReactNode;
-}
+};
 
-export const Formation = (props: Formation) => {
+export const Formation = (props: FormationProps) => {
   return (
     <div className="formation">
       <svg

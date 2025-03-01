@@ -1,6 +1,5 @@
-.technos-listing-title {
+.technos-listing-item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-top: 5vh;
 }

@@ -4,21 +4,9 @@ import React from 'react';
 import { TechnoIcon } from './TechnoIcon';
 
 import '~/style/WebTechno.css';
+import type { TechnoProps, WebTechnoProps } from '~/elements/Project';
 
-export interface WebTechno {
-  front: string[];
-  back: string[];
-}
-
-export const getWebTechno = (front: string[], back: string[]): WebTechno => {
-  return { front: front, back: back };
-};
-
-interface Techno {
-  name: string;
-  position: number;
-}
-const Techno = (props: Techno) => {
+const Techno = (props: TechnoProps) => {
   return (
     <>
       <TechnoIcon name={props.name} className={'pos-' + props.position} />
@@ -33,7 +21,7 @@ const Techno = (props: Techno) => {
   );
 };
 
-export const WebTechno = (props: WebTechno) => {
+export const WebTechno = (props: WebTechnoProps) => {
   if (props.front.length === 0) return <p>Error front nb agrs</p>;
   if (props.back.length === 0) return <p>Error back nb agrs</p>;
 

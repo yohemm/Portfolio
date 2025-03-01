@@ -1,24 +1,18 @@
 import React from 'react';
-
-import { TitleAnimate } from './TitleAnimate';
 import { TechnoIcon } from './TechnoIcon';
 
 import '~/style/TechnosListing.css';
 
-interface TechnosListing {
-  title: string;
+type TechnosListingProps = {
   technos: string[];
-}
+};
 
-export const TechnosListing = (props: TechnosListing) => {
+export const TechnosListing = (props: TechnosListingProps) => {
   return (
-    <div className="technos-listing-container">
-      <TitleAnimate>{props.title}</TitleAnimate>
-      <div className="technos-listing-title">
-        {props.technos.map((name) => {
-          return <TechnoIcon name={name} key={name} />;
-        })}
-      </div>
+    <div className="technos-listing-item">
+      {props.technos.map((name) => {
+        return <TechnoIcon name={name} key={name} className="animate" />;
+      })}
     </div>
   );
 };

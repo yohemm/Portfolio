@@ -2,7 +2,17 @@
 
 import React, { useEffect, useState } from 'react';
 
-export const SchoolCuriculum = (props: SchoolCuriculum) => {
+type SchoolCuriculumProps = {
+  schoolSteps: SchoolStepProps[];
+};
+
+export type SchoolStepProps = {
+  name: string;
+  establishment: string;
+  diploma: string;
+  children: React.ReactNode;
+};
+export const SchoolCuriculum = (props: SchoolCuriculumProps) => {
   return (
     <section id="schoolcuriculum">
       {props.schoolSteps.map((value) => {
@@ -22,11 +32,7 @@ export const SchoolCuriculum = (props: SchoolCuriculum) => {
   );
 };
 
-interface SchoolCuriculum {
-  schoolSteps: SchoolStep[];
-}
-
-export const SchoolStep = (props: SchoolStep) => {
+export const SchoolStep = (props: SchoolStepProps) => {
   const [className, setClassName] = useState('');
   const [delay, setDelay] = useState(0);
 
@@ -76,10 +82,3 @@ export const SchoolStep = (props: SchoolStep) => {
     </div>
   );
 };
-
-export interface SchoolStep {
-  name: string;
-  establishment: string;
-  diploma: string;
-  children: React.ReactNode;
-}

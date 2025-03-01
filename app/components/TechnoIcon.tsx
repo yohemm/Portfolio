@@ -4,12 +4,12 @@ import { getIcon } from '~/data';
 
 import '~/style/TechnoIcon.css';
 
-interface TechnoIcon {
+type TechnoIconProps = {
   name: string;
   className?: string;
-}
+};
 
-export const TechnoIcon = (props: TechnoIcon) => {
+export const TechnoIcon = (props: TechnoIconProps) => {
   return (
     <div className={'technos-container ' + (props.className || '')}>
       <i className={getIcon(props.name)}></i>

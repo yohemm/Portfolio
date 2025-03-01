@@ -4,15 +4,15 @@ import { PROJECTS } from '~/data';
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router';
 
-interface ProjectShowcase {
+type ProjectShowcaseProps = {
   name: string;
   displayName: string;
   image: string;
   presentation: React.ReactNode;
   presentationTechnos: string[];
-}
+};
 
-export const ProjectShowcase = (props: ProjectShowcase) => {
+export const ProjectShowcase = (props: ProjectShowcaseProps) => {
   useNavigate();
   const imageStyle: React.CSSProperties = {
     backgroundImage: `url(${props.image})`,
@@ -39,7 +39,7 @@ export const ProjectShowcase = (props: ProjectShowcase) => {
               </span>
             ) : (
               <span key={techno}>
-                <span>{techno}</span>,{' '}
+                <span>{techno}</span>{', '}
               </span>
             );
           })}

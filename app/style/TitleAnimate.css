@@ -2,18 +2,20 @@
   display: flex;
 }
 
-.container-subtitle-async:nth-child(2n) h3.subtitle::before {
+.container-subtitle-async:nth-child(odd) h3.subtitle::before {
   animation-delay: 1.5s;
 }
 
 h3.subtitle {
   position: relative;
   width: auto;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
 }
 h3.subtitle::before {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: 4px;
   right: 15px;
   left: 15px;
   width: calc(100% - 30px);
@@ -21,9 +23,9 @@ h3.subtitle::before {
   background-image: linear-gradient(to bottom, transparent 50%, var(--black) 50%, var(--black));
   background-size: 100% 200%;
   animation-name: moveToUp;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
 }
 
 /* @keyframes h3Spacer{

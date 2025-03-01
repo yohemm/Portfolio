@@ -3,13 +3,13 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router';
 
-interface FooterContact {
+type FooterContactProps = {
   linkAndName: { [id: string]: string };
-}
+};
 
 const externalPatern: RegExp = /http/;
 
-export const FooterContact = (props: FooterContact) => {
+export const FooterContact = (props: FooterContactProps) => {
   useNavigate();
   return (
     <footer id="my-contact">

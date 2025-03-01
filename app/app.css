@@ -87,7 +87,9 @@ nav ul li {
   text-align: center;
 }
 nav ul li a {
-  line-height: 2.1;
+  line-height: 2;
+  display: inline-flex;
+  align-items: center;
 }
 nav ul li.name.hide {
   transform: translate(0, -2.1rem);
@@ -100,11 +102,17 @@ nav ul li.name {
   width: fit-content;
   transition: transform 0.2s ease-in;
 }
+nav li.photo-profile {
+  display: inline-grid;
+  display: -ms-inline-grid;
+  align-content: center;
+}
 nav li.photo-profile > a {
   height: 100%;
 }
 nav li.photo-profile img {
   width: 1.5rem;
+  height: 1.5rem;
   /* transform: translateY(calc(calc(72px - 2rem)/2)); */
   transition: border-radius 0.2s ease-in;
 }
@@ -123,7 +131,10 @@ nav li.github {
 }
 
 nav i {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
 }
 nav li.github.hide {
   transform: translate(87%, 0rem);
@@ -149,7 +160,7 @@ header nav ul li.skills-projects {
   margin: 0 5%;
   margin-top: max(20vh, 9rem);
   width: 60%;
-  min-height: 80vh;
+  min-height: calc(65vh - 152px);
   margin-bottom: 1rem;
 }
 #header h2 {
@@ -179,7 +190,7 @@ header nav ul li.skills-projects {
 
 section {
   min-height: 60vh;
-  margin-bottom: max(40vh, 200px);
+  margin-bottom: max(25vh, 200px);
 }
 section:nth-last-of-type(1) {
   margin-bottom: 80px;
