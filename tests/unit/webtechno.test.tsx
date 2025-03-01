@@ -1,56 +1,60 @@
 import React from 'react';
-import { render, screen } from "@testing-library/react";
-import { WebTechno } from "~/components/WebTechno"
+import { render } from '@testing-library/react';
+import { WebTechno } from '~/components/WebTechno';
 
-describe('<WebTechno>', ()=>{
-    it('should render error paragraph', ()=> {
-        const fullEmpty = render(<WebTechno back={[]} front={[]}/>).container;
-        const frontEmpty = render(<WebTechno back={["NodeJs", "Express", "PostGreSQL"]} front={[]}/>).container;
-        const backEmpty = render(<WebTechno back={[]} front={[ "CSS", "JavaScript" ]}/>).container;
+describe('<WebTechno>', () => {
+  it('should render error paragraph', () => {
+    const fullEmpty = render(<WebTechno back={[]} front={[]} />).container;
+    const frontEmpty = render(
+      <WebTechno back={['NodeJs', 'Express', 'PostGreSQL']} front={[]} />
+    ).container;
+    const backEmpty = render(<WebTechno back={[]} front={['CSS', 'JavaScript']} />).container;
 
-        expect(fullEmpty).toMatchInlineSnapshot(`
+    expect(fullEmpty).toMatchInlineSnapshot(`
           <div>
             <p>
               Error front nb agrs
             </p>
           </div>
         `);
-        expect(frontEmpty).toMatchInlineSnapshot(`
+    expect(frontEmpty).toMatchInlineSnapshot(`
           <div>
             <p>
               Error front nb agrs
             </p>
           </div>
         `);
-        expect(backEmpty).toMatchInlineSnapshot(`
+    expect(backEmpty).toMatchInlineSnapshot(`
           <div>
             <p>
               Error back nb agrs
             </p>
           </div>
         `);
-    })
-    it('should render correctly', ()=> {
-        const {container} = render(<WebTechno back={["NodeJs", "Express", "PostGreSQL"]} front={[ "CSS", "JavaScript" ]}/>);
-        // const mainDiv = screen.getByText('PostGreSQL');
-        // expect(mainDiv).toBeInTheDocument();
-        expect(container).toMatchInlineSnapshot(`
+  });
+  it('should render correctly', () => {
+    const { container } = render(
+      <WebTechno back={['NodeJs', 'Express', 'PostGreSQL']} front={['CSS', 'JavaScript']} />
+    );
+    // const mainDiv = screen.getByText('PostGreSQL');
+    // expect(mainDiv).toBeInTheDocument();
+    expect(container).toMatchInlineSnapshot(`
           <div>
             <div
-              class="container-skills"
-              id="main-skills"
+              class="web-techno-main"
+              id="web-techno-main"
             >
               <div
-                id="back-skills"
+                id="web-techno-backend"
               >
                 <h3>
                   Back-end
                 </h3>
                 <div
-                  class="all-section-skill-container"
+                  class="web-techno-icons-container"
                 >
                   <div
-                    class="skill-container pos-0"
+                    class="technos-container pos-0"
                   >
                     <i
                       class=""
@@ -60,7 +64,7 @@ describe('<WebTechno>', ()=>{
                     </p>
                   </div>
                   <div
-                    class="skill-container pos-1"
+                    class="technos-container pos-1"
                   >
                     <i
                       class="devicon-express-original colored"
@@ -73,7 +77,7 @@ describe('<WebTechno>', ()=>{
                     class="vert"
                   />
                   <div
-                    class="skill-container pos-2"
+                    class="technos-container pos-2"
                   >
                     <i
                       class="devicon-postgresql-plain colored"
@@ -89,19 +93,19 @@ describe('<WebTechno>', ()=>{
               </div>
               <span />
               <div
-                id="front-skills"
+                id="web-techno-frontend"
               >
                 <h3>
                   Front-end
                 </h3>
                 <div
-                  class="all-section-skill-container"
+                  class="web-techno-icons-container"
                 >
                   <span
                     class="anim"
                   />
                   <div
-                    class="skill-container pos-0"
+                    class="technos-container pos-0"
                   >
                     <i
                       class="devicon-css3-plain colored"
@@ -111,7 +115,7 @@ describe('<WebTechno>', ()=>{
                     </p>
                   </div>
                   <div
-                    class="skill-container pos-1"
+                    class="technos-container pos-1"
                   >
                     <i
                       class="devicon-javascript-plain colored"
@@ -128,5 +132,5 @@ describe('<WebTechno>', ()=>{
             </div>
           </div>
         `);
-    })
-})
+  });
+});

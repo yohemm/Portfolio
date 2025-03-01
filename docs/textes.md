@@ -1,5 +1,7 @@
 # Home
+
 ## intro
+
 Développeur passionné par le domaine du web, notamment en backend, mais aussi par les systèmes, comme la mise en place de serveurs, j’aspire à devenir DevOps. Voulant maîtriser la mise en production continue, je me forme actuellement sur ce sujet.
 
 Autodidacte, j’aime apprendre et développer mes compétences en réalisant de nouveaux projets ou en relevant des défis.
@@ -7,12 +9,15 @@ Autodidacte, j’aime apprendre et développer mes compétences en réalisant de
 Je suis également capable de créer des applications avec des outils tels que JavaFX et des jeux vidéo en Python avec des bibliothèques comme Pickle, Pygame et Socket.
 
 L’univers des technologies IT me fascine, mais pour me professionnaliser, j’ai choisi de me concentrer sur une expérience en développement backend et en administration système.
+
 ## About Me
 
 J'ai commencé à créer des sites web durant mon collège et, depuis, je ne me suis jamais arrêté. J’ai pu développer mes compétences, notamment en UX/UI design, en référencement et en optimisation SEO. J’ai également appris les logiques et le fonctionnement du backend afin d’être capable de créer des applications complexes intégrant la gestion des utilisateurs, des pages d’administration, des middlewares et des API.
 
 Je me suis ensuite spécialisé durant mes études supérieures afin de mieux connaître les langages de bas niveau et les systèmes. J’ai ainsi appris à créer des scripts complexes en Bash, comme des explorateurs de fichiers, et à installer différents types de serveurs. Lors de cet apprentissage, j’ai également découvert les bases de la mise en place d’une infrastructure réseau professionnelle sécurisée.
+
 ## About Portfolio
+
 - React X React-Router
 - CI-CD Pipeline
 
@@ -51,8 +56,8 @@ Création de plusieur plugin minecraft dévelopé en JAVA 8.
 ### Presentation
 
 Mise en place de serveurs de production ainsi que développement en Java 8.
-## Alternance PGS
 
+## Alternance PGS
 
     Technos:
         - Servers Windows (AD, Domain, RDS, Remote APP)
@@ -81,7 +86,7 @@ Découvrir les serveur Windows (AD, IIS, DNS, GPO, Remote App, ...)
         - VPS Hostinger
         - Hostinger DNS AREA
 
-Configuration d'un VPS utilisé par plusieur personne pouvant se connecté par ssh. Plusieur site profesionnelles ainsi que des project personnelle sont hébergé dessus, comme par exemple se portfolio. Le serveur utilise nginx entant que reverse proxy et docker pour pour lancé de multiple application. 
+Configuration d'un VPS utilisé par plusieur personne pouvant se connecté par ssh. Plusieur site profesionnelles ainsi que des project personnelle sont hébergé dessus, comme par exemple se portfolio. Le serveur utilise nginx entant que reverse proxy et docker pour pour lancé de multiple application.
 
 ### Presentation
 
@@ -95,6 +100,7 @@ Serveur de multi-herbergements avec auto-certifation ssl, supervision et managem
       - ISO/image CloneZilla
       - mise en place de serveur sous débian
       - mise en place de GLPI avec IIS
+
 Alertance pour ma 2eme et 3eme année de licence professionnelle en temps que technicien réseau et systeme.
 J'ai pu approfondir mes connaissances en réseau.
 Découvrir le monde proffessionnelle de l'IT.
@@ -106,14 +112,16 @@ Découvrir les serveur Windows (AD, IIS, DNS, GPO, Remote App, ...)
 Alternance en tant que Technicien Système et Réseau au sein de la Polyclinique de Grande-Synthe.
 
 ## [JournalDuDev](https://github.com/yohemm/journal-du-dev)
+
     Technos:
       - NodeJS
       - CSS
       - JS
       - Express
       - mysql
+
 Projects personnelle ayant pour but de créer une communauté autour de la programmation dans le milieu francophone.
-Cette application n'est pas pas encore terminé bien qu'elle inclue deja un system de d'utilisateur avec des droits et images de profiles, l'ajout de commentaire et la creation de nouveau cours. 
+Cette application n'est pas pas encore terminé bien qu'elle inclue deja un system de d'utilisateur avec des droits et images de profiles, l'ajout de commentaire et la creation de nouveau cours.
 
 ### Presentation
 
@@ -129,7 +137,7 @@ Project Web Personnel incluant un un gestion des utilisateurs et leur profile, s
         - mysql
 
 Projects personnelle ayant pour but de créer une communauté autour de la programmation dans le milieu francophone.
-Cette application n'est pas pas encore terminé bien qu'elle inclue deja un system de d'utilisateur avec des droits et images de profiles, l'ajout de commentaire et la creation de nouveau cours. 
+Cette application n'est pas pas encore terminé bien qu'elle inclue deja un system de d'utilisateur avec des droits et images de profiles, l'ajout de commentaire et la creation de nouveau cours.
 
 ## [Flash card App](https://github.com/yohemm/FlashCards)
 
@@ -141,7 +149,7 @@ Cette application n'est pas pas encore terminé bien qu'elle inclue deja un syst
     - HTML
 
 Application de carte de memorisation créer pour un project lors de ma licence professionnelle.
-Avec un ORM et un CRUD. 
+Avec un ORM et un CRUD.
 
 ### Presentation
 
@@ -149,24 +157,24 @@ Application de révision basée sur un système de flashcards, incluant une gest
 
 ## Jeux Video
 
-  - [peacefull RPG](https://github.com/yohemm/peace-full-rpg)
-    Technos:
-      - Python (pygame)
-      - pickle
+- [peacefull RPG](https://github.com/yohemm/peace-full-rpg)
+  Technos:
+  - Python (pygame)
+  - pickle
     RPG en 2D avec systeme de quetes, un application à était créer en plus pour la creation de la carte.
-    Se  jeux à était créer en tant que project pour mon année de terminal au lycée.
-  - [GrabThePlayer](https://github.com/yohemm/grab-the-player)
-    Technos:
-      - Python
-      - Pygame
-      - Socket
-      - Pickle
+    Se jeux à était créer en tant que project pour mon année de terminal au lycée.
+- [GrabThePlayer](https://github.com/yohemm/grab-the-player)
+  Technos:
+  - Python
+  - Pygame
+  - Socket
+  - Pickle
     Jeux multi de combat joueur avec un client et un server qui dialogue en UDP.
-  - [An Other Game](https://github.com/yohemm/AnOtherGame)
-    Technos:
-      - UML diagram
-      - Java
-      - Java FX
+- [An Other Game](https://github.com/yohemm/AnOtherGame)
+  Technos:
+  - UML diagram
+  - Java
+  - Java FX
     Jeux dans le style rogue lite incluant de la géneration procédural.
 
 ### Presentation
@@ -176,6 +184,7 @@ Création de multiples jeux vidéo, intégrant de la génération procédurale a
 # Compétances
 
 Competances:
+
 - Git
 - github
 - CI-CD pipeline
@@ -195,7 +204,7 @@ Competances:
 J'ai debuté la programmation sur des projects personnelles,
 j'ai donc appris au fur et a mesure de mes projects la chain de mise en production.
 
-Actuellement, je suis capable de mettre un place un project qui inclue des pipelines CI-CD avec Github Actions permetant de gerer le versionning des releases, envoyer des images sur des repositories et deployer le project sur un serveur. 
+Actuellement, je suis capable de mettre un place un project qui inclue des pipelines CI-CD avec Github Actions permetant de gerer le versionning des releases, envoyer des images sur des repositories et deployer le project sur un serveur.
 
 Passionné par le developpement systeme et le back, j'ai appris a manager des serveurs multi-hosting avec automatisation des taches.
 
@@ -212,9 +221,11 @@ J'ai aussi pu mettre un réseau de supervision et monitoring sur mes docker-comp
 # Formations
 
 ## Scolaire
+
 Avec comme spécialitées maths et NSI (Numérique et sciences informatiques), ou j'ai eu 20/20 aux 2 épreuves du bac TP pratique et TP théorique sur papier sur cette derniere spécialité.
 
 Parcourt reseau et systeme informatique afin d'etre capable de mettre en place des serveurs profesionnelles et des réseaux pour diversifié mes compétances dans l'IT.
+
 ## Autodidact
 
 Dés mon colleges, avant même d'entamé se cursus dans l'IT, j'ai commencé a me former et apprendre la programmation, notament en creant de petit jeux video avec l'aide de moteur graphique ou bien en créant des sites web, puis de réel applications web.

@@ -1,63 +1,50 @@
 'use client';
 
 import React from 'react';
-import { getIcon } from '~/data';
+import { TechnoIcon } from './TechnoIcon';
 
-export interface WebTechno {
-    front: string[];
-    back: string[];
-}
+import '~/style/WebTechno.css';
+import type { TechnoProps, WebTechnoProps } from '~/elements/Project';
 
-export const getWebTechno = (front: string[], back: string[]):WebTechno => {return {front:front, back: back};}
+const Techno = (props: TechnoProps) => {
+  return (
+    <>
+      <TechnoIcon name={props.name} className={'pos-' + props.position} />
+      {props.position == 1 ? (
+        <span className="vert"></span>
+      ) : props.position == 2 ? (
+        <span className="horiz"></span>
+      ) : (
+        ''
+      )}
+    </>
+  );
+};
 
-interface Techno {
-    name: string;
-    position: number;
-}
-const Techno = (props: Techno) => {
-    return (
-        <>
-            <div className={"skill-container pos-"+ props.position }>
-                <i className={getIcon(props.name)}></i>
-                <p>{props.name}</p>
-            </div>
-            { props.position == 1 ? <span className="vert"></span> : props.position == 2 ? <span className="horiz"></span> : "" }
-        </>
-    )
-}
+export const WebTechno = (props: WebTechnoProps) => {
+  if (props.front.length === 0) return <p>Error front nb agrs</p>;
+  if (props.back.length === 0) return <p>Error back nb agrs</p>;
 
-export const WebTechno = (props:WebTechno) => {
-    if (props.front.length === 0) return (
-        <p>Error front nb agrs</p>
-    );
-    if (props.back.length === 0) return(
-        <p>Error back nb agrs</p>
-    );
-    
-    return (
-        <div id="main-skills" className="container-skills">
-            <div id="back-skills">
-                <h3>Back-end</h3>
-                <div className="all-section-skill-container">
-                    {
-                        props.back.map(function(name, index){
-                            return (<Techno key={name+" "+index} name={name} position={index}/>);
-                        })
-                    }
-                </div>
-            </div>
-            <span></span>
-            <div id="front-skills">
-                <h3>Front-end</h3>
-                <div className="all-section-skill-container">
-                    <span className="anim"></span>
-                    {
-                        props.front.map(function(name, index){
-                            return (<Techno key={name+" "+index} name={name} position={index}/>);
-                        })
-                    }
-                </div>
-            </div>
+  return (
+    <div id="web-techno-main" className="web-techno-main">
+      <div id="web-techno-backend">
+        <h3>Back-end</h3>
+        <div className="web-techno-icons-container">
+          {props.back.map(function (name, index) {
+            return <Techno key={name + ' ' + index} name={name} position={index} />;
+          })}
         </div>
-    );
-}
+      </div>
+      <span></span>
+      <div id="web-techno-frontend">
+        <h3>Front-end</h3>
+        <div className="web-techno-icons-container">
+          <span className="anim"></span>
+          {props.front.map(function (name, index) {
+            return <Techno key={name + ' ' + index} name={name} position={index} />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};

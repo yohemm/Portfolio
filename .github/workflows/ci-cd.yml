@@ -8,12 +8,12 @@ on:
 jobs:
   #### CI Check up and build artifact
   ci-and-build-artifact:
-    name: "Install, Lint, TypeCheck and Testing Application, then build."
+    name: 'Install, Lint, TypeCheck and Testing Application, then build.'
     runs-on: ubuntu-latest
     steps:
       # Recup les fichiers de travaille
       - uses: actions/checkout@v4
-      
+
       # utilise node
       - name: Use Node.js  22
         uses: actions/setup-node@v4
@@ -31,13 +31,13 @@ jobs:
 
       - name: Check Type
         run: npm run typecheck
-      
+
       - name: Jest Test for react
         run: npm run test:ci
 
       - name: Build App
         run: npm run build
-      
+
       - uses: actions/upload-artifact@v4
         with:
           name: build
@@ -49,10 +49,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: ci-and-build-artifact
     steps:
-      
       # Recup les fichiers de travaille
       - uses: actions/checkout@v4
-      
+
       # utilise node
       - name: Use Node.js  22
         uses: actions/setup-node@v4
@@ -68,7 +67,7 @@ jobs:
         # Multi platforms
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-    
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Build & Run container
@@ -102,13 +101,13 @@ jobs:
 
       - name: Clean install NPM
         run: npm ci
-        
+
       - name: Build
         run: npm run build
-        
+
       - name: Verify the integruty of signatures for installed dependencies
         run: npm audit signatures
-        
+
       - name: Execute semantic release
         run: npx semantic-release
         env:
@@ -145,13 +144,12 @@ jobs:
         with:
           path: build # change to your build folder
 
-
   #### setup github-packages registry image
   build-image-github:
     name: GitHub Build docker image
     runs-on: ubuntu-latest
     needs: test-docker-image
-    
+
     if: ${{ ((github.event_name == 'push' || github.event_name == 'pull_request') && github.ref_name == 'master' && success()) || github.event_name == 'workflow_dispatch' }}
 
     # changer de repertoire de travail
@@ -159,18 +157,18 @@ jobs:
     #   run:
     #     working-directory:
 
-    permissions: 
+    permissions:
       packages: write
       contents: read
-      
+
     steps:
       # Recup les fichiers de travaille
       - uses: actions/checkout@v4
-      
+
       # utilise node
       - name: Login in to registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
-      
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -182,14 +180,13 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/portfolio:${{ github.ref_name }}
 
-
   #### docker hub image registry pipeline
   build-image-dockerhub:
     name: Push Image on dockerHub
     needs: test-docker-image
 
     if: ${{ ((github.event_name == 'push' || github.event_name == 'pull_request') && github.ref_name == 'master' && success()) || github.event_name == 'workflow_dispatch' }}
-    permissions: 
+    permissions:
       contents: read
     runs-on: ubuntu-latest
     # needs: checkup
@@ -205,7 +202,7 @@ jobs:
         with:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -227,21 +224,17 @@ jobs:
           tags: ${{ vars.DOCKER_USERNAME }}/portfolio:latest
           # tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
 
-
-          
   #### VPS Pipeline
   deploy-server:
     name: Deployment on Server with SSH Connection
     runs-on: ubuntu-latest
     needs: build-image-dockerhub
     # needs: ci-and-build-artifact
-    
+
     if: ${{ ((github.event_name == 'push' || github.event_name == 'pull_request') && github.ref_name == 'master' && success()) || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-
 
       # - name: DEBUG
       #   shell: bash
@@ -262,7 +255,7 @@ jobs:
       #     key: ${{ secrets.SSH_PRIVATE_KEY }}
       #     source: "*,*/,!.DS_Store,!/node_modules/,!/.react-router/,!/build/"
       #     target: /VPS_v2/Projets/portfolio/
-      #     strip_components: 0 
+      #     strip_components: 0
       #     debug: true
       #           - name: Set up SSH key
       - name: Set up SSH key
@@ -273,7 +266,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 22 ${{ secrets.VPS_IP }} >> ~/.ssh/known_hosts
           sudo apt-get install sshpass
-
 
       - name: Deploy to server
         run: |
@@ -290,8 +282,6 @@ jobs:
 
         # # Pull the latest code from the repository
         # git pull origin master
-
-
 
       # - name: Deploy to VPS
       #   uses: appleboy/ssh-action@v1.2.0

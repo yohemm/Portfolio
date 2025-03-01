@@ -1,9 +1,10 @@
 .ci-cd-container > img {
-    align-self: center;
+  align-self: center;
+  width: 80%;
 }
 .ci-cd-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

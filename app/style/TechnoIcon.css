@@ -1,0 +1,22 @@
+.technos-container {
+  margin: 0 15px;
+  text-align: center;
+  min-width: 100px;
+}
+.technos-container.animate:hover i::before {
+  font-size: 2.5rem;
+  transition: font-size 0.1s ease-in-out;
+}
+.technos-container i::before {
+  transition: font-size 0.4s ease-in-out;
+}
+.technos-container i {
+  font-size: 1.5rem;
+}
+.technos-container i {
+  font-size: 2rem;
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  height: 2rem;
+}
