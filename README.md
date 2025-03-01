@@ -24,12 +24,13 @@
 - [x] elements/Projects.tsx
   - [x] ajout de l'attribut, "text-presentation" dans Projects
 - [ ] Ajout de la section contact sur l'accueil
-- [ ] Compétaeces
+- [ ] Compétences
 - [ ] Configurer Nav et Footer en temps que Layer
 - [ ] Home Page
   - [x] Faire un schema de la CI-CD du site
   - [ ] Ajouté WebTechno
 - [ ] Refractor toutes les props en type et non interface
+- [ ] Renomé les Props Avec comme format ComponentNameProps
 - [ ] Fix les titles animate aleternate
 
 ### Redaction
