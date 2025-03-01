@@ -16,28 +16,42 @@
 
 ### Dev
 
+- [ ] WebTechno:
+  - [ ] Apparition:
+    - [ ] Apparition backend puis front end
+    - [ ] la bar central s'active uniquement à la fin
+- [ ] Formations:
+  - remplacé la barre central par un element avec un background pour pourvoir changer ca background possition
+  - [ ] Apparition:
+    - [ ] barre central apparait du bas avec un mouvement du background
+    - [ ] les formations apparaisse sur leur coté repectif via un transform translate
 - [x] ProjectShowing
   - [x] Redisign
   - [x] liens
+  - [ ] Apparition:
 - [x] components/Projects.tsx
   - [x] Laisons entre project showing et projects liste (en rajoutant la connection au image)
-- [x] elements/Projects.tsx
-  - [x] ajout de l'attribut, "text-presentation" dans Projects
-- [ ] Ajout de la section contact sur l'accueil
+  - [ ] Apparition:
 - [x] Compétences
-- [ ] Configurer Nav et Footer en temps que Layer
-- [ ] Home Page
+  - [ ] Apparition:
+- [ ] Home Page:
+
   - [x] Faire un schema de la CI-CD du site
   - [x] Ajouté WebTechno
+  - [ ] Ajout de la section contact sur l'accueil
+  - [ ] Apparition:
+
 - [x] Refractor toutes les props en type et non interface
-- [x] Renomé les Props Avec comme format ComponentNameProps
-- [ ] refaire & stylisé les cards project
+- [x] Renomer les Props Avec comme format ComponentNameProps
+- [ ] refaire & styliser les cards project
 - [ ] Fix les titles animate aleternate
 - [ ] Responsive
-  - [ ] enlevé les subtitles animé
+  - [ ] enlever les subtitles animé
   - [ ] Revision du MenuNav
 - [ ] Reduire les textes
-- [ ] faire des effets d'apparition pour les élements
+- [ ] Configurer Nav et Footer en temps que Layer
+- [ ] faire des effets d'apparition pour les élements:
+  - [ ] Configurer des Class css pour les diffents styles d'apparitions
 
 ### Redaction
 
