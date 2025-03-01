@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "description": "Yohem VAXELAIRE's Portfolio",
+  "author": "yohem",
   "private": true,
   "type": "module",
   "scripts": {
