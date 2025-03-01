@@ -39,7 +39,8 @@ export const ProjectShowcase = (props: ProjectShowcaseProps) => {
               </span>
             ) : (
               <span key={techno}>
-                <span>{techno}</span>{', '}
+                <span>{techno}</span>
+                {', '}
               </span>
             );
           })}

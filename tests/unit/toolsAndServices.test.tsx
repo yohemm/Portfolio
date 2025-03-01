@@ -15,7 +15,7 @@ describe('<ToolsAndServices>', () => {
     expect(toolsAndServices).toMatchInlineSnapshot(`
       <div>
         <div
-          id="container-subtitle-async tools-and-services-container"
+          class="container-subtitle-async tools-and-services-container"
         >
           <div
             class="technos-listing-container"
@@ -31,10 +31,10 @@ describe('<ToolsAndServices>', () => {
               </h3>
             </div>
             <div
-              class="technos-listing-title"
+              class="technos-listing-item"
             >
               <div
-                class="technos-container "
+                class="technos-container animate"
               >
                 <i
                   class="devicon-git-plain colored"
@@ -59,10 +59,10 @@ describe('<ToolsAndServices>', () => {
               </h3>
             </div>
             <div
-              class="technos-listing-title"
+              class="technos-listing-item"
             >
               <div
-                class="technos-container "
+                class="technos-container animate"
               >
                 <i
                   class="devicon-grafana-plain colored"
@@ -79,7 +79,7 @@ describe('<ToolsAndServices>', () => {
     expect(tools).toMatchInlineSnapshot(`
       <div>
         <div
-          id="container-subtitle-async tools-and-services-container"
+          class="container-subtitle-async tools-and-services-container"
         >
           <div
             class="technos-listing-container"
@@ -95,10 +95,10 @@ describe('<ToolsAndServices>', () => {
               </h3>
             </div>
             <div
-              class="technos-listing-title"
+              class="technos-listing-item"
             >
               <div
-                class="technos-container "
+                class="technos-container animate"
               >
                 <i
                   class="devicon-git-plain colored"
@@ -115,7 +115,7 @@ describe('<ToolsAndServices>', () => {
     expect(services).toMatchInlineSnapshot(`
       <div>
         <div
-          id="container-subtitle-async tools-and-services-container"
+          class="container-subtitle-async tools-and-services-container"
         >
           <div
             class="technos-listing-container"
@@ -131,10 +131,10 @@ describe('<ToolsAndServices>', () => {
               </h3>
             </div>
             <div
-              class="technos-listing-title"
+              class="technos-listing-item"
             >
               <div
-                class="technos-container "
+                class="technos-container animate"
               >
                 <i
                   class="devicon-grafana-plain colored"
