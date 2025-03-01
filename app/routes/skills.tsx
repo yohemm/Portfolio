@@ -34,7 +34,7 @@ export default function Skills() {
       </section>
       <section>
         <div>
-          <TitleAnimate>Compétance et spécialisation Web</TitleAnimate>
+          <TitleAnimate>Compétances et spécialisations Web</TitleAnimate>
           <p>
             J&apos;ai choisi de me spécialiser dans Node.js pour le développement backend, car
             j&apos;apprécie son paradigme asynchrone basé sur les callbacks et les promises. Bien
@@ -68,7 +68,7 @@ export default function Skills() {
         <TechnosListing technos={['Active Directory', 'PowerShell', 'GPO', 'RDS', 'IIS']} />
       </section>
       <section>
-        <TitleAnimate>Mise en Place de Serveur</TitleAnimate>
+        <TitleAnimate>Mise en Place de Serveurs</TitleAnimate>
         <p>
           Lorsque je réalisais mes premiers projets personnels, je me suis heurté à un problème de
           mise en production, car je ne disposais pas de serveur. Pour y remédier, j&apos;ai loué un

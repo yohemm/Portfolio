@@ -1,4 +1,5 @@
 import React from 'react';
+import { WebTechno } from '~/components/WebTechno';
 
 import '~/style/home.css';
 
@@ -72,6 +73,7 @@ export default function Home() {
           L&apos;utilisation de React Router pourrait sembler superflue, mais j&apos;ai souhaité
           profiter de la création de ce portfolio pour découvrir la version 7 de la librairie.
         </p>
+        <WebTechno back={["NodeJS", "React-Router", "Docker"]} front={["React", "TypeScript", "CSS"]} />
       </section>
     </>
   );
