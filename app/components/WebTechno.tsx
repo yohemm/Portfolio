@@ -23,10 +23,11 @@ const Techno = (props: TechnoProps) => {
 };
 
 export const WebTechno = (props: WebTechnoProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInViewport = useIsInViewport(ref);
   if (props.front.length === 0) return <p>Error front nb agrs</p>;
   if (props.back.length === 0) return <p>Error back nb agrs</p>;
+
+  const ref = useRef<HTMLDivElement>(null);
+  const isInViewport = useIsInViewport(ref);
 
   return (
     <div
