@@ -6,17 +6,17 @@
 }
 #web-techno-main #web-techno-backend .web-techno-icons-container,
 #web-techno-main #web-techno-frontend .web-techno-icons-container {
-  border-top: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
   min-height: 10rem;
   height: 50vh;
   position: relative;
 }
 #web-techno-main #web-techno-backend .web-techno-icons-container {
-  border-left: 1px solid var(--black);
+  border-left: 1px solid var(--text);
 }
 #web-techno-main #web-techno-frontend .web-techno-icons-container {
-  border-right: 1px solid var(--black);
+  border-right: 1px solid var(--text);
 }
 
 #web-techno-main #web-techno-backend .web-techno-icons-container::before,
@@ -24,7 +24,7 @@
   content: '';
   position: absolute;
   height: 30%;
-  border-right: 1px solid var(--black);
+  border-right: 1px solid var(--text);
   right: 0;
 }
 #web-techno-main #web-techno-backend .web-techno-icons-container::after {
@@ -40,7 +40,7 @@
   position: absolute;
   left: 0;
   height: 30%;
-  border-left: 1px solid var(--black);
+  border-left: 1px solid var(--text);
 }
 #web-techno-main #web-techno-frontend .web-techno-icons-container::after {
   top: 0;
@@ -84,7 +84,7 @@
 #web-techno-backend span.horiz,
 #web-techno-frontend span {
   position: absolute;
-  background: var(--black);
+  background: var(--text);
 }
 #web-techno-backend span.vert,
 #web-techno-frontend span.vert {
@@ -125,7 +125,7 @@
   top: calc(50% - 2px);
   bottom: 50%;
   left: -100%;
-  background: linear-gradient(to left, transparent 90%, var(--black) 90%, var(--black));
+  background: linear-gradient(to left, transparent 90%, var(--text) 90%, var(--text));
   background-size: 200%;
   animation:
     spawnBar 1.5s linear forwards 1,
