@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useIsInViewport } from '~/elements/hooks';
 
 type SchoolCuriculumProps = {
   schoolSteps: SchoolStepProps[];
@@ -34,6 +35,8 @@ export const SchoolCuriculum = (props: SchoolCuriculumProps) => {
 export const SchoolStep = (props: SchoolStepProps) => {
   const [className, setClassName] = useState('');
   const [delay, setDelay] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInViewport = useIsInViewport(ref);
 
   useEffect(() => {
     setClassName('path');
@@ -44,7 +47,7 @@ export const SchoolStep = (props: SchoolStepProps) => {
     };
   }, []);
   return (
-    <div className='school-step'>
+    <div className={'school-step ' + (isInViewport ? 'in-viewport' : '')} ref={ref}>
       <svg
         width='100%'
         height='100%'

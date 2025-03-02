@@ -1,10 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { TechnoIcon } from './TechnoIcon';
 
 import '~/style/WebTechno.css';
 import type { TechnoProps, WebTechnoProps } from '~/elements/Project';
+import { useIsInViewport } from '~/elements/hooks';
 
 const Techno = (props: TechnoProps) => {
   return (
@@ -22,11 +23,16 @@ const Techno = (props: TechnoProps) => {
 };
 
 export const WebTechno = (props: WebTechnoProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInViewport = useIsInViewport(ref);
   if (props.front.length === 0) return <p>Error front nb agrs</p>;
   if (props.back.length === 0) return <p>Error back nb agrs</p>;
 
   return (
-    <div id='web-techno-main' className='web-techno-main'>
+    <div
+      id='web-techno-main'
+      className={'web-techno-main ' + (isInViewport ? 'in-viewport' : '')}
+      ref={ref}>
       <div id='web-techno-backend'>
         <h3>Back-end</h3>
         <div className='web-techno-icons-container'>

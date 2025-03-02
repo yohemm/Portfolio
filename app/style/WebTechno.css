@@ -137,17 +137,22 @@
   justify-content: space-between;
   position: relative;
 }
-#web-techno-main #web-techno-backend {
+#web-techno-main.in-viewport #web-techno-backend {
   animation: spawnBack 1.5s linear forwards 1;
 }
-#web-techno-main #web-techno-frontend {
+#web-techno-main.in-viewport #web-techno-frontend {
   animation: spawnFront 1.5s linear forwards 1;
 }
 #web-techno-main #web-techno-backend,
 #web-techno-main #web-techno-frontend {
   width: 40%;
 }
-
+/* .web-front-spawn-animation {
+  animation: spawnFront 1.5s linear forwards 1;
+}
+.web-back-spawn-animation {
+  animation: spawnBack 1.5s linear forwards 1;
+} */
 /* ANIMATION */
 
 @keyframes backToFront {

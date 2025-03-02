@@ -18,13 +18,14 @@
 
 - [ ] WebTechno:
   - [ ] Apparition:
-    - [ ] Apparition backend puis front end
-    - [ ] la bar central s'active uniquement à la fin
+    - [x] Apparition backend puis front end
+    - [x] la bar central s'active uniquement à la fin
 - [ ] Formations:
-  - remplacé la barre central par un element avec un background pour pourvoir changer ca background possition
+  - [x] emplacé la barre central par un element avec un background pour pourvoir changer ca background possition
+  - [x] animation de la bar centrale
   - [ ] Apparition:
     - [ ] barre central apparait du bas avec un mouvement du background
-    - [ ] les formations apparaisse sur leur coté repectif via un transform translate
+    - [x] les formations apparaisse sur leur coté repectif via un transform translate
 - [x] ProjectShowing
   - [x] Redisign
   - [x] liens

@@ -66,12 +66,14 @@ section#schoolcuriculum .school-step {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-section#schoolcuriculum .school-step:nth-child(odd) {
+section#schoolcuriculum .school-step.in-viewport:nth-child(odd) {
   animation-name: spawnTranslateLeft;
+}
+section#schoolcuriculum .school-step.in-viewport:nth-child(even) {
+  animation-name: spawnTranslateRight;
 }
 section#schoolcuriculum .school-step:nth-child(even) {
   margin-left: auto;
-  animation-name: spawnTranslateRight;
 }
 section#schoolcuriculum .school-step::after {
   content: '';
@@ -83,6 +85,8 @@ section#schoolcuriculum .school-step::after {
   top: 0;
   right: -0.4%;
   transform: translate(100%, 50%);
+}
+section#schoolcuriculum .school-step.in-viewport::after {
   animation: spanwAtMiddleTime 1.5s linear forwards 1;
 }
 section#schoolcuriculum .school-step:nth-child(even)::after {
