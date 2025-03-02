@@ -47,15 +47,31 @@ section#schoolcuriculum::after {
   content: '';
   position: absolute;
   height: 100%;
-  right: 49.9%;
+  width: 4px;
+  right: calc(50% - 2px);
   top: 0%;
-  border: solid 2px var(--black);
+  background-image: linear-gradient(to bottom, transparent 50%, var(--black) 50%, var(--black));
+  background-size: 100% 200%;
+  animation:
+    spanwAtMiddleTime 1.5s linear forwards 1,
+    moveToUp 2s ease-in-out forwards infinite;
 }
 
 section#schoolcuriculum .school-step {
   /* position: relative; */
   width: 49%;
   margin-top: 1rem;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+section#schoolcuriculum .school-step:nth-child(odd) {
+  animation-name: spawnTranslateLeft;
+}
+section#schoolcuriculum .school-step:nth-child(even) {
+  margin-left: auto;
+  animation-name: spawnTranslateRight;
 }
 section#schoolcuriculum .school-step::after {
   content: '';
@@ -67,17 +83,65 @@ section#schoolcuriculum .school-step::after {
   top: 0;
   right: -0.4%;
   transform: translate(100%, 50%);
+  animation: spanwAtMiddleTime 1.5s linear forwards 1;
 }
 section#schoolcuriculum .school-step:nth-child(even)::after {
-  left: -0.4%;
   transform: translate(-100%, 50%);
-}
-section#schoolcuriculum .school-step:nth-child(even) {
-  margin-left: auto;
+  left: -0.4%;
 }
 
 @keyframes progress {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes moveToUp {
+  0% {
+    background-position-y: 200%;
+  }
+  10% {
+    background-position-y: 100%;
+  }
+  45% {
+    background-position-y: 100%;
+  }
+  65% {
+    background-position-y: 0%;
+  }
+  100% {
+    background-position-y: 0%;
+  }
+}
+
+@keyframes spawnTranslateRight {
+  from {
+    transform: translate(100%, 0);
+    opacity: 0%;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+}
+@keyframes spawnTranslateLeft {
+  from {
+    transform: translate(-100%, 0);
+    opacity: 0%;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+}
+@keyframes spanwAtMiddleTime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

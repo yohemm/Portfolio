@@ -16,8 +16,7 @@ export const Formation = (props: FormationProps) => {
         height='100%'
         viewBox='0 0 100 100'
         preserveAspectRatio='none'
-        className='svg-animate'
-      >
+        className='svg-animate'>
         <path fill='none' d='M0,0 L0,100' />
         <path fill='none' d='M0,100 L100,100' />
         <path fill='none' d='M100,100 L100,0' />

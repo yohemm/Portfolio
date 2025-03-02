@@ -21,8 +21,7 @@ export const SchoolCuriculum = (props: SchoolCuriculumProps) => {
             key={value.name.replace(' ', '-')}
             name={value.name}
             establishment={value.establishment}
-            diploma={value.diploma}
-          >
+            diploma={value.diploma}>
             {' '}
             {value.children}{' '}
           </SchoolStep>
@@ -51,8 +50,7 @@ export const SchoolStep = (props: SchoolStepProps) => {
         height='100%'
         viewBox='0 0 100 100'
         preserveAspectRatio='none'
-        className='svg-animate'
-      >
+        className='svg-animate'>
         <path fill='none' d='M0,0 L0,100' style={{ animationDelay: `0s` }} className={className} />
         <path
           fill='none'

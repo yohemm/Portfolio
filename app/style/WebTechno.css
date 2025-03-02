@@ -127,13 +127,21 @@
   left: -100%;
   background: linear-gradient(to left, transparent 90%, var(--black) 90%, var(--black));
   background-size: 200%;
-  animation: backToFront 3s 0s infinite ease-in-out;
+  animation:
+    spawnBar 1.5s linear forwards 1,
+    backToFront 3s 0s infinite ease-in-out;
 }
 
 #web-techno-main {
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+#web-techno-main #web-techno-backend {
+  animation: spawnBack 1.5s linear forwards 1;
+}
+#web-techno-main #web-techno-frontend {
+  animation: spawnFront 1.5s linear forwards 1;
 }
 #web-techno-main #web-techno-backend,
 #web-techno-main #web-techno-frontend {
@@ -151,5 +159,46 @@
   }
   100% {
     background-position: 220%;
+  }
+}
+
+@keyframes spawnBar {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spawnBack {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes spawnFront {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }

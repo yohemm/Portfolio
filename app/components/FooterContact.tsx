@@ -20,8 +20,7 @@ export const FooterContact = (props: FooterContactProps) => {
               <li key={key}>
                 <NavLink
                   to={props.linkAndName[key]}
-                  target={externalPatern.test(props.linkAndName[key]) ? '_blank' : ''}
-                >
+                  target={externalPatern.test(props.linkAndName[key]) ? '_blank' : ''}>
                   {key}
                 </NavLink>
               </li>

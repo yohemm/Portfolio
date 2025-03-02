@@ -61,8 +61,7 @@ export const NavBar = () => {
             to='/skills'
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none'
-            })}
-          >
+            })}>
             Compétences
           </NavLink>
         </li>
@@ -71,8 +70,7 @@ export const NavBar = () => {
             to='/projects'
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none'
-            })}
-          >
+            })}>
             Projets
           </NavLink>
         </li>
@@ -81,8 +79,7 @@ export const NavBar = () => {
             to='/formations'
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none'
-            })}
-          >
+            })}>
             Formations
           </NavLink>
         </li>
