@@ -10,7 +10,7 @@ export const getToolsAndServices = (tools: string[], services: string[]): ToolsA
 };
 export const ToolsAndServices = (props: ToolsAndServicesProps) => {
   return (
-    <div className="container-subtitle-async tools-and-services-container">
+    <div className='container-subtitle-async tools-and-services-container'>
       {props.tools.length == 0 ? (
         ''
       ) : (

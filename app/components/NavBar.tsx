@@ -37,20 +37,20 @@ export const NavBar = () => {
     <nav className={navSticked}>
       <ul>
         <li className={'photo-profile'}>
-          <NavLink to="/" className="custom-logo-link">
+          <NavLink to='/' className='custom-logo-link'>
             <img
               className={logoDown}
-              src="/assets/photo-profil.webp"
-              alt="photo de profile de Yohem"
+              src='/assets/photo-profil.webp'
+              alt='photo de profile de Yohem'
             />
           </NavLink>
         </li>
         <li className={'name ' + nameHide}>
-          <NavLink to="/">Yohem</NavLink>
+          <NavLink to='/'>Yohem</NavLink>
         </li>
         <li className={'github ' + githubHide}>
-          <NavLink to="https://github.com/yohemm" target="_blank">
-            <i className="devicon-github-original colored"></i>
+          <NavLink to='https://github.com/yohemm' target='_blank'>
+            <i className='devicon-github-original colored'></i>
             <span>Mon GitHub</span>
           </NavLink>
         </li>
@@ -58,7 +58,7 @@ export const NavBar = () => {
       <ul>
         <li className={'skills-nav'}>
           <NavLink
-            to="/skills"
+            to='/skills'
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none'
             })}
@@ -68,7 +68,7 @@ export const NavBar = () => {
         </li>
         <li className={'skills-projects'}>
           <NavLink
-            to="/projects"
+            to='/projects'
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none'
             })}
@@ -78,7 +78,7 @@ export const NavBar = () => {
         </li>
         <li className={'skills-formations'}>
           <NavLink
-            to="/formations"
+            to='/formations'
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none'
             })}

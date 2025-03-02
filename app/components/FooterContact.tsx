@@ -12,7 +12,7 @@ const externalPatern: RegExp = /http/;
 export const FooterContact = (props: FooterContactProps) => {
   useNavigate();
   return (
-    <footer id="my-contact">
+    <footer id='my-contact'>
       <address>
         <ul>
           {Object.keys(props.linkAndName).map((key) => {

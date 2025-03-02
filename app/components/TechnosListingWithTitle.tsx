@@ -10,7 +10,7 @@ type TechnosListingWithTitleProps = {
 
 export const TechnosListingWithTitle = (props: TechnosListingWithTitleProps) => {
   return (
-    <div className="technos-listing-container">
+    <div className='technos-listing-container'>
       <TitleAnimate>{props.title}</TitleAnimate>
       <TechnosListing {...props} />
     </div>
