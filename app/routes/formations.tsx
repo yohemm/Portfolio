@@ -59,7 +59,7 @@ export default function Formations() {
         </p>
         <p>
           Vous pouvez notamment en retrouver une partie sur{' '}
-          <NavLink to="https://github.com/yohemm" target="_blank">
+          <NavLink to='https://github.com/yohemm' target='_blank'>
             mon profil GitHub.
           </NavLink>
         </p>

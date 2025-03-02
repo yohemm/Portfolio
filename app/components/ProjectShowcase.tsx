@@ -19,18 +19,18 @@ export const ProjectShowcase = (props: ProjectShowcaseProps) => {
     backgroundRepeat: 'no-repeat'
   };
   return (
-    <div className="card">
-      <div className="card-header" style={imageStyle}>
-        <div className="card-header-content">
+    <div className='card'>
+      <div className='card-header' style={imageStyle}>
+        <div className='card-header-content'>
           <h4>{props.displayName}</h4>
         </div>
       </div>
-      <div className="card-content">
-        <div className="card-details">{props.presentation}</div>
-        <NavLink className="formation-btn" to={'/projects/' + props.name}>
+      <div className='card-content'>
+        <div className='card-details'>{props.presentation}</div>
+        <NavLink className='formation-btn' to={'/projects/' + props.name}>
           Voir en détaille
         </NavLink>
-        <p className="card-technos-overview">
+        <p className='card-technos-overview'>
           Techonologies utilisées :{' '}
           {props.presentationTechnos.map((techno, index) => {
             return index == props.presentationTechnos.length - 1 ? (

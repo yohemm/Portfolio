@@ -1,11 +1,13 @@
 {
   "name": "portfolio",
   "description": "Yohem VAXELAIRE's Portfolio",
+  "author": "yohem",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
+    "nodemon": "npx nodemon --exec \"npm run dev .\" ./app/**/*",
     "start": "react-router-serve ./build/server/index.js",
     "clean": "rm -rf node_modules && npm ci",
     "lint": "eslint .",

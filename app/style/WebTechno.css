@@ -91,22 +91,19 @@
   top: calc(2rem + 1.5rem + 10px);
   height: calc(100% - 2 * calc(2rem + 1.5rem + 10px));
   width: 4px;
-  right: 50%;
-  left: 50%;
+  right: calc(50% - 2px);
+}
+#web-techno-backend span.horiz,
+#web-techno-frontend span.horiz {
+  top: calc(50% - 2px);
+  height: 4px;
+  width: calc(50% - 140px);
 }
 #web-techno-backend span.horiz {
-  top: 50%;
-  bottom: 50%;
   right: 50%;
-  height: 4px;
-  width: calc(50% - 140px);
 }
 #web-techno-frontend span.horiz {
-  top: 50%;
-  bottom: 50%;
   left: 50%;
-  height: 4px;
-  width: calc(50% - 140px);
 }
 #web-techno-backend span.vert::before,
 #web-techno-frontend span.vert::before {
@@ -125,12 +122,14 @@
   z-index: 0;
   width: 150%;
   height: 4px;
-  top: 50%;
+  top: calc(50% - 2px);
   bottom: 50%;
   left: -100%;
   background: linear-gradient(to left, transparent 90%, var(--black) 90%, var(--black));
   background-size: 200%;
-  animation: backToFront 3s 0s infinite ease-in-out;
+  animation:
+    spawnBar 1.5s linear forwards 1,
+    backToFront 3s 0s infinite ease-in-out;
 }
 
 #web-techno-main {
@@ -138,11 +137,22 @@
   justify-content: space-between;
   position: relative;
 }
+#web-techno-main.in-viewport #web-techno-backend {
+  animation: spawnBack 1.5s linear forwards 1;
+}
+#web-techno-main.in-viewport #web-techno-frontend {
+  animation: spawnFront 1.5s linear forwards 1;
+}
 #web-techno-main #web-techno-backend,
 #web-techno-main #web-techno-frontend {
   width: 40%;
 }
-
+/* .web-front-spawn-animation {
+  animation: spawnFront 1.5s linear forwards 1;
+}
+.web-back-spawn-animation {
+  animation: spawnBack 1.5s linear forwards 1;
+} */
 /* ANIMATION */
 
 @keyframes backToFront {
@@ -154,5 +164,46 @@
   }
   100% {
     background-position: 220%;
+  }
+}
+
+@keyframes spawnBar {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spawnBack {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes spawnFront {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }

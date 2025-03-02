@@ -1,8 +1,22 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { WebTechno } from '~/components/WebTechno';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+
+const IntersectionObserverMock = vi.fn(() => ({
+  disconnect: vi.fn(),
+  observe: vi.fn(),
+  takeRecords: vi.fn(),
+  unobserve: vi.fn()
+}));
+
+vi.stubGlobal('IntersectionObserver', IntersectionObserverMock);
 
 describe('<WebTechno>', () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
   it('should render error paragraph', () => {
     const fullEmpty = render(<WebTechno back={[]} front={[]} />).container;
     const frontEmpty = render(
@@ -11,26 +25,26 @@ describe('<WebTechno>', () => {
     const backEmpty = render(<WebTechno back={[]} front={['CSS', 'JavaScript']} />).container;
 
     expect(fullEmpty).toMatchInlineSnapshot(`
-          <div>
-            <p>
-              Error front nb agrs
-            </p>
-          </div>
-        `);
+      <div>
+        <p>
+          Error front nb agrs
+        </p>
+      </div>
+    `);
     expect(frontEmpty).toMatchInlineSnapshot(`
-          <div>
-            <p>
-              Error front nb agrs
-            </p>
-          </div>
-        `);
+      <div>
+        <p>
+          Error front nb agrs
+        </p>
+      </div>
+    `);
     expect(backEmpty).toMatchInlineSnapshot(`
-          <div>
-            <p>
-              Error back nb agrs
-            </p>
-          </div>
-        `);
+      <div>
+        <p>
+          Error back nb agrs
+        </p>
+      </div>
+    `);
   });
   it('should render correctly', () => {
     const { container } = render(
@@ -39,98 +53,98 @@ describe('<WebTechno>', () => {
     // const mainDiv = screen.getByText('PostGreSQL');
     // expect(mainDiv).toBeInTheDocument();
     expect(container).toMatchInlineSnapshot(`
-          <div>
+      <div>
+        <div
+          class="web-techno-main "
+          id="web-techno-main"
+        >
+          <div
+            id="web-techno-backend"
+          >
+            <h3>
+              Back-end
+            </h3>
             <div
-              class="web-techno-main"
-              id="web-techno-main"
+              class="web-techno-icons-container"
             >
               <div
-                id="web-techno-backend"
+                class="technos-container pos-0"
               >
-                <h3>
-                  Back-end
-                </h3>
-                <div
-                  class="web-techno-icons-container"
-                >
-                  <div
-                    class="technos-container pos-0"
-                  >
-                    <i
-                      class=""
-                    />
-                    <p>
-                      NodeJs
-                    </p>
-                  </div>
-                  <div
-                    class="technos-container pos-1"
-                  >
-                    <i
-                      class="devicon-express-original colored"
-                    />
-                    <p>
-                      Express
-                    </p>
-                  </div>
-                  <span
-                    class="vert"
-                  />
-                  <div
-                    class="technos-container pos-2"
-                  >
-                    <i
-                      class="devicon-postgresql-plain colored"
-                    />
-                    <p>
-                      PostGreSQL
-                    </p>
-                  </div>
-                  <span
-                    class="horiz"
-                  />
-                </div>
+                <i
+                  class=""
+                />
+                <p>
+                  NodeJs
+                </p>
               </div>
-              <span />
               <div
-                id="web-techno-frontend"
+                class="technos-container pos-1"
               >
-                <h3>
-                  Front-end
-                </h3>
-                <div
-                  class="web-techno-icons-container"
-                >
-                  <span
-                    class="anim"
-                  />
-                  <div
-                    class="technos-container pos-0"
-                  >
-                    <i
-                      class="devicon-css3-plain colored"
-                    />
-                    <p>
-                      CSS
-                    </p>
-                  </div>
-                  <div
-                    class="technos-container pos-1"
-                  >
-                    <i
-                      class="devicon-javascript-plain colored"
-                    />
-                    <p>
-                      JavaScript
-                    </p>
-                  </div>
-                  <span
-                    class="vert"
-                  />
-                </div>
+                <i
+                  class="devicon-express-original colored"
+                />
+                <p>
+                  Express
+                </p>
               </div>
+              <span
+                class="vert"
+              />
+              <div
+                class="technos-container pos-2"
+              >
+                <i
+                  class="devicon-postgresql-plain colored"
+                />
+                <p>
+                  PostGreSQL
+                </p>
+              </div>
+              <span
+                class="horiz"
+              />
             </div>
           </div>
-        `);
+          <span />
+          <div
+            id="web-techno-frontend"
+          >
+            <h3>
+              Front-end
+            </h3>
+            <div
+              class="web-techno-icons-container"
+            >
+              <span
+                class="anim"
+              />
+              <div
+                class="technos-container pos-0"
+              >
+                <i
+                  class="devicon-css3-plain colored"
+                />
+                <p>
+                  CSS
+                </p>
+              </div>
+              <div
+                class="technos-container pos-1"
+              >
+                <i
+                  class="devicon-javascript-plain colored"
+                />
+                <p>
+                  JavaScript
+                </p>
+              </div>
+              <span
+                class="vert"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    `);
   });
 });

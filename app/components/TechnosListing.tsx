@@ -9,9 +9,9 @@ type TechnosListingProps = {
 
 export const TechnosListing = (props: TechnosListingProps) => {
   return (
-    <div className="technos-listing-item">
+    <div className='technos-listing-item'>
       {props.technos.map((name) => {
-        return <TechnoIcon name={name} key={name} className="animate" />;
+        return <TechnoIcon name={name} key={name} className='animate' />;
       })}
     </div>
   );

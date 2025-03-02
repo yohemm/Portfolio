@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useIsInViewport } from '~/elements/hooks';
 
 type SchoolCuriculumProps = {
   schoolSteps: SchoolStepProps[];
@@ -14,15 +15,14 @@ export type SchoolStepProps = {
 };
 export const SchoolCuriculum = (props: SchoolCuriculumProps) => {
   return (
-    <section id="schoolcuriculum">
+    <section id='schoolcuriculum'>
       {props.schoolSteps.map((value) => {
         return (
           <SchoolStep
             key={value.name.replace(' ', '-')}
             name={value.name}
             establishment={value.establishment}
-            diploma={value.diploma}
-          >
+            diploma={value.diploma}>
             {' '}
             {value.children}{' '}
           </SchoolStep>
@@ -35,6 +35,8 @@ export const SchoolCuriculum = (props: SchoolCuriculumProps) => {
 export const SchoolStep = (props: SchoolStepProps) => {
   const [className, setClassName] = useState('');
   const [delay, setDelay] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInViewport = useIsInViewport(ref);
 
   useEffect(() => {
     setClassName('path');
@@ -45,39 +47,38 @@ export const SchoolStep = (props: SchoolStepProps) => {
     };
   }, []);
   return (
-    <div className="school-step">
+    <div className={'school-step ' + (isInViewport ? 'in-viewport' : '')} ref={ref}>
       <svg
-        width="100%"
-        height="100%"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        className="svg-animate"
-      >
-        <path fill="none" d="M0,0 L0,100" style={{ animationDelay: `0s` }} className={className} />
+        width='100%'
+        height='100%'
+        viewBox='0 0 100 100'
+        preserveAspectRatio='none'
+        className='svg-animate'>
+        <path fill='none' d='M0,0 L0,100' style={{ animationDelay: `0s` }} className={className} />
         <path
-          fill="none"
-          d="M0,100 L100,100"
+          fill='none'
+          d='M0,100 L100,100'
           style={{ animationDelay: `${delay}s` }}
           className={className}
         />
         <path
-          fill="none"
-          d="M100,100 L100,0"
+          fill='none'
+          d='M100,100 L100,0'
           style={{ animationDelay: `${delay * 2}s` }}
           className={className}
         />
         <path
-          fill="none"
-          d="M100,0 0,0"
+          fill='none'
+          d='M100,0 0,0'
           style={{ animationDelay: `${delay * 3}s` }}
           className={className}
         />
       </svg>
-      <div className="text">
+      <div className='text'>
         <h3>{props.name}</h3>
-        <p className="diploma">Diplôme obtenue : {props.diploma} </p>
-        <p className="etablishement">Etablissement : {props.establishment} </p>
-        <div className="details">{props.children}</div>
+        <p className='diploma'>Diplôme obtenue : {props.diploma} </p>
+        <p className='etablishement'>Etablissement : {props.establishment} </p>
+        <div className='details'>{props.children}</div>
       </div>
     </div>
   );

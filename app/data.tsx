@@ -160,7 +160,7 @@ export const ICONS: { [id: string]: string } = {
   Laravel: 'devicon-laravel-original colored',
   NodeJS: 'devicon-nodejs-plain colored',
   Express: 'devicon-express-original colored',
-  ReactRouter: 'devicon-reactrouter-plain colored',
+  'React-Router': 'devicon-reactrouter-plain colored',
   React: 'devicon-react-original colored',
   VueJs: 'devicon-vuejs-plain colored',
   JavaScript: 'devicon-javascript-plain colored',
