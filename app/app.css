@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lora&family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lora&family=Montserrat:ital@1&family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Varela&display=swap');
 :root {
+  --font-tile: 'Brygada 1918', 'Antic Didone', serif;
+  --font-content: Montserrat, 'Varela', sans-serif;
   --solid: #dd4425;
   --background: #f9f9f9;
   --border-separator: #bbbbbb;
@@ -40,7 +42,7 @@ nav {
 p,
 span,
 div {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-content);
   color: var(--text);
 }
 html {
@@ -54,24 +56,38 @@ main {
   backdrop-filter: blur(20px);
 }
 a {
-  font-family: 'Antic Didone', serif;
-  font-weight: 700;
+  font-family: var(--font-content);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   color: var(--interactif);
 }
 h1 {
   font-size: 4rem;
-  font-family: 'Antic Didone', serif;
-  font-weight: 100;
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 h2 {
   font-size: 3rem;
-  font-family: 'Antic Didone', serif;
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 h3 {
   font-size: 2rem;
-  font-family: 'Antic Didone', serif;
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
+nav a,
+nav span {
+  font-family: var(--font-tile);
+}
 nav {
   z-index: 9999;
   /* height: clamp(50px, 15vw, 75px); */
@@ -157,6 +173,12 @@ nav li.photo-profile:hover img.down {
 /* nav li>a  {
     font-size: clamp(1rem, 5vw ,1.5rem);
 } */
+nav li.github a span {
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 nav li.github {
   transition: transform 0.2s ease-in;
 }
@@ -168,7 +190,7 @@ nav i {
   height: fit-content;
 }
 nav li.github.hide {
-  transform: translate(87%, 0rem);
+  transform: translate(calc(100% - 1.5rem), 0rem);
 }
 nav li.github:hover {
   transform: translate(0, 0rem);
