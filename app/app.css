@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lora&family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lora&family=Montserrat:ital@1&family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Varela&display=swap');
 :root {
+  --font-tile: 'Brygada 1918', 'Antic Didone', serif;
+  --font-content: Montserrat, 'Varela', sans-serif;
+  --solid: #dd4425;
+  --background: #f9f9f9;
+  --border-separator: #bbbbbb;
+  --text: #202020;
+  --interactif: #008573;
   --white: rgb(240, 232, 232);
-  --white-less-opacity: rgba(240, 232, 232, 0.348);
+  --background-less-opacity: rgba(240, 232, 232, 0.348);
   --black: rgb(27, 26, 26);
   --gray: rgb(209, 200, 200);
   --linearGray: linear-gradient(
@@ -11,7 +18,6 @@
     rgba(124, 124, 124, 0.278)
   );
   --formationStroke: linear-gradient(45deg, #c7c7c7 0%, #383838 50%);
-  --linearGreen: linear-gradient(45deg, #85ffbd 0%, #fffb7d 50%);
 }
 html {
   --res: calc(0.01 * 10vmin);
@@ -36,7 +42,8 @@ nav {
 p,
 span,
 div {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-content);
+  color: var(--text);
 }
 html {
   overflow-x: hidden;
@@ -49,24 +56,38 @@ main {
   backdrop-filter: blur(20px);
 }
 a {
-  color: var(--black);
-  font-family: 'Antic Didone', serif;
-  font-weight: 700;
+  font-family: var(--font-content);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--interactif);
 }
 h1 {
   font-size: 4rem;
-  font-family: 'Antic Didone', serif;
-  font-weight: 100;
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 h2 {
   font-size: 3rem;
-  font-family: 'Antic Didone', serif;
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 h3 {
   font-size: 2rem;
-  font-family: 'Antic Didone', serif;
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
+nav a,
+nav span {
+  font-family: var(--font-tile);
+}
 nav {
   z-index: 9999;
   /* height: clamp(50px, 15vw, 75px); */
@@ -87,12 +108,38 @@ nav ul li {
   text-align: center;
 }
 nav ul li a {
+  color: var(--text);
   line-height: 2;
   display: inline-flex;
   align-items: center;
 }
 nav ul li.name.hide {
   transform: translate(0, -2.1rem);
+}
+nav ul li.name.hide a::after {
+  background-color: var(--background);
+}
+nav ul li.name a {
+  position: relative;
+  display: flex;
+  /* border-bottom: var(--interactif) 3px solid; */
+  transition: color 0.2s ease-out;
+}
+nav ul li.name a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 16px;
+  background-color: var(--interactif);
+  transition: background 0.2s ease-out;
+}
+nav ul li.name:hover a::after {
+  border-bottom: var(--background) 3px solid;
+}
+nav ul li.name:hover a {
+  /* border-bottom: var(--background) 3px solid; */
+  color: var(--interactif);
 }
 nav ul li.name {
   position: absolute;
@@ -126,6 +173,12 @@ nav li.photo-profile:hover img.down {
 /* nav li>a  {
     font-size: clamp(1rem, 5vw ,1.5rem);
 } */
+nav li.github a span {
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 nav li.github {
   transition: transform 0.2s ease-in;
 }
@@ -137,7 +190,7 @@ nav i {
   height: fit-content;
 }
 nav li.github.hide {
-  transform: translate(87%, 0rem);
+  transform: translate(calc(100% - 1.5rem), 0rem);
 }
 nav li.github:hover {
   transform: translate(0, 0rem);
@@ -152,8 +205,8 @@ header nav ul li.skills-projects {
 }
 
 .nav-sticked {
-  border-bottom: 1px solid var(--black);
-  background-color: #fff;
+  border-bottom: 1px solid var(--text);
+  background-color: var(--background);
 }
 
 #header {
@@ -178,14 +231,13 @@ header nav ul li.skills-projects {
 #header div a.contact-btn {
   transition: all 0.2s ease-in;
   padding: 10px;
-  border: 1px solid var(--black);
+  border: 1px solid var(--text);
   border-radius: 4px;
 }
 #header div a.contact-btn:hover {
-  border: 1px solid var(--white);
   border-radius: 4px;
-  color: var(--white);
-  background: var(--black);
+  color: var(--background);
+  background: var(--interactif);
 }
 
 section {
@@ -207,6 +259,7 @@ section:nth-last-of-type(1) {
 }
 #about-me .space-between-vertcal p {
   flex-grow: 1;
+  color: var(--background);
 }
 #about-me p {
   font-size: 1rem;
@@ -216,8 +269,8 @@ section:nth-last-of-type(1) {
 }
 section#about-me {
   position: relative;
-  background: var(--black);
-  color: var(--white);
+  background: var(--text);
+  color: var(--background);
   padding: 15px;
 }
 section#about-me::after {
@@ -225,7 +278,7 @@ section#about-me::after {
   position: absolute;
   right: -5vw;
   top: 0;
-  background-color: var(--black);
+  background-color: var(--text);
   width: 5vw;
   height: 100%;
 }
@@ -238,11 +291,12 @@ footer address ul {
   padding-bottom: 15px;
 }
 footer address a {
-  border-bottom: var(--black) 3px solid;
+  color: var(--text);
+  border-bottom: var(--interactif) 3px solid;
   transition: border-bottom 0.2s ease-out;
 }
 footer address a:hover {
-  border-color: #fff;
+  border-color: var(--background);
 }
 
 @media screen and (max-width: 740px) {

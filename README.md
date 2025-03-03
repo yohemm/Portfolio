@@ -23,12 +23,16 @@
 - [ ] Formations:
   - [x] emplacé la barre central par un element avec un background pour pourvoir changer ca background possition
   - [x] animation de la bar centrale
+  - [ ] Revoir les couleurs de font des schools steps
+  - [ ] centré les titres, respacing
   - [ ] Apparition:
     - [ ] barre central apparait du bas avec un mouvement du background
     - [x] les formations apparaisse sur leur coté repectif via un transform translate
 - [x] ProjectShowing
   - [x] Redisign
   - [x] liens
+  - [ ] refaire & styliser les cards project
+  - [ ] effect de rayon lumineux au hover
   - [ ] Apparition:
 - [x] components/Projects.tsx
   - [x] Laisons entre project showing et projects liste (en rajoutant la connection au image)
@@ -44,7 +48,6 @@
 
 - [x] Refractor toutes les props en type et non interface
 - [x] Renomer les Props Avec comme format ComponentNameProps
-- [ ] refaire & styliser les cards project
 - [ ] Fix les titles animate aleternate
 - [ ] Responsive
   - [ ] enlever les subtitles animé
