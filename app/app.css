@@ -113,13 +113,15 @@ nav ul li a {
   display: inline-flex;
   align-items: center;
 }
-nav i::before {
-  font-size: 2.5rem;
-}
 nav ul.me a {
   font-size: 2rem;
 }
-nav ul.do-and-skills a {
+nav i::before {
+  transition: all 0.2s ease-out;
+  font-size: 2rem;
+}
+nav a,
+nav span {
   font-size: 1.25rem;
 }
 nav ul li.name.hide {
@@ -197,7 +199,7 @@ nav li.github a span {
   font-style: normal;
 }
 nav li.github {
-  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in-out;
 }
 
 nav i {
@@ -205,6 +207,9 @@ nav i {
   align-items: center;
   width: fit-content;
   height: fit-content;
+}
+nav li.github.hide i::before {
+  font-size: 2.5rem;
 }
 nav li.github.hide {
   transform: translate(calc(100% - 2.5rem), 0rem);
@@ -246,7 +251,7 @@ header nav ul li.skills-projects {
   padding-top: 20px;
 }
 #header div a.contact-btn {
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease-out;
   padding: 10px;
   border: 1px solid var(--text);
   border-radius: 4px;
