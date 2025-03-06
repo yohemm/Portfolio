@@ -99,30 +99,47 @@ nav {
     border-bottom 0.5s ease-in;
 }
 nav ul {
-  height: 100%;
+  height: 9vh;
   display: flex;
   justify-content: space-between;
 }
 
 nav ul li {
   text-align: center;
+  margin: auto 0;
 }
 nav ul li a {
   color: var(--text);
-  line-height: 2;
   display: inline-flex;
   align-items: center;
 }
+nav i::before {
+  font-size: 2.5rem;
+}
+nav ul.me a {
+  font-size: 2rem;
+}
+nav ul.do-and-skills a {
+  font-size: 1.25rem;
+}
 nav ul li.name.hide {
-  transform: translate(0, -2.1rem);
+  transform: translate(0, -9vh);
 }
 nav ul li.name.hide a::after {
   background-color: var(--background);
 }
-nav ul li.name a {
+nav ul li.name,
+nav ul li.skills-projects {
+  height: inherit;
+}
+nav ul li.name a,
+nav ul li.skills-projects a {
+  top: 50%;
+  transform: translateY(-50%);
   position: relative;
+}
+nav ul li.name a {
   display: flex;
-  /* border-bottom: var(--interactif) 3px solid; */
   transition: color 0.2s ease-out;
 }
 nav ul li.name a::after {
@@ -130,7 +147,7 @@ nav ul li.name a::after {
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: 16px;
+  bottom: 0;
   background-color: var(--interactif);
   transition: background 0.2s ease-out;
 }
@@ -158,8 +175,8 @@ nav li.photo-profile > a {
   height: 100%;
 }
 nav li.photo-profile img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   /* transform: translateY(calc(calc(72px - 2rem)/2)); */
   transition: border-radius 0.2s ease-in;
 }
@@ -190,7 +207,7 @@ nav i {
   height: fit-content;
 }
 nav li.github.hide {
-  transform: translate(calc(100% - 1.5rem), 0rem);
+  transform: translate(calc(100% - 2.5rem), 0rem);
 }
 nav li.github:hover {
   transform: translate(0, 0rem);
