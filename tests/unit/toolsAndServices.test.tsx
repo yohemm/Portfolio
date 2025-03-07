@@ -20,16 +20,12 @@ describe('<ToolsAndServices>', () => {
           <div
             class="technos-listing-container"
           >
-            <div
-              class="subtitle-container"
+            <h3
+              class="subtitle"
             >
-              <h3
-                class="subtitle"
-              >
-                 
-                Les outils que j'ai pu utilisé :
-              </h3>
-            </div>
+               
+              Les outils que j'ai pu utilisé :
+            </h3>
             <div
               class="technos-listing-item"
             >
@@ -48,16 +44,12 @@ describe('<ToolsAndServices>', () => {
           <div
             class="technos-listing-container"
           >
-            <div
-              class="subtitle-container"
+            <h3
+              class="subtitle"
             >
-              <h3
-                class="subtitle"
-              >
-                 
-                Les services que j'ai pu utilisé :
-              </h3>
-            </div>
+               
+              Les services que j'ai pu utilisé :
+            </h3>
             <div
               class="technos-listing-item"
             >
@@ -84,16 +76,12 @@ describe('<ToolsAndServices>', () => {
           <div
             class="technos-listing-container"
           >
-            <div
-              class="subtitle-container"
+            <h3
+              class="subtitle"
             >
-              <h3
-                class="subtitle"
-              >
-                 
-                Les outils que j'ai pu utilisé :
-              </h3>
-            </div>
+               
+              Les outils que j'ai pu utilisé :
+            </h3>
             <div
               class="technos-listing-item"
             >
@@ -120,16 +108,12 @@ describe('<ToolsAndServices>', () => {
           <div
             class="technos-listing-container"
           >
-            <div
-              class="subtitle-container"
+            <h3
+              class="subtitle"
             >
-              <h3
-                class="subtitle"
-              >
-                 
-                Les services que j'ai pu utilisé :
-              </h3>
-            </div>
+               
+              Les services que j'ai pu utilisé :
+            </h3>
             <div
               class="technos-listing-item"
             >

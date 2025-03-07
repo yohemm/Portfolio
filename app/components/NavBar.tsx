@@ -22,7 +22,7 @@ export const NavBar = () => {
   };
 
   useEffect(() => {
-    if (y != null && y > 105) {
+    if (y != null && y > 40) {
       setNameHide('');
       setNavSticked('nav-sticked');
       setGithubHide('hide');
@@ -35,7 +35,7 @@ export const NavBar = () => {
 
   return (
     <nav className={navSticked}>
-      <ul>
+      <ul className='me'>
         <li className={'photo-profile'}>
           <NavLink to='/' className='custom-logo-link'>
             <img
@@ -55,7 +55,7 @@ export const NavBar = () => {
           </NavLink>
         </li>
       </ul>
-      <ul>
+      <ul className='do-and-skills'>
         <li className={'skills-nav'}>
           <NavLink
             to='/skills'

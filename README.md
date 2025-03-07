@@ -23,7 +23,7 @@
 - [ ] Formations:
   - [x] emplacé la barre central par un element avec un background pour pourvoir changer ca background possition
   - [x] animation de la bar centrale
-  - [ ] Revoir les couleurs de font des schools steps
+  - [ ] Revoir les couleurs de fond des schools steps
   - [ ] centré les titres, respacing
   - [ ] Apparition:
     - [ ] barre central apparait du bas avec un mouvement du background
