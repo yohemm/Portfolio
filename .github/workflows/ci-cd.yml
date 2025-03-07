@@ -127,23 +127,41 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # utilise node
-      - name: Use Node.js  22
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-        # execute des commandes
-      - name: Clean install NPM
-        run: npm ci
+      - name: Build Docker image
+        run: |
+          docker build -t my-web-server .
 
-      - name: Build App
-        run: npm run build
+      - name: Save Docker container output
+        run: |
+          docker run --rm my-web-server > output.tar.gz
+
+      - name: Extract files
+        run: |
+          mkdir output
+          tar -xvf output.tar.gz -C output
 
       - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-          npx gh-pages -d public
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: output
+      # # utilise node
+      # - name: Use Node.js  22
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 22
+      #   # execute des commandes
+      # - name: Clean install NPM
+      #   run: npm ci
+
+      # - name: Build App
+      #   run: npm run build
+
+      # - name: Deploy to GitHub Pages
+      #   run: |
+      #     git config --global user.email "github-actions@github.com"
+      #     git config --global user.name "github-actions"
+      #     npx gh-pages -d public
       # - id: build-publish
       #   uses: bitovi/github-actions-react-to-github-pages@v1.2.4
       #   with:
