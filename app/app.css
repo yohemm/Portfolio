@@ -45,10 +45,10 @@ div {
   font-family: var(--font-content);
   color: var(--text);
 }
-html {
+html,
+body,
+main {
   overflow-x: hidden;
-}
-body {
   overflow-x: hidden;
 }
 main {
