@@ -139,10 +139,15 @@ jobs:
       - name: Build App
         run: npm run build
 
-      - id: build-publish
-        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
-        with:
-          path: build # change to your build folder
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          npx gh-pages -d public
+      # - id: build-publish
+      #   uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+      #   with:
+      #     path: build # change to your build folder
 
   #### setup github-packages registry image
   build-image-github:
