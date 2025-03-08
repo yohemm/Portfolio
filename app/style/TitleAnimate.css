@@ -64,3 +64,9 @@ h3.subtitle::before {
     background-position-y: 200%;
   }
 }
+
+@media only screen and (max-width: 650px) {
+  h3.subtitle::before {
+    display: none;
+  }
+}
