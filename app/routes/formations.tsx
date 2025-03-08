@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { SchoolCuriculum } from '~/components/SchoolCurriculum';
 
 import '~/style/formation.css';
 import { NavLink } from 'react-router';
+import { useRevealAnim } from '~/elements/hooks';
 
 export function meta() {
   return [
@@ -16,6 +17,8 @@ export function meta() {
 }
 
 export default function Formations() {
+  const selfMade = useRef<HTMLDivElement | null>(null);
+  useRevealAnim(selfMade);
   return (
     <>
       <SchoolCuriculum
@@ -46,7 +49,7 @@ export default function Formations() {
           }
         ]}
       />
-      <section>
+      <section className={'reveal-left'} ref={selfMade}>
         <p>
           Dès le collège, avant même d’entamer mon cursus dans l’IT, j’ai commencé à me former et à
           apprendre la programmation. J’ai notamment créé de petits jeux vidéo à l’aide de moteurs

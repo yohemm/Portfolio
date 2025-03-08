@@ -1,0 +1,20 @@
+.reveal.reveal-down,
+.reveal .reveal-down {
+  transform: translateY(64px);
+}
+.reveal.reveal-left,
+.reveal .reveal-left {
+  transform: translateX(-64px);
+}
+.reveal.reveal-right,
+.reveal .reveal-right {
+  transform: translateX(64px);
+}
+
+.reveal[class*='reveal-'],
+.reveal [class*='reveal-'] {
+  opacity: 0;
+}
+[class*='reveal-'] {
+  transition: all 0.3s ease-in-out;
+}

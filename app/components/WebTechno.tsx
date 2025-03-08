@@ -32,7 +32,7 @@ export const WebTechno = (props: WebTechnoProps) => {
   return (
     <div
       id='web-techno-main'
-      className={'web-techno-main ' + (isInViewport ? 'in-viewport' : '')}
+      className={(isInViewport ? '' : 'reveal ') + 'web-techno-main'}
       ref={ref}>
       <div id='web-techno-backend'>
         <h3>Back-end</h3>

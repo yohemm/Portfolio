@@ -127,9 +127,6 @@
   left: -100%;
   background: linear-gradient(to left, transparent 90%, var(--text) 90%, var(--text));
   background-size: 200%;
-  animation:
-    spawnBar 1.5s linear forwards 1,
-    backToFront 3s 0s infinite ease-in-out;
 }
 
 #web-techno-main {
@@ -137,15 +134,34 @@
   justify-content: space-between;
   position: relative;
 }
-#web-techno-main.in-viewport #web-techno-backend {
-  animation: spawnBack 1.5s linear forwards 1;
+#web-techno-main.reveal #web-techno-frontend,
+#web-techno-main.reveal #web-techno-backend {
+  transform: translateY(30%);
+  opacity: 0;
 }
-#web-techno-main.in-viewport #web-techno-frontend {
-  animation: spawnFront 1.5s linear forwards 1;
+/* #web-techno-main.reveal #web-techno-backend {
+  transition: all 1s ease-in-out;
+  animation: spawnBack 0.5s linear forwards 1;
 }
+#web-techno-main.reveal #web-techno-frontend {
+  animation: spawnFront 0.5s linear forwards 1;
+  transition: all 1s ease-in-out;
+} */
 #web-techno-main #web-techno-backend,
 #web-techno-main #web-techno-frontend {
   width: 40%;
+  transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+}
+#web-techno-main #web-techno-backend {
+  transition-delay: 0.1s;
+  transition-duration: 0.9s;
+}
+#web-techno-main.reveal span.anim {
+  opacity: 0;
+}
+#web-techno-main span.anim {
+  transition: opacity 1s 0.9s cubic-bezier(0.7, 0, 0.3, 1);
+  animation: backToFront 3s 0.8s infinite ease-in-out;
 }
 /* .web-front-spawn-animation {
   animation: spawnFront 1.5s linear forwards 1;
@@ -164,46 +180,5 @@
   }
   100% {
     background-position: 220%;
-  }
-}
-
-@keyframes spawnBar {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes spawnBack {
-  0% {
-    transform: translate(0, 100%);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes spawnFront {
-  0% {
-    transform: translate(0, 100%);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(0, 100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
   }
 }
