@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { WebTechno } from '~/components/WebTechno';
+import { useRevealAnim } from '~/elements/hooks';
 
 import '~/style/home.css';
 
@@ -15,6 +16,12 @@ export function meta() {
 }
 
 export default function Home() {
+  const startDev = useRef<HTMLDivElement | null>(null);
+  useRevealAnim(startDev);
+
+  const aboutPortfolio = useRef<HTMLDivElement | null>(null);
+  useRevealAnim(aboutPortfolio);
+
   return (
     <>
       <section id='about-me'>
@@ -42,7 +49,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section id='starting-dev'>
+      <section id='starting-dev' className={'reveal-down'} ref={startDev}>
         <p>
           J&apos;ai commencé à créer des sites web durant mon collège et, depuis, je ne me suis
           jamais arrêté. J&apos;ai pu développer mes compétences, notamment en UX/UI design, en
@@ -59,17 +66,17 @@ export default function Home() {
           place d&apos;une infrastructure réseau professionnelle sécurisée.
         </p>
       </section>
-      <section id='about-portfolio'>
-        <p>
+      <section id='about-portfolio' ref={aboutPortfolio}>
+        <p className='reveal-opacity'>
           Ce portfolio utilise React ainsi que React Router. La mise en production du site est
           automatiquement gérée par un pipeline CI/CD qui inspecte et vérifie le code, versionne
           l&apos;application avec Semantic Release, génère et envoie la nouvelle image Docker vers
           des repositories, puis met à jour le serveur de production via une connexion SSH.
         </p>
-        <div className='ci-cd-container'>
+        <div className='ci-cd-container reveal-down'>
           <img src='/assets/github_actions.png' alt='Plan du la CI-CD de github' />
         </div>
-        <p>
+        <p className='reveal-right'>
           L&apos;utilisation de React Router pourrait sembler superflue, mais j&apos;ai souhaité
           profiter de la création de ce portfolio pour découvrir la version 7 de la librairie.
         </p>

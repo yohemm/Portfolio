@@ -20,3 +20,13 @@ export function useIsInViewport(ref: React.RefObject<HTMLDivElement | null>) {
 
   return isIntersecting;
 }
+
+export function useRevealAnim(ref: React.RefObject<HTMLDivElement | null>) {
+  const isInVP = useIsInViewport(ref);
+  if (isInVP) {
+    ref?.current?.classList.remove('reveal');
+  } else {
+    ref?.current?.classList.add('reveal');
+  }
+  return isInVP;
+}

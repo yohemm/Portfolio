@@ -62,7 +62,7 @@ section#schoolcuriculum .school-step {
   /* position: relative; */
   width: 49%;
   margin-top: 1rem;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

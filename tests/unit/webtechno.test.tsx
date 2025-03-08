@@ -55,7 +55,7 @@ describe('<WebTechno>', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="web-techno-main "
+          class="reveal web-techno-main"
           id="web-techno-main"
         >
           <div

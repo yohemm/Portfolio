@@ -11,6 +11,7 @@ import {
 } from 'react-router';
 import type { Route } from './+types/root';
 
+import './style/spawnAnimation.css';
 import './app.css';
 
 import { NavBar } from './components/NavBar';
