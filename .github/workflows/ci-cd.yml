@@ -127,45 +127,42 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build Docker image
-        run: |
-          docker build -t my-web-server .
+      # - name: Build Docker image
+      #   run: |
+      #     docker build -t my-web-server .
+      # - name: Save Docker container output
+      #   run: |
+      #     docker run --rm my-web-server > output.tar.gz
+      # - name: Extract files
+      #   run: |
+      #     mkdir output
+      #     tar -xvf output.tar.gz -C output
+      # - name: Deploy to GitHub Pages
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     branch: gh-pages
+      #     folder: output
+      # utilise node
+      - name: Use Node.js  22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+        # execute des commandes
+      - name: Clean install NPM
+        run: npm ci
 
-      - name: Save Docker container output
-        run: |
-          docker run --rm my-web-server > output.tar.gz
-
-      - name: Extract files
-        run: |
-          mkdir output
-          tar -xvf output.tar.gz -C output
+      - name: Build App
+        run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          npx gh-pages -d public
+      - id: build-publish
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
         with:
-          branch: gh-pages
-          folder: output
-      # # utilise node
-      # - name: Use Node.js  22
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: 22
-      #   # execute des commandes
-      # - name: Clean install NPM
-      #   run: npm ci
-
-      # - name: Build App
-      #   run: npm run build
-
-      # - name: Deploy to GitHub Pages
-      #   run: |
-      #     git config --global user.email "github-actions@github.com"
-      #     git config --global user.name "github-actions"
-      #     npx gh-pages -d public
-      # - id: build-publish
-      #   uses: bitovi/github-actions-react-to-github-pages@v1.2.4
-      #   with:
-      #     path: build # change to your build folder
+          path: build # change to your build folder
 
   #### setup github-packages registry image
   build-image-github:
