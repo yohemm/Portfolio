@@ -4,19 +4,23 @@
 #web-techno-main h3::before {
   content: none !important;
 }
+.web-techno-icons-container p {
+  color: var(--text-tomato);
+}
 #web-techno-main #web-techno-backend .web-techno-icons-container,
 #web-techno-main #web-techno-frontend .web-techno-icons-container {
-  border-top: 1px solid var(--text);
-  border-bottom: 1px solid var(--text);
+  border-top: 1px solid var(--ui-boder-tomato);
+  border-bottom: 1px solid var(--ui-boder-tomato);
   min-height: 10rem;
   height: 50vh;
   position: relative;
+  background-color: var(--ui-bg-tomato);
 }
 #web-techno-main #web-techno-backend .web-techno-icons-container {
-  border-left: 1px solid var(--text);
+  border-left: 1px solid var(--ui-boder-tomato);
 }
 #web-techno-main #web-techno-frontend .web-techno-icons-container {
-  border-right: 1px solid var(--text);
+  border-right: 1px solid var(--ui-boder-tomato);
 }
 
 #web-techno-main #web-techno-backend .web-techno-icons-container::before,
@@ -24,7 +28,7 @@
   content: '';
   position: absolute;
   height: 30%;
-  border-right: 1px solid var(--text);
+  border-right: 1px solid var(--ui-boder-tomato);
   right: 0;
 }
 #web-techno-main #web-techno-backend .web-techno-icons-container::after {
@@ -40,7 +44,7 @@
   position: absolute;
   left: 0;
   height: 30%;
-  border-left: 1px solid var(--text);
+  border-left: 1px solid var(--ui-boder-tomato);
 }
 #web-techno-main #web-techno-frontend .web-techno-icons-container::after {
   top: 0;
@@ -84,7 +88,7 @@
 #web-techno-backend span.horiz,
 #web-techno-frontend span {
   position: absolute;
-  background: var(--text);
+  background: var(--text-gray);
 }
 #web-techno-backend span.vert,
 #web-techno-frontend span.vert {
@@ -125,7 +129,7 @@
   top: calc(50% - 2px);
   bottom: 50%;
   left: -100%;
-  background: linear-gradient(to left, transparent 90%, var(--text) 90%, var(--text));
+  background: linear-gradient(to left, transparent 90%, var(--text-gray) 90%, var(--text-gray));
   background-size: 200%;
 }
 

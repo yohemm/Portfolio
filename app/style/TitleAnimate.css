@@ -22,7 +22,12 @@ h3.subtitle::before {
   left: 15px;
   width: calc(100% - 30px);
   height: 4px;
-  background-image: linear-gradient(to bottom, transparent 50%, var(--text) 50%, var(--text));
+  background-image: linear-gradient(
+    to bottom,
+    transparent 50%,
+    var(--text-gray) 50%,
+    var(--text-gray)
+  );
   background-size: 100% 200%;
   animation-name: moveToUp;
   animation-duration: 6s;
@@ -62,5 +67,11 @@ h3.subtitle::before {
   }
   100% {
     background-position-y: 200%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h3.subtitle::before {
+    display: none;
   }
 }

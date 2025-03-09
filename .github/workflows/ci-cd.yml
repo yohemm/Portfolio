@@ -126,6 +126,22 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      # utilise node
+      - name: Use Node.js  22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+        # execute des commandes
+      - name: Clean install NPM
+        run: npm ci
+
+      - name: Build App
+        run: npm run build
+
+      - id: build-publish
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+        with:
+          path: build # change to your build folder
 
       # - name: Build Docker image
       #   run: |
@@ -143,26 +159,26 @@ jobs:
       #     branch: gh-pages
       #     folder: output
       # utilise node
-      - name: Use Node.js  22
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-        # execute des commandes
-      - name: Clean install NPM
-        run: npm ci
+      # - name: Use Node.js  22
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 22
+      #   # execute des commandes
+      # - name: Clean install NPM
+      #   run: npm ci
 
-      - name: Build App
-        run: npm run build
+      # - name: Build App
+      #   run: npm run build
 
-      - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-          npx gh-pages -d public
-      - id: build-publish
-        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
-        with:
-          path: build # change to your build folder
+      # - name: Deploy to GitHub Pages
+      #   run: |
+      #     git config --global user.email "github-actions@github.com"
+      #     git config --global user.name "github-actions"
+      #     npx gh-pages -d public
+      # - id: build-publish
+      #   uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+      #   with:
+      #     path: build # change to your build folder
 
   #### setup github-packages registry image
   build-image-github:
