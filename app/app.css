@@ -66,11 +66,7 @@ a {
   color: var(--text-interactif);
   transition: color 0.2s;
 }
-a:hover {
-  font-family: var(--font-content);
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+section a:hover {
   color: var(--text-low-interactif);
 }
 h1 {
