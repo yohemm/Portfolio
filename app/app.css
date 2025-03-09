@@ -45,15 +45,9 @@ div {
   font-family: var(--font-content);
   color: var(--text);
 }
-html,
-body,
-main {
-  overflow-x: hidden;
-  overflow-x: hidden;
-}
 main {
   margin: 0 5%;
-  backdrop-filter: blur(20px);
+  overflow-y: hidden;
 }
 a {
   font-family: var(--font-content);
