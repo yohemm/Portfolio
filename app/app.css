@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lora&family=Montserrat:ital@1&family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lora&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Varela&display=swap');
 :root {
-  --font-tile: 'Brygada 1918', 'Antic Didone', serif;
-  --font-content: Montserrat, 'Varela', sans-serif;
+  --font-tile: 'Brygada 1918', 'Montserrat', serif;
+  --font-content: 'Varela', 'Antic Didone', sans-serif;
   --text-tomato: #5c271f;
   --text-low-tomato: #d13415;
   --background-white: #fcfcfc;
@@ -46,7 +46,7 @@ nav {
   border: none;
   scroll-behavior: smooth;
   font-size: 1.5rem;
-  font-size: clamp(0.8rem, 4vw, 1.5rem);
+  font-size: clamp(1rem, 4vw, 1.25rem);
 }
 p,
 span,
@@ -55,8 +55,7 @@ div {
   color: var(--text-gray);
 }
 main {
-  margin: 0 5%;
-  overflow-y: hidden;
+  margin: 0 5vw;
 }
 a {
   font-family: var(--font-content);
@@ -73,7 +72,7 @@ h1 {
   font-size: 4rem;
   font-family: var(--font-tile);
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 200;
   font-style: normal;
 }
 h2 {
@@ -116,7 +115,7 @@ nav ul li {
   margin: auto 0;
 }
 nav ul li a {
-  color: var(--text);
+  color: var(--text-gray);
   display: inline-flex;
   align-items: center;
 }
@@ -245,11 +244,8 @@ header nav ul li.skills-projects {
 }
 #header h2 {
   font-size: 1.8rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-tile);
   font-weight: bold;
-}
-#header p {
-  font-size: 1rem;
 }
 #header div {
   text-align: center;

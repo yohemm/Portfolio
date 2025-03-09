@@ -93,5 +93,5 @@
   align-self: flex-end;
 }
 .card .card-content .card-technos-overview span > span {
-  color: var(--solid);
+  color: var(--text-low-tomato);
 }
