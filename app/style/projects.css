@@ -13,6 +13,37 @@
   flex-direction: column;
 }
 
+.card .card-header-content {
+  overflow: hidden;
+  display: inline-block;
+}
+.card .card-header-content::after {
+  content: '';
+  opacity: 0;
+  height: 100%;
+  opacity: 0;
+  width: 20%;
+  transform: translate(-50%, -60%) rotate(30deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.card:hover .card-header-content::after {
+  opacity: 1;
+  transform: translate(-50%, 130%) rotate(30deg);
+  transition-property: transform, opacity;
+  transition-duration: 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+.card:active .card-header-content:after {
+  opacity: 0;
+}
 .card .card-header .card-header-content {
   backdrop-filter: blur(1px);
   align-self: center;
