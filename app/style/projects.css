@@ -7,6 +7,7 @@
 .card {
   margin: 20vh 0;
   border: 1px solid;
+  border-color: var(--ui-boder-tomato);
   border-radius: 5px;
   min-height: 450px;
   display: flex;
@@ -24,14 +25,7 @@
   opacity: 0;
   width: 20%;
   transform: translate(-50%, -60%) rotate(30deg);
-  background: rgba(255, 255, 255, 0.13);
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.13) 77%,
-    rgba(255, 255, 255, 0.5) 92%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: var(--shadow-border);
 }
 .card:hover .card-header-content::after {
   opacity: 1;
@@ -60,36 +54,35 @@
 }
 .card .card-header h4 {
   border-radius: 15px;
-  box-shadow:
-    10px 0 5px var(--border-separator),
-    -10px 0 5px var(--border-separator);
   text-align: center;
   font-size: 2.5rem;
   backdrop-filter: grayscale(0.65);
-  -webkit-backdrop-filter: grayscale(1);
+  -webkit-backdrop-filter: grayscale(0.65);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow:
-    -1px 0px 0px var(--background),
-    0px -1px 0px var(--background),
-    1px 0px 0px var(--background),
-    0px 1px 0px var(--background);
+    -1px 0px 0px var(--background-white),
+    0px -1px 0px var(--background-white),
+    1px 0px 0px var(--background-white),
+    0px 1px 0px var(--background-white);
 }
 
 .card .card-content .formation-btn:hover {
-  color: var(--background);
+  color: var(--text-interactif);
+  background-color: var(--ui-bg-hover-jade);
 }
 .card .card-content .formation-btn {
   text-align: center;
   border-radius: 5px;
-  background-color: var(--interactif);
-  color: var(--text);
+  background-color: var(--ui-bg-jade);
+  color: var(--text-low-interactif);
   width: 200px;
   margin: 0 auto;
-  transition: all 0.5s ease-out;
+  transition: all 0.1s ease-out;
+  border: 2px solid var(--ui-boder-jade);
 }
 .card .card-content {
-  background-color: var(--background);
+  background-color: var(--ui-bg-tomato);
   flex-grow: 3;
   display: flex;
   flex-direction: column;
