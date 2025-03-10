@@ -31,6 +31,10 @@
 html {
   --res: calc(0.01 * 10vmin);
 }
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
 nav {
   font-size: 1.5rem;
 }
@@ -55,7 +59,8 @@ div {
   color: var(--text-gray);
 }
 main {
-  margin: 0 5vw;
+  margin: 0 auto;
+  width: 90vw;
 }
 a {
   font-family: var(--font-content);
@@ -76,14 +81,21 @@ h1 {
   font-style: normal;
 }
 h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-family: var(--font-tile);
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-family: var(--font-tile);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h4 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-family: var(--font-tile);
   font-optical-sizing: auto;
   font-weight: 400;
@@ -99,7 +111,7 @@ nav {
   /* height: clamp(50px, 15vw, 75px); */
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   transition:
     background 0.08s ease-in,
     border-bottom 0.4s ease-in;
@@ -332,5 +344,6 @@ footer address a:hover {
   }
   main {
     margin: 0;
+    width: 100vw;
   }
 }
