@@ -91,15 +91,15 @@ export default function App() {
           </header>
           <main>
             <Outlet />
-            <FooterContact
-              linkAndName={{
-                'About me': '/',
-                Linkedin: 'https://www.linkedin.com/in/yohem-vaxelaire/',
-                GitHub: 'https://github.com/yohemm',
-                Contact: '/#my-contact'
-              }}
-            />
           </main>
+          <FooterContact
+            linkAndName={{
+              'About me': '/',
+              Linkedin: 'https://www.linkedin.com/in/yohem-vaxelaire/',
+              GitHub: 'https://github.com/yohemm',
+              Contact: '/#my-contact'
+            }}
+          />
         </>
       )}{' '}
     </>

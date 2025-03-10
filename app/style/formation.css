@@ -1,6 +1,13 @@
 /* SVG FORMATIONS */
 
-.school-step {
+section#schoolcuriculum .school-step {
+  width: calc(50% - 0.75vw);
+  margin-top: 1rem;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
   position: relative;
   padding: 10px;
   /* SvG a changer aussi pour br */
@@ -62,16 +69,6 @@ section#schoolcuriculum::after {
     spanwAtMiddleTime 1.5s linear forwards 1,
     moveToUp 2s ease-in-out forwards infinite;
 }
-
-section#schoolcuriculum .school-step {
-  /* position: relative; */
-  width: 49%;
-  margin-top: 1rem;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
 section#schoolcuriculum .school-step.in-viewport:nth-child(odd) {
   animation-name: spawnTranslateLeft;
 }
@@ -89,7 +86,7 @@ section#schoolcuriculum .school-step::after {
   width: 1.5vw;
   height: 1.5vw;
   top: 0;
-  right: -0.4%;
+  right: 0;
   transform: translate(100%, 50%);
 }
 section#schoolcuriculum .school-step.in-viewport::after {
@@ -97,7 +94,7 @@ section#schoolcuriculum .school-step.in-viewport::after {
 }
 section#schoolcuriculum .school-step:nth-child(even)::after {
   transform: translate(-100%, 50%);
-  left: -0.4%;
+  left: 0;
 }
 
 @keyframes progress {
