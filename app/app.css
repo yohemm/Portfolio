@@ -61,7 +61,6 @@ div {
 main {
   margin: 0 auto;
   width: 90vw;
-  overflow-x: hidden;
 }
 a {
   font-family: var(--font-content);
@@ -278,25 +277,28 @@ header nav ul li.skills-projects {
 }
 
 section {
-  min-height: 60vh;
-  margin-bottom: max(25vh, 200px);
+  min-height: 40vh;
+  margin: max(25vh, 200px) 0;
 }
-section:nth-last-of-type(1) {
-  margin-bottom: 80px;
+#about-me {
+  display: flex;
+  flex-flow: column;
 }
-
 #about-me h2 {
   margin-left: 0;
 }
-#about-me div {
+#about-me .space-between-vertcal {
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  height: auto;
+  flex-flow: column;
+  flex: 1 1 auto;
+  justify-content: space-around;
 }
 #about-me .space-between-vertcal p {
-  flex-grow: 1;
   color: var(--background-white);
+}
+#about-me {
+  min-height: 50vh;
+  margin-bottom: 80px;
 }
 #about-me p {
   font-size: 1rem;
@@ -371,5 +373,6 @@ footer ul li a {
   main {
     margin: 0;
     width: 100vw;
+    overflow-x: hidden;
   }
 }
