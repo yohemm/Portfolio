@@ -2,6 +2,7 @@
 :root {
   --font-tile: 'Brygada 1918', 'Montserrat', serif;
   --font-content: 'Varela', 'Antic Didone', sans-serif;
+  /*   
   --text-tomato: #5c271f;
   --text-low-tomato: #d13415;
   --background-white: #fcfcfc;
@@ -18,7 +19,24 @@
   --focus-gray: #bbbbbb;
   --text-gray: #202020;
   --text-low-interactif: #208368;
-  --text-interactif: #193b2d;
+  --text-interactif: #193b2d; */
+
+  --text-tomato: #1f2d5c;
+  --text-low-tomato: #3a5bc7;
+  --background-white: #fcfcfc;
+  --ui-bg-gray: #f0f0f0;
+  --ui-bg-tomato: #edf2fe;
+  --ui-bg-solid-jade: #bdee63;
+  --ui-bg-solid-hover-jade: #b0e64c;
+  --ui-bg-jade: #eef6d6;
+  --ui-bg-hover-jade: #e2f0bd;
+  --ui-boder-jade: #abc978;
+  --ui-boder-tomato: #c1d0ff;
+  --ui-boder-interactif-gray: #cecece;
+  --focus-gray: #bbbbbb;
+  --text-gray: #202020;
+  --text-low-interactif: #5c7c2f;
+  --text-interactif: #37401c;
   /* --linearGray: linear-gradient(
     45deg,
     transparent 50%,
@@ -269,10 +287,11 @@ header nav ul li.skills-projects {
   border: 1px solid var(--text-gray);
   background: var(--ui-bg-jade);
   border-radius: 4px;
+  color: var(--text-low-interactif);
 }
 #header div a.contact-btn:hover {
   border-radius: 4px;
-  color: var(--background-white);
+  color: var(--text-interactif);
   background: var(--ui-bg-solid-jade);
 }
 
