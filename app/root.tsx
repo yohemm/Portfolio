@@ -72,7 +72,7 @@ export default function App() {
           <header>
             <NavBar />
             <div className='' id='header'>
-              <h1>Yohem Vaxelaire</h1>
+              <h1>Yohem VAXELAIRE</h1>
               <h2>Développeur Back-end.</h2>
               <p>
                 Je m’appelle Yohem VAXELAIRE, et j’ai 18 ans. Je suis développeur informatique, fort

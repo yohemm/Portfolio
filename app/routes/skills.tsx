@@ -49,7 +49,7 @@ export default function Skills() {
       </section>
       <section ref={skills}>
         <div className='reveal-down'>
-          <TitleAnimate>Compétances et spécialisations Web</TitleAnimate>
+          <TitleAnimate>Compétences et spécialisations Web</TitleAnimate>
           <p>
             J&apos;ai choisi de me spécialiser dans Node.js pour le développement backend, car
             j&apos;apprécie son paradigme asynchrone basé sur les callbacks et les promises. Bien
@@ -72,7 +72,7 @@ export default function Skills() {
       </section>
       <section ref={technos}>
         <div className='reveal-right'>
-          <TitleAnimate>Technologies aprisent lors de l&apos;alternance</TitleAnimate>
+          <TitleAnimate>Technologies apprisent lors de l&apos;alternance</TitleAnimate>
           <p>
             Lors de ma licence professionnelle en informatique et de mon apprentissage au sein de la
             polyclinique de Grande-Synthe en tant que technicien réseau, j&apos;ai pu développer mes

@@ -28,7 +28,7 @@ export const ProjectShowcase = (props: ProjectShowcaseProps) => {
       <div className='card-content'>
         <div className='card-details'>{props.presentation}</div>
         <NavLink className='formation-btn' to={'/projects/' + props.name}>
-          Voir en détaille
+          Voir en détail
         </NavLink>
         <p className='card-technos-overview'>
           Techonologies utilisées :{' '}

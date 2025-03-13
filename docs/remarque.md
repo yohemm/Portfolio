@@ -4,3 +4,8 @@
 - animation step school svg en trop
 - distinstion sur la navBAr
 - Plus utilisé les couleurs du logo
+
+Maman:
+
+- changement de couleur
+- reduire les marges des sections
