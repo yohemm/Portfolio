@@ -20,11 +20,11 @@ import { Loader } from './components/Loader';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-  // {
-  //   rel: "preconnect",
-  //   href: "https://fonts.gstatic.com",
-  //   crossOrigin: "anonymous",
-  // },
+  {
+    rel: 'preconnect',
+    href: 'https://fonts.gstatic.com',
+    crossOrigin: 'anonymous'
+  },
   {
     rel: 'stylesheet',
     href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css',

@@ -3,3 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.technos-listing-item .technos-container i {
+  height: 2.5rem;
+}
