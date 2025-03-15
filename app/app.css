@@ -63,8 +63,8 @@ nav {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style: none;
   text-decoration: none;
+  font-family: var(--font-content);
   outline: none;
   border: none;
   font-size: 1.5rem;
@@ -145,6 +145,7 @@ nav ul {
 nav ul li {
   text-align: center;
   margin: auto 0;
+  list-style: none;
 }
 nav ul li a {
   color: var(--text-gray);

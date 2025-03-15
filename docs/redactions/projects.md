@@ -76,9 +76,23 @@ Découvrir le monde proffessionnelle de l'IT.
 Participer à la réalisation de Plan de sécurité et autre document officielle.
 Découvrir les serveur Windows (AD, IIS, DNS, GPO, Remote App, ...)
 
-## Presentation
+### Presentation
 
 Alternance en tant que Technicien Système et Réseau au sein de la Polyclinique de Grande-Synthe.
+
+### Intro
+
+Alternances de 2 ans en temps que technicien systeme & réseau au sein de la Polyclinque De Grande-Synthe.
+
+### Main
+
+Mise en place de serveur GLPI sur IIS avec agent installé par GPO sur les postes de travaille, remonté des imprimentes et composant réseau.
+Participation à la rédaction de plan de Sécurité (SégurNumérique et Plan Blanc innformatique).
+Manipulation de l'Active Directory, de Hyper-V et configuration de switchs.
+Creation d'image ISO et CloneZilla via l'outil SysPrep de Windows.
+Cartographie réseau, des périphériques finaux aux prériphérique réseau.
+Rédaction de script PowerShell pour des petites automatisations.
+Mission longtherme de Help Desk pour résoudre les problemes informatiques et réseaux du corps médicals et de l'administration
 
 ## [Gites hautes vosges](https://github.com/yohemm/apartment-rental)
 

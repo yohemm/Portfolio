@@ -105,8 +105,34 @@ export const PROJECTS: Project[] = [
         Grande-Synthe.
       </p>
     ),
-    intro: <>intro</>,
-    children: <>node</>,
+    intro: (
+      <p>
+        Alternance de 2 ans en tant que technicien système & réseau au sein de la Polyclinique de
+        Grande-Synthe.
+      </p>
+    ),
+    children: (
+      <section>
+        <ul>
+          <li>
+            Mise en place de serveur GLPI sur IIS avec agent installé par GPO sur les postes de
+            travail, remontée des imprimantes et composants réseau.
+          </li>
+          <li>
+            Participation à la rédaction de plans de sécurité (SégurNumérique et Plan Blanc
+            Informatique).
+          </li>
+          <li>Manipulation de l'Active Directory, de Hyper-V et configuration de switchs.</li>
+          <li>Création d'images ISO et CloneZilla via l'outil SysPrep de Windows.</li>
+          <li>Cartographie réseau, des périphériques finaux aux périphériques réseau.</li>
+          <li>Rédaction de scripts PowerShell pour des automatisations simples.</li>
+          <li>
+            Mission à long terme de Help Desk pour résoudre les problèmes informatiques et réseaux
+            du corps médical et de l'administration.
+          </li>
+        </ul>
+      </section>
+    ),
     toolsAndServices: null,
     webTechnos: null,
     presentationTechnos: [
