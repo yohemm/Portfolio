@@ -50,6 +50,17 @@ Cette application n'est pas pas encore terminé bien qu'elle inclue deja un syst
 
 Project Web Personnel incluant un un gestion des utilisateurs et leur profile, section commentaire, création de cours/articles. Suivant un diagramme UML.
 
+### Intro
+
+Projet personnel ayant pour but de créer une application web avec une gestion des utilisateurs complexe.
+
+### Main
+
+Site web ayant pour but d'être une plateforme de cours textuels pour les francophones passionnés par l'IT.
+Il inclut une gestion des droits et des accès utilisateurs, des sections de commentaires ainsi que des formulaires de rédaction de cours.
+L'utilisateur peut changer son pseudo ainsi que son image de profil. Par la suite, un système de badges et de trophées sera implémenté.
+Ce projet inclut un diagramme UML complexe:
+
 ## Alternance PGS
 
     Technos:

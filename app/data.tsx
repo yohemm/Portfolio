@@ -68,8 +68,26 @@ export const PROJECTS: Project[] = [
         diagramme UML.
       </p>
     ),
-    intro: <>intro</>,
-    children: <>node</>,
+    intro: (
+      <p>
+        Projet personnel ayant pour but de créer une application web avec une gestion des
+        utilisateurs complexe.
+      </p>
+    ),
+    children: (
+      <section>
+        <p>
+          Site web ayant pour but d'être une plateforme de cours textuels pour les francophones
+          passionnés par l'IT. Il inclut une gestion des droits et des accès utilisateurs, des
+          sections de commentaires ainsi que des formulaires de rédaction de cours. L'utilisateur
+          peut changer son pseudo ainsi que son image de profil. Par la suite, un système de badges
+          et de trophées sera implémenté. Ce projet inclut un diagramme UML complexe:
+          <div className='center-img'>
+            <img src='/assets/JDD/UML.png' alt='Diagramme UML de La BBD du projet' height='400px' />
+          </div>
+        </p>
+      </section>
+    ),
     toolsAndServices: null,
     webTechnos: {
       front: ['JavaScript', 'CSS'],
