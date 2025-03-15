@@ -12,8 +12,35 @@ export const PROJECTS: Project[] = [
         conteneurs.
       </p>
     ),
-    intro: <>intro</>,
-    children: <>node</>,
+    intro: (
+      <p>
+        Afin de centraliser de nombreux projets, j'ai décidé de louer un VPS que j'ai configuré pour
+        automatiser les déploiements et superviser les différents projets.
+      </p>
+    ),
+    children: (
+      <section>
+        <p>
+          Les projets sont hébergés dans des conteneurs Docker avec un réseau Docker distinct par
+          projet. Un reverse proxy Nginx avec certification automatique via Certbot sert de
+          passerelle pour autoriser les applications à être contactées depuis l'extérieur.
+        </p>
+        <p>
+          Certains projets appartenant à des organisations, j'ai donc dû mettre en place des accès
+          SSH sécurisés avec une gestion précise des droits et des permissions, afin de respecter
+          l'isolation des projets.
+        </p>
+        <p>
+          De plus, une supervision a été mise en place en récupérant les informations du VPS et des
+          conteneurs via Prometheus et son Node Exporter, qui envoient les données à Grafana pour le
+          suivi et l’analyse.
+        </p>
+        <p>
+          Pour terminer, un serveur Gitea, Portainer et des interfaces web d’administration de bases
+          de données ont été mis en place pour faciliter la gestion des projets.
+        </p>
+      </section>
+    ),
     toolsAndServices: {
       tools: ['Docker', 'Git', 'Nginx', 'Bash', 'Postfix', 'Serveurs Web'],
       services: [
