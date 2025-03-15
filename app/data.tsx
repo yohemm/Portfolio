@@ -14,8 +14,8 @@ export const PROJECTS: Project[] = [
     ),
     intro: (
       <p>
-        Afin de centraliser de nombreux projets, j'ai décidé de louer un VPS que j'ai configuré pour
-        automatiser les déploiements et superviser les différents projets.
+        Afin de centraliser de nombreux projets, j&apos;ai décidé de louer un VPS que j&apos;ai
+        configuré pour automatiser les déploiements et superviser les différents projets.
       </p>
     ),
     children: (
@@ -23,21 +23,21 @@ export const PROJECTS: Project[] = [
         <p>
           Les projets sont hébergés dans des conteneurs Docker avec un réseau Docker distinct par
           projet. Un reverse proxy Nginx avec certification automatique via Certbot sert de
-          passerelle pour autoriser les applications à être contactées depuis l'extérieur.
+          passerelle pour autoriser les applications à être contactées depuis l&apos;extérieur.
         </p>
         <p>
-          Certains projets appartenant à des organisations, j'ai donc dû mettre en place des accès
-          SSH sécurisés avec une gestion précise des droits et des permissions, afin de respecter
-          l'isolation des projets.
+          Certains projets appartenant à des organisations, j&apos;ai donc dû mettre en place des
+          accès SSH sécurisés avec une gestion précise des droits et des permissions, afin de
+          respecter l&apos;isolation des projets.
         </p>
         <p>
           De plus, une supervision a été mise en place en récupérant les informations du VPS et des
           conteneurs via Prometheus et son Node Exporter, qui envoient les données à Grafana pour le
-          suivi et l’analyse.
+          suivi et l&apos;analyse.
         </p>
         <p>
-          Pour terminer, un serveur Gitea, Portainer et des interfaces web d’administration de bases
-          de données ont été mis en place pour faciliter la gestion des projets.
+          Pour terminer, un serveur Gitea, Portainer et des interfaces web d&apos;administration de
+          bases de données ont été mis en place pour faciliter la gestion des projets.
         </p>
       </section>
     ),
@@ -77,11 +77,12 @@ export const PROJECTS: Project[] = [
     children: (
       <section>
         <p>
-          Site web ayant pour but d'être une plateforme de cours textuels pour les francophones
-          passionnés par l'IT. Il inclut une gestion des droits et des accès utilisateurs, des
-          sections de commentaires ainsi que des formulaires de rédaction de cours. L'utilisateur
-          peut changer son pseudo ainsi que son image de profil. Par la suite, un système de badges
-          et de trophées sera implémenté. Ce projet inclut un diagramme UML complexe:
+          Site web ayant pour but d&apos;être une plateforme de cours textuels pour les francophones
+          passionnés par l&apos;IT. Il inclut une gestion des droits et des accès utilisateurs, des
+          sections de commentaires ainsi que des formulaires de rédaction de cours.
+          L&apos;utilisateur peut changer son pseudo ainsi que son image de profil. Par la suite, un
+          système de badges et de trophées sera implémenté. Ce projet inclut un diagramme UML
+          complexe:
           <div className='center-img'>
             <img src='/assets/JDD/UML.png' alt='Diagramme UML de La BBD du projet' height='400px' />
           </div>
@@ -122,13 +123,13 @@ export const PROJECTS: Project[] = [
             Participation à la rédaction de plans de sécurité (SégurNumérique et Plan Blanc
             Informatique).
           </li>
-          <li>Manipulation de l'Active Directory, de Hyper-V et configuration de switchs.</li>
-          <li>Création d'images ISO et CloneZilla via l'outil SysPrep de Windows.</li>
+          <li>Manipulation de l&apos;Active Directory, de Hyper-V et configuration de switchs.</li>
+          <li>Création d&apos;images ISO et CloneZilla via l&apos;outil SysPrep de Windows.</li>
           <li>Cartographie réseau, des périphériques finaux aux périphériques réseau.</li>
           <li>Rédaction de scripts PowerShell pour des automatisations simples.</li>
           <li>
             Mission à long terme de Help Desk pour résoudre les problèmes informatiques et réseaux
-            du corps médical et de l'administration.
+            du corps médical et de l&apos;administration.
           </li>
         </ul>
       </section>

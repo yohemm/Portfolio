@@ -76,13 +76,13 @@ export default function App() {
               <h2>Développeur Back-end.</h2>
               <p>
                 Je suis un programmeur informatique de 20 ans, passionné par les technologies web et
-                systèmes. Je maîtrise la création d'applications web complexes ainsi que leur
+                systèmes. Je maîtrise la création d&apos;applications web complexes ainsi que leur
                 hébergement automatisé via des chaînes CI/CD et du monitoring.
               </p>
               <p>
                 Découvrez <NavLink to='/projects'>mes projets</NavLink> et{' '}
-                <NavLink to='/skills'>compétences</NavLink>, et n'hésitez pas à me contacter pour
-                toute collaboration ou échange autour de la tech !
+                <NavLink to='/skills'>compétences</NavLink>, et n&apos; hésitez pas à me contacter
+                pour toute collaboration ou échange autour de la tech!
               </p>
               <div className=''>
                 <NavLink to='/#contact-me' className='contact-btn'>
