@@ -75,12 +75,14 @@ export default function App() {
               <h1>Yohem VAXELAIRE</h1>
               <h2>Développeur Back-end.</h2>
               <p>
-                Je m’appelle Yohem VAXELAIRE, et j’ai 18 ans. Je suis développeur informatique, fort
-                de 6 ans d’expérience. Je suis passionné par la technologie et capable de travailler
-                sur divers sujets, du développement web aux jeux vidéo. J’ai également de
-                l’expérience dans le piratage et la création d’interfaces utilisateur optimisées
-                pour le référencement (SEO). Je suis déterminé à continuer à apprendre et à me
-                développer en tant que développeur professionnel.
+                Je suis un programmeur informatique de 20 ans, passionné par les technologies web et
+                systèmes. Je maîtrise la création d&apos;applications web complexes ainsi que leur
+                hébergement automatisé via des chaînes CI/CD et du monitoring.
+              </p>
+              <p>
+                Découvrez <NavLink to='/projects'>mes projets</NavLink> et{' '}
+                <NavLink to='/skills'>compétences</NavLink>, et n&apos; hésitez pas à me contacter
+                pour toute collaboration ou échange autour de la tech!
               </p>
               <div className=''>
                 <NavLink to='/#contact-me' className='contact-btn'>

@@ -63,12 +63,20 @@ nav {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style: none;
   text-decoration: none;
+  font-family: var(--font-content);
   outline: none;
   border: none;
   font-size: 1.5rem;
   font-size: clamp(1rem, 4vw, 1.25rem);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  list-style: none;
 }
 p,
 span,
@@ -119,7 +127,9 @@ h4 {
   font-weight: 400;
   font-style: normal;
 }
-
+.center-img {
+  text-align: center;
+}
 nav a,
 nav span {
   font-family: var(--font-tile);
@@ -143,6 +153,7 @@ nav ul {
 nav ul li {
   text-align: center;
   margin: auto 0;
+  list-style: none;
 }
 nav ul li a {
   color: var(--text-gray);

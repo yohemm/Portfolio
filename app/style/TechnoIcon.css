@@ -14,9 +14,8 @@
   font-size: 1.5rem;
 }
 .technos-container i {
-  font-size: 2rem;
   margin: 0 auto;
   width: fit-content;
   display: flex;
-  height: 2rem;
+  height: 2.5rem;
 }

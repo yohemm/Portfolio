@@ -34,16 +34,12 @@ export default function Skills() {
         <div className='reveal-opacity'>
           <p>
             J&apos;ai débuté la programmation sur des projets personnels, ce qui m&apos;a permis
-            d&apos;apprendre progressivement la chaîne de mise en production.
-          </p>
-          <p>
-            Aujourd&apos;hui, je suis capable de mettre en place un projet intégrant des pipelines
-            CI/CD avec GitHub Actions, permettant de gérer le versioning des releases,
-            d&apos;envoyer des images sur des repositories et de déployer le projet sur un serveur.
-          </p>
-          <p>
-            Passionné par le développement système et le backend, j&apos;ai appris à gérer des
-            serveurs multi-hébergement avec automatisation des tâches.
+            d&apos;apprendre progressivement la chaîne de mise en production. Aujourd&apos;hui, je
+            suis capable de mettre en place un projet intégrant des pipelines CI/CD avec GitHub
+            Actions, permettant de gérer le versioning des releases, d&apos;envoyer des images sur
+            des repositories et de déployer le projet sur un serveur. Passionné par le développement
+            système et le backend, j&apos;ai appris à gérer des serveurs multi-hébergement avec
+            automatisation des tâches.
           </p>
         </div>
       </section>
@@ -55,14 +51,12 @@ export default function Skills() {
             j&apos;apprécie son paradigme asynchrone basé sur les callbacks et les promises. Bien
             que le fonctionnement de JavaScript puisse sembler étrange dans certains cas,
             l&apos;usage de TypeScript, ESLint et de tests bien configurés permet de résoudre en
-            partie les problèmes intrinsèques au langage.
-          </p>
-          <p>
-            Bien que le backend soit ma priorité, j&apos;ai également appris React.js afin
-            d&apos;approfondir un framework frontend. J&apos;ai choisi React non seulement pour sa
-            compatibilité avec Node.js, mais aussi pour sa popularité sur le marché professionnel.
-            De plus, j&apos;ai été séduit par son système de composants, son mécanisme de rendu et
-            sa surcouche du DOM virtuel, qui le rendent particulièrement pratique à utiliser.
+            partie les problèmes intrinsèques au langage. Bien que le backend soit ma priorité,
+            j&apos;ai également appris React.js afin d&apos;approfondir un framework frontend.
+            J&apos;ai choisi React non seulement pour sa compatibilité avec Node.js, mais aussi pour
+            sa popularité sur le marché professionnel. De plus, j&apos;ai été séduit par son système
+            de composants, son mécanisme de rendu et sa surcouche du DOM virtuel, qui le rendent
+            particulièrement pratique à utiliser.
           </p>
           <WebTechno
             back={['NodeJS', 'PostGreSQL', 'Express']}
@@ -90,19 +84,14 @@ export default function Skills() {
           <p>
             Lorsque je réalisais mes premiers projets personnels, je me suis heurté à un problème de
             mise en production, car je ne disposais pas de serveur. Pour y remédier, j&apos;ai loué
-            un VPS et configuré le système afin de gérer mes applications.
-          </p>
-          <p>
-            J&apos;ai mis en place Docker, avec un docker-compose par application, chaque
-            application contenant plusieurs conteneurs. Les applications accessibles depuis
-            l&apos;extérieur sont gérées par un reverse-proxy Nginx sur un conteneur Docker, associé
-            à Certbot pour gérer automatiquement les certificats Let&apos;s Encrypt. Cette
-            configuration est automatisée via un script Bash, utilisant des variables
-            d&apos;environnement pour gérer les domaines.
-          </p>
-          <p>
-            Enfin, j&apos;ai mis en place un réseau de supervision et de monitoring sur mes
-            docker-compose, me permettant de surveiller les ressources et le trafic de chaque
+            un VPS et configuré le système afin de gérer mes applications. J&apos;ai mis en place
+            Docker, avec un docker-compose par application, chaque application contenant plusieurs
+            conteneurs. Les applications accessibles depuis l&apos;extérieur sont gérées par un
+            reverse-proxy Nginx sur un conteneur Docker, associé à Certbot pour gérer
+            automatiquement les certificats Let&apos;s Encrypt. Cette configuration est automatisée
+            via un script Bash, utilisant des variables d&apos;environnement pour gérer les
+            domaines. Enfin, j&apos;ai mis en place un réseau de supervision et de monitoring sur
+            mes docker-compose, me permettant de surveiller les ressources et le trafic de chaque
             conteneur.
           </p>
           <TechnosListing

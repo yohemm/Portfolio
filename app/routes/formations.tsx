@@ -54,11 +54,9 @@ export default function Formations() {
           Dès le collège, avant même d’entamer mon cursus dans l’IT, j’ai commencé à me former et à
           apprendre la programmation. J’ai notamment créé de petits jeux vidéo à l’aide de moteurs
           graphiques, ainsi que des sites web, avant de me lancer dans le développement de
-          véritables applications web.
-        </p>
-        <p>
-          Tout au long de mes formations, j’ai continué à approfondir mes connaissances en me
-          renseignant sur divers sujets et en réalisant de nouveaux projets personnels en parallèle.
+          véritables applications web. Tout au long de mes formations, j’ai continué à approfondir
+          mes connaissances en me renseignant sur divers sujets et en réalisant de nouveaux projets
+          personnels en parallèle.
         </p>
         <p>
           Vous pouvez notamment en retrouver une partie sur{' '}
