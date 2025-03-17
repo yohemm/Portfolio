@@ -110,6 +110,22 @@ Création d'un site PHP incluant un panel admin no code permettant de modifier l
 
 Site vitrine professionnel destiné à la prise de contact pour la location d’hébergements, avec un panel d’administration no-code pour une gestion simplifiée.
 
+### Intro
+
+Site vitrine de présentation de logements et prise de contact pour une entreprise de logement touristique.
+
+### Main
+
+Site web réalisé en PHP avec un panel d'administration complexe permettant de :
+
+- Remplir le planning
+- Ajouter des administrateurs
+- Afficher des alertes sur certaines pages (bannière publicitaire pour un logement/une page)
+- Ajouter de nouvelles pages
+- Modifier le contenu des pages
+- Personnaliser le style des pages
+- Consulter les messages de contact
+
 ## MP
 
     Technos:
