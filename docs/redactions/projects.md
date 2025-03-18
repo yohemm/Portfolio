@@ -93,6 +93,7 @@ Creation d'image ISO et CloneZilla via l'outil SysPrep de Windows.
 Cartographie réseau, des périphériques finaux aux prériphérique réseau.
 Rédaction de script PowerShell pour des petites automatisations.
 Mission longtherme de Help Desk pour résoudre les problemes informatiques et réseaux du corps médicals et de l'administration
+Renouvellement complet du parc d'imprimantes, passage de l'ensemble du parc d'imprimantes de la marque Konica à Canon.
 
 ## [Gites hautes vosges](https://github.com/yohemm/apartment-rental)
 

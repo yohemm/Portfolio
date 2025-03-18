@@ -131,6 +131,10 @@ export const PROJECTS: Project[] = [
             Mission à long terme de Help Desk pour résoudre les problèmes informatiques et réseaux
             du corps médical et de l&apos;administration.
           </li>
+          <li>
+            Renouvellement complet du parc d&apos;imprimantes, passage de l&apos;ensemble du parc
+            d&apos;imprimantes de la marque Konica à Canon.
+          </li>
         </ul>
       </section>
     ),
