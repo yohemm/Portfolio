@@ -131,6 +131,10 @@ export const PROJECTS: Project[] = [
             Mission à long terme de Help Desk pour résoudre les problèmes informatiques et réseaux
             du corps médical et de l&apos;administration.
           </li>
+          <li>
+            Renouvellement complet du parc d&apos;imprimantes, passage de l&apos;ensemble du parc
+            d&apos;imprimantes de la marque Konica à Canon.
+          </li>
         </ul>
       </section>
     ),
@@ -156,14 +160,35 @@ export const PROJECTS: Project[] = [
         simplifiée.
       </p>
     ),
-    intro: <>intro</>,
-    children: <>node</>,
+    intro: (
+      <p>
+        Site vitrine de présentation de logements et prise de contact pour une entreprise de
+        logement touristique.
+      </p>
+    ),
+    children: (
+      <div>
+        <p>Site web réalisé en PHP avec un panel d&apos;administration complexe permettant de :</p>
+        <ul>
+          <li>Remplir le planning</li>
+          <li>Ajouter des administrateurs</li>
+          <li>
+            Afficher des alertes sur certaines pages (bannière publicitaire pour un logement/une
+            page)
+          </li>
+          <li>Ajouter de nouvelles pages</li>
+          <li>Modifier le contenu des pages</li>
+          <li>Personnaliser le style des pages</li>
+          <li>Consulter les messages de contact</li>
+        </ul>
+      </div>
+    ),
     toolsAndServices: null,
     webTechnos: {
       front: ['JavaScript', 'CSS'],
-      back: ['PHP', 'PostGreSQL', 'Hébergement']
+      back: ['PHP', 'PostGreSQL', 'Ninx']
     },
-    presentationTechnos: ['PHP', 'PostGreSQL', 'Hébergement']
+    presentationTechnos: ['PHP', 'PostGreSQL', 'Nginx']
   },
   {
     name: 'minepiece',

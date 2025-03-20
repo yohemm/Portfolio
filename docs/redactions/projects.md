@@ -93,6 +93,7 @@ Creation d'image ISO et CloneZilla via l'outil SysPrep de Windows.
 Cartographie réseau, des périphériques finaux aux prériphérique réseau.
 Rédaction de script PowerShell pour des petites automatisations.
 Mission longtherme de Help Desk pour résoudre les problemes informatiques et réseaux du corps médicals et de l'administration
+Renouvellement complet du parc d'imprimantes, passage de l'ensemble du parc d'imprimantes de la marque Konica à Canon.
 
 ## [Gites hautes vosges](https://github.com/yohemm/apartment-rental)
 
@@ -109,6 +110,22 @@ Création d'un site PHP incluant un panel admin no code permettant de modifier l
 ### Presentation
 
 Site vitrine professionnel destiné à la prise de contact pour la location d’hébergements, avec un panel d’administration no-code pour une gestion simplifiée.
+
+### Intro
+
+Site vitrine de présentation de logements et prise de contact pour une entreprise de logement touristique.
+
+### Main
+
+Site web réalisé en PHP avec un panel d'administration complexe permettant de :
+
+- Remplir le planning
+- Ajouter des administrateurs
+- Afficher des alertes sur certaines pages (bannière publicitaire pour un logement/une page)
+- Ajouter de nouvelles pages
+- Modifier le contenu des pages
+- Personnaliser le style des pages
+- Consulter les messages de contact
 
 ## MP
 
