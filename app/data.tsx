@@ -31,13 +31,17 @@ export const PROJECTS: Project[] = [
           respecter l&apos;isolation des projets.
         </p>
         <p>
-          De plus, une supervision a été mise en place en récupérant les informations du VPS et des
-          conteneurs via Prometheus et son Node Exporter, qui envoient les données à Grafana pour le
-          suivi et l&apos;analyse.
+          Mais j&apos;ai aussi eu le temps de créer de nombreux projets personnels tels que des
+          serveurs de mails, des serveurs d&apos;automatisation (n8n), des serveurs web / de jeux.
         </p>
         <p>
-          Pour terminer, un serveur Gitea, Portainer et des interfaces web d&apos;administration de
-          bases de données ont été mis en place pour faciliter la gestion des projets.
+          De plus, une supervision a été mise en place en récupérant les informations du VPS et des
+          conteneurs via Prometheus et son Node Exporter, qui envoient les données à Grafana pour le
+          suivi et l’analyse.
+        </p>
+        <p>
+          Pour terminer, un serveur Gitea, Portainer et des interfaces web d’administration de bases
+          de données ont été mis en place pour faciliter la gestion des projets.
         </p>
       </section>
     ),
@@ -69,20 +73,37 @@ export const PROJECTS: Project[] = [
       </p>
     ),
     intro: (
-      <p>
-        Projet personnel ayant pour but de créer une application web avec une gestion des
-        utilisateurs complexe.
-      </p>
+      <>
+        <p>
+          Projet personnel ayant pour but de créer une communauté autour de la programmation dans le
+          milieu francophone à l&apos;aide une application web.
+        </p>
+        <p>
+          Cette application n&apos;est pas pas encore terminé bien qu&apos;elle inclue deja un
+          system de d&apos;utilisateur avec des droits et images de profiles, l&apos;ajout de
+          commentaire et la creation de nouveau cours.
+        </p>
+      </>
     ),
     children: (
       <section>
         <p>
           Site web ayant pour but d&apos;être une plateforme de cours textuels pour les francophones
-          passionnés par l&apos;IT. Il inclut une gestion des droits et des accès utilisateurs, des
-          sections de commentaires ainsi que des formulaires de rédaction de cours.
+          passionnés par l&apos;IT.
+        </p>
+        <p>
+          Il inclut une gestion des droits et des accès utilisateurs, des sections de commentaires
+          ainsi que des formulaires de rédaction de cours.
+        </p>
+        <p>
           L&apos;utilisateur peut changer son pseudo ainsi que son image de profil. Par la suite, un
-          système de badges et de trophées sera implémenté. Ce projet inclut un diagramme UML
-          complexe:
+          système de badges et de trophées sera implémenté.
+        </p>
+        <p>
+          Ce projet m&apos;a permis de démontrer mes compétences en Node.js et notamment Express.
+        </p>
+        <p>
+          Ce projet inclut un diagramme UML complexe:
           <div className='center-img'>
             <img src='/assets/JDD/UML.png' alt='Diagramme UML de La BBD du projet' height='400px' />
           </div>
@@ -108,7 +129,7 @@ export const PROJECTS: Project[] = [
     ),
     intro: (
       <p>
-        Alternance de 2 ans en tant que technicien système & réseau au sein de la Polyclinique de
+        Alternances de 2 ans en temps que technicien systeme & réseau au sein de la Polyclinque De
         Grande-Synthe.
       </p>
     ),
@@ -136,6 +157,13 @@ export const PROJECTS: Project[] = [
             d&apos;imprimantes de la marque Konica à Canon.
           </li>
         </ul>
+
+        <p>
+          Mon alternance se déroulé dans le service informatique d&apos;une clinique, entreprise
+          privé du milieux médical se qui m&apos;as permit de dévcouvrir le mileux des grosse
+          entreprise mais aussi de comprendre et d&apos;appliqué la rigeur de la sécurité
+          informatique pour garantir la disponibilité des services ciritique.
+        </p>
       </section>
     ),
     toolsAndServices: null,
@@ -167,7 +195,7 @@ export const PROJECTS: Project[] = [
       </p>
     ),
     children: (
-      <div>
+      <section>
         <p>Site web réalisé en PHP avec un panel d&apos;administration complexe permettant de :</p>
         <ul>
           <li>Remplir le planning</li>
@@ -181,12 +209,25 @@ export const PROJECTS: Project[] = [
           <li>Personnaliser le style des pages</li>
           <li>Consulter les messages de contact</li>
         </ul>
-      </div>
+        <p>Le site web a été réalisé uniquement en JavaScript et PHP vanilla.</p>
+        <p>
+          Lors de la création du site, je ne maîtrisais pas de framework PHP, j’ai donc préféré
+          consolider mes compétences en PHP vanilla.
+        </p>
+        <p>
+          Le site étant uniquement un site de prospection/vitrine, l&apos;utilisation de PHP vanilla
+          ne posait aucun problème.
+        </p>
+        <p>
+          Je suis aussi responsable de l&apos;hébergement (via mon serveur Docker), de la zone DNS,
+          mais aussi de la maintenance du site.
+        </p>
+      </section>
     ),
     toolsAndServices: null,
     webTechnos: {
       front: ['JavaScript', 'CSS'],
-      back: ['PHP', 'PostGreSQL', 'Ninx']
+      back: ['PHP', 'PostGreSQL', 'Nginx']
     },
     presentationTechnos: ['PHP', 'PostGreSQL', 'Nginx']
   },
@@ -195,8 +236,75 @@ export const PROJECTS: Project[] = [
     displayName: 'Développement bénevole pour un communauté',
     image: '/assets/docker/0.png',
     presentation: <p>Mise en place de serveurs de production ainsi que développement en Java 8.</p>,
-    intro: <>intro</>,
-    children: <>node</>,
+    intro: (
+      <>
+        <p>
+          Création de multiples plugins pour le fonctionnement d’un serveur Minecraft, hébergement
+          des bases de données et du site web depuis le serveur VPS.
+        </p>
+        <p>
+          Le serveur Minecraft est en développement actif depuis plus de six ans. Il contient de
+          multiples mods créés par d’autres développeurs, ainsi que de nombreux plugins créés ou mis
+          à jour par mes soins.
+        </p>
+      </>
+    ),
+    children: (
+      <section>
+        <p>
+          Je me suis intéressé à ce projet lors de sa création, d’abord en tant que simple membre du
+          l&apos;équipe du serveur (animateur de la communauté), puis je me suis hissé dans la
+          hiérarchie.
+        </p>
+        <p>
+          Je suis actuellement le seul développeur de plugins du projet, et je suis responsable de
+          la mise en place et de la maintenance de plusieurs serveurs du projet.
+        </p>
+        <div>
+          <b>Plugins (Java & Spigot) :</b>
+          <ul>
+            <li>
+              <p>Gestion du temps en jeu</p>
+            </li>
+            <li>
+              <p>Blocs cassables avec réapparition et récompenses personnalisées</p>
+            </li>
+            <li>
+              <p>Gestion du système de vente via HDV</p>
+            </li>
+            <li>
+              <p>Supervision de joueurs pour les membres du l&apos;équipe du serveur</p>
+            </li>
+            <li>
+              <p>
+                Participation au plugin principal, incluant la gestion des rôles, des factions et du
+                territoire
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <b>Hébergements (Docker, PostgreSQL, MongoDB, Nginx, Apache) :</b>
+          <ul>
+            <li>
+              <p>Hébergement du serveur web officiel</p>
+            </li>
+            <li>
+              <p>Hébergement du serveur web du launcher client</p>
+            </li>
+            <li>
+              <p>Hébergement de bases de données propres aux plugins</p>
+            </li>
+            <li>
+              <p>
+                Hébergement de bases de données propres au launcher du serveur (l’application
+                client)
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    ),
     toolsAndServices: {
       tools: ['Java', 'Spigot', 'Hébergement'],
       services: []
@@ -214,8 +322,37 @@ export const PROJECTS: Project[] = [
         utilisateurs via un ORM et une structure CRUD.
       </p>
     ),
-    intro: <>intro</>,
-    children: <>node</>,
+    intro: (
+      <p>
+        Application web de révision réalisée lors d’un projet du BUT, utilisant un système de
+        flashcards développée avec Laravel.
+      </p>
+    ),
+    children: (
+      <section>
+        <p>
+          Lors de ce projet, j’ai pu développer le fonctionnement back-end, qui a été réalisé via un
+          ORM et une API CRUD.
+        </p>
+        <p>
+          Un système de middleware a aussi été mis en place pour limiter les accès nécessitant la
+          création d’un compte.
+        </p>
+        <p>
+          L’organisation de ce projet étant à définir en interne, j’ai également pu m’améliorer en
+          gestion de projet et d’équipe, car j’ai dû m’improviser chef de projet afin de m’assurer
+          du respect des deadlines. J’ai donc appris à assigner des tâches en fonction des
+          compétences de chacun, tout en expliquant les autres parties du projet afin que personne
+          ne soit mis de côté et que tout le monde puisse au moins comprendre la logique globale et,
+          au mieux, répliquer le fonctionnement du serveur sur un autre projet.
+        </p>
+        <p>
+          Le site fonctionne avec une API CRUD qui est appelée pour la moindre modification des
+          données. Cette API sert donc d’intermédiaire entre l’interface graphique du navigateur et
+          le serveur de base de données PostgreSQL.
+        </p>
+      </section>
+    ),
     toolsAndServices: null,
     webTechnos: { front: ['JavaScript', 'CSS'], back: ['Laravel', 'MySQL'] },
     presentationTechnos: ['Laravel', 'MySQL', 'ORM & CRUD']
@@ -230,8 +367,50 @@ export const PROJECTS: Project[] = [
         architecture client-serveur communiquant via des sockets.
       </p>
     ),
-    intro: <>intro</>,
-    children: <>node</>,
+    intro: (
+      <p>
+        Durant mes études au lycée, j’ai commencé à créer plusieurs jeux, notamment pour mes cours
+        de NSI. J’ai aussi pu développer ces compétences lors de mes années de BUT.
+      </p>
+    ),
+    children: (
+      <section>
+        <p>
+          Lors de mes cours de NSI, j’ai notamment découvert la librairie PyGame, ce qui m’a permis
+          de créer un jeu en 2D dans le style Open World, avec un système de quêtes ouvertes
+          permettant de débloquer des raccourcis sur la carte ou bien de nouveaux événements ou
+          objets.
+        </p>
+        <p>
+          La version finale de ce jeu, avec la carte terminée et l’ensemble des quêtes, a
+          malheureusement disparu, mais le système reste le même que celui du projet sur GitHub.
+        </p>
+        <p>Le jeu a été créé sans aucune classe Python, avec un paradigme fonctionnel.</p>
+        <p>
+          J’ai délégué la création de la carte, mais celle-ci étant très grande, cela rendait le
+          travail très chronophage. J’ai donc dû créer un logiciel externe permettant la création de
+          la carte via un outil que j’ai développé, qui est assez similaire à Paint.
+        </p>
+        <p>
+          Durant mes vacances d’été entre ma terminale et mon BUT, j’ai eu l’occasion de développer
+          un POC (proof of concept) d’un jeu 2D de combat en réseau, vu de dessus, avec des
+          déplacements omnidirectionnels en 2D (gestion de l’angle et de la rotation du personnage).
+        </p>
+        <p>
+          Ce jeu inclut un client et un serveur ; le dialogue entre ces deux composants s’effectue
+          via des sockets Python.
+        </p>
+        <p>
+          Mon dernier projet de jeua été réalisé à l’aide de JavaFX. C’est un rogue-lite dans lequel
+          on explore un donjon généré procéduralement. Le but est de descendre dans les étages en
+          trouvant la clé détenue par le boss de chaque étage.
+        </p>
+        <p>
+          Lors de ce projet, j’ai dû réaliser un diagramme UML afin d’avoir une vue d’ensemble, mais
+          aussi pour ne pas me perdre dans l’avancement du projet.
+        </p>
+      </section>
+    ),
     toolsAndServices: { tools: ['Java', 'Python', 'NumPy'], services: [] },
     webTechnos: null,
     presentationTechnos: ['Java', 'JavaFX', 'Python', 'NumPy', 'Pygame']
