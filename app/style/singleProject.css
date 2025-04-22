@@ -1,0 +1,6 @@
+section > ul {
+  margin-bottom: 15vh;
+}
+section > div:has(ul) {
+  margin-top: 15vh;
+}
