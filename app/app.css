@@ -21,9 +21,9 @@
   --text-low-interactif: #208368;
   --text-interactif: #193b2d; */
 
-  --text-tomato: #1f2d5c;
+  --text-tomato: #1f2d5c; /* indigo */
   --text-low-tomato: #3a5bc7;
-  --background-white: #fcfcfc;
+  --background-white: #fdfdfe;
   --ui-bg-gray: #f0f0f0;
   --ui-bg-tomato: #edf2fe;
   --ui-bg-solid-jade: #bdee63;
@@ -53,6 +53,7 @@ body {
   overflow-x: hidden;
   width: 100vw;
   scroll-behavior: smooth;
+  background-color: var(--background-white);
 }
 nav {
   font-size: 1.5rem;
@@ -67,6 +68,9 @@ nav {
   outline: none;
   border: none;
   text-decoration: none;
+}
+section li {
+  margin-left: 1.25rem;
 }
 * {
   font-family: var(--font-content);
@@ -133,6 +137,7 @@ h4 {
 }
 nav a,
 nav span {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-family: var(--font-tile);
 }
 nav {
@@ -167,10 +172,6 @@ nav ul.me a {
 nav i::before {
   transition: all 0.2s ease-out;
   font-size: 2rem;
-}
-nav a,
-nav span {
-  font-size: 1.5rem;
 }
 nav ul li.name.hide {
   transform: translate(0, -9vh);
@@ -274,7 +275,7 @@ header nav ul li.skills-projects {
 
 .nav-sticked {
   border-bottom: 1px solid var(--focus-gray);
-  background-color: var(--ui-bg-gray);
+  background-color: #f7f9ff;
 }
 
 #header {
@@ -354,6 +355,11 @@ section#about-me::after {
 }
 
 /* FOOTER */
+/* footer {
+  position: fixed;
+  bottom: 0;
+
+} */
 
 footer address ul {
   display: flex;
