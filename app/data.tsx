@@ -1,4 +1,5 @@
 import type React from 'react';
+import { NavLink } from 'react-router';
 import { type Project } from '~/elements/Project';
 
 export const PROJECTS: Project[] = [
@@ -13,10 +14,19 @@ export const PROJECTS: Project[] = [
       </p>
     ),
     intro: (
-      <p>
-        Afin de centraliser de nombreux projets, j&apos;ai décidé de louer un VPS que j&apos;ai
-        configuré pour automatiser les déploiements et superviser les différents projets.
-      </p>
+      <>
+        <NavLink
+          to='https://github.com/yohemm/VPS-Docker-Net'
+          target='_blank'
+          className='link-github-project '>
+          <i className='devicon-github-original colored'></i>
+          Source du Projet
+        </NavLink>
+        <p>
+          Afin de centraliser de nombreux projets, j&apos;ai décidé de louer un VPS que j&apos;ai
+          configuré pour automatiser les déploiements et superviser les différents projets.
+        </p>
+      </>
     ),
     children: (
       <section>
@@ -43,6 +53,10 @@ export const PROJECTS: Project[] = [
           Pour terminer, un serveur Gitea, Portainer et des interfaces web d’administration de bases
           de données ont été mis en place pour faciliter la gestion des projets.
         </p>
+        <div className='center-img'>
+          <img src='/assets/docker/0.png' alt='Diagramme UML de La BBD du projet' height='400px' />
+          <img src='/assets/docker/1.png' alt='Diagramme UML de La BBD du projet' height='400px' />
+        </div>
       </section>
     ),
     toolsAndServices: {
@@ -74,6 +88,13 @@ export const PROJECTS: Project[] = [
     ),
     intro: (
       <>
+        <NavLink
+          to='https://github.com/yohemm/journal-du-dev'
+          target='_blank'
+          className='link-github-project '>
+          <i className='devicon-github-original colored'></i>
+          Source du Projet
+        </NavLink>
         <p>
           Projet personnel ayant pour but de créer une communauté autour de la programmation dans le
           milieu francophone à l&apos;aide une application web.
@@ -96,6 +117,10 @@ export const PROJECTS: Project[] = [
           ainsi que des formulaires de rédaction de cours.
         </p>
         <p>
+          <div className='center-img'>
+            <img src='/assets/JDD/0.png' alt='Accueil du projet' height='400px' />
+            <img src='/assets/JDD/2.png' alt='Profile utilisateur du projet' height='400px' />
+          </div>
           L&apos;utilisateur peut changer son pseudo ainsi que son image de profil. Par la suite, un
           système de badges et de trophées sera implémenté.
         </p>
@@ -120,7 +145,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'work-study',
     displayName: 'Alternance en Licence Professionnelle',
-    image: '/assets/JDD/0.png',
+    image: '/assets/polyclinique/ext.jpg',
     presentation: (
       <p>
         Alternance en tant que Technicien Système et Réseau au sein de la Polyclinique de
@@ -157,7 +182,9 @@ export const PROJECTS: Project[] = [
             d&apos;imprimantes de la marque Konica à Canon.
           </li>
         </ul>
-
+        <div className='center-img'>
+          <img src='/assets/polyclinique/ext.jpg' alt='Batiment de la PG-S' height='400px' />
+        </div>
         <p>
           Mon alternance se déroulé dans le service informatique d&apos;une clinique, entreprise
           privé du milieux médical se qui m&apos;as permit de dévcouvrir le mileux des grosse
@@ -189,10 +216,19 @@ export const PROJECTS: Project[] = [
       </p>
     ),
     intro: (
-      <p>
-        Site vitrine de présentation de logements et prise de contact pour une entreprise de
-        logement touristique.
-      </p>
+      <div>
+        <NavLink
+          to='https://github.com/yohemm/apartment-rental'
+          target='_blank'
+          className='link-github-project '>
+          <i className='devicon-github-original colored'></i>
+          Source du Projet
+        </NavLink>
+        <p>
+          Site vitrine de présentation de logements et prise de contact pour une entreprise de
+          logement touristique.
+        </p>
+      </div>
     ),
     children: (
       <section>
@@ -209,6 +245,11 @@ export const PROJECTS: Project[] = [
           <li>Personnaliser le style des pages</li>
           <li>Consulter les messages de contact</li>
         </ul>
+
+        <div className='center-img'>
+          <img src='/assets/location/0.png' alt='Accueil du projet' height='400px' />
+          <img src='/assets/location/2.png' alt='Accueil du projet' height='400px' />
+        </div>
         <p>Le site web a été réalisé uniquement en JavaScript et PHP vanilla.</p>
         <p>
           Lors de la création du site, je ne maîtrisais pas de framework PHP, j’ai donc préféré
@@ -234,7 +275,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'minepiece',
     displayName: 'Développement bénevole pour un communauté',
-    image: '/assets/docker/0.png',
+    image: '/assets/minepiece/0.png',
     presentation: <p>Mise en place de serveurs de production ainsi que développement en Java 8.</p>,
     intro: (
       <>
@@ -265,15 +306,43 @@ export const PROJECTS: Project[] = [
           <ul>
             <li>
               <p>Gestion du temps en jeu</p>
+              <NavLink
+                to='https://github.com/yohemm/Temporal-MC'
+                target='_blank'
+                className='link-github-project '>
+                <i className='devicon-github-original colored'></i>
+                Source du Projet
+              </NavLink>
             </li>
             <li>
               <p>Blocs cassables avec réapparition et récompenses personnalisées</p>
+              <NavLink
+                to='https://github.com/yohemm/Breakable_Block'
+                target='_blank'
+                className='link-github-project '>
+                <i className='devicon-github-original colored'></i>
+                Source du Projet
+              </NavLink>
             </li>
             <li>
               <p>Gestion du système de vente via HDV</p>
+              <NavLink
+                to='https://github.com/yohemm/HDV-minecraft-plugin'
+                target='_blank'
+                className='link-github-project '>
+                <i className='devicon-github-original colored'></i>
+                Source du Projet
+              </NavLink>
             </li>
             <li>
               <p>Supervision de joueurs pour les membres du l&apos;équipe du serveur</p>
+              <NavLink
+                to='https://github.com/yohemm/ModoStick'
+                target='_blank'
+                className='link-github-project '>
+                <i className='devicon-github-original colored'></i>
+                Source du Projet
+              </NavLink>
             </li>
             <li>
               <p>
@@ -282,6 +351,14 @@ export const PROJECTS: Project[] = [
               </p>
             </li>
           </ul>
+          <div className='center-img'>
+            <img
+              src='/assets/minepiece/2.png'
+              alt='Architecture de fichier du projet'
+              height='400px'
+            />
+            <img src='/assets/minepiece/3.png' alt='Code du projet' height='400px' />
+          </div>
         </div>
         <div>
           <b>Hébergements (Docker, PostgreSQL, MongoDB, Nginx, Apache) :</b>
@@ -302,6 +379,10 @@ export const PROJECTS: Project[] = [
               </p>
             </li>
           </ul>
+          <div className='center-img'>
+            <img src='/assets/minepiece/0.png' alt='Launcher du projet' height='400px' />
+            <img src='/assets/minepiece/1.png' alt='Hébergement web du projet' height='400px' />
+          </div>
         </div>
       </section>
     ),
@@ -323,10 +404,19 @@ export const PROJECTS: Project[] = [
       </p>
     ),
     intro: (
-      <p>
-        Application web de révision réalisée lors d’un projet du BUT, utilisant un système de
-        flashcards développée avec Laravel.
-      </p>
+      <div>
+        <NavLink
+          to='https://github.com/yohemm/FlashCards'
+          target='_blank'
+          className='link-github-project '>
+          <i className='devicon-github-original colored'></i>
+          Source du Projet
+        </NavLink>
+        <p>
+          Application web de révision réalisée lors d’un projet du BUT, utilisant un système de
+          flashcards développée avec Laravel.
+        </p>
+      </div>
     ),
     children: (
       <section>
@@ -376,10 +466,17 @@ export const PROJECTS: Project[] = [
     children: (
       <section>
         <p>
-          Lors de mes cours de NSI, j’ai notamment découvert la librairie PyGame, ce qui m’a permis
-          de créer un jeu en 2D dans le style Open World, avec un système de quêtes ouvertes
-          permettant de débloquer des raccourcis sur la carte ou bien de nouveaux événements ou
-          objets.
+          Lors de mes cours de NSI durant mon année de terminale, j’ai notamment découvert la
+          librairie PyGame, ce qui m’a permis de créer un jeu en 2D dans le style Open World, avec
+          un système de quêtes ouvertes permettant de débloquer des raccourcis sur la carte ou bien
+          de nouveaux événements ou objets.
+          <NavLink
+            to='https://github.com/yohemm/peace-full-rpg'
+            target='_blank'
+            className='link-github-project '>
+            <i className='devicon-github-original colored'></i>
+            Source du Projet
+          </NavLink>
         </p>
         <p>
           La version finale de ce jeu, avec la carte terminée et l’ensemble des quêtes, a
@@ -395,16 +492,39 @@ export const PROJECTS: Project[] = [
           Durant mes vacances d’été entre ma terminale et mon BUT, j’ai eu l’occasion de développer
           un POC (proof of concept) d’un jeu 2D de combat en réseau, vu de dessus, avec des
           déplacements omnidirectionnels en 2D (gestion de l’angle et de la rotation du personnage).
+          <NavLink
+            to='https://github.com/yohemm/grab-the-player'
+            target='_blank'
+            className='link-github-project '>
+            <i className='devicon-github-original colored'></i>
+            Source du Projet
+          </NavLink>
         </p>
         <p>
           Ce jeu inclut un client et un serveur ; le dialogue entre ces deux composants s’effectue
           via des sockets Python.
+          <div className='center-img'>
+            <img src='/assets/socket/0.png' alt='Prototype du projet' height='400px' />
+            <img src='/assets/socket/1.png' alt='Prototype du projet' height='400px' />
+          </div>
         </p>
         <p>
           Mon dernier projet de jeua été réalisé à l’aide de JavaFX. C’est un rogue-lite dans lequel
           on explore un donjon généré procéduralement. Le but est de descendre dans les étages en
           trouvant la clé détenue par le boss de chaque étage.
+          <NavLink
+            to='https://github.com/yohemm/AnOtherGame'
+            target='_blank'
+            className='link-github-project '>
+            <i className='devicon-github-original colored'></i>
+            Source du Projet
+          </NavLink>
         </p>
+        <div className='center-img'>
+          <img src='/assets/game/0.png' alt='Prototype du projet' height='400px' />
+          <img src='/assets/game/1.png' alt='carte du monde du projet' height='400px' />
+          <img src='/assets/game/2.png' alt='Architecture code du projet' height='400px' />
+        </div>
         <p>
           Lors de ce projet, j’ai dû réaliser un diagramme UML afin d’avoir une vue d’ensemble, mais
           aussi pour ne pas me perdre dans l’avancement du projet.

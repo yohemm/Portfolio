@@ -4,3 +4,8 @@ section > ul {
 section > div:has(ul) {
   margin-top: 15vh;
 }
+.link-github-project {
+  display: block;
+  text-align: right;
+  color: var(--text-low-interactif);
+}
