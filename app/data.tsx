@@ -54,8 +54,16 @@ export const PROJECTS: Project[] = [
           de données ont été mis en place pour faciliter la gestion des projets.
         </p>
         <div className='center-img'>
-          <img src='/assets/docker/0.png' alt='Diagramme UML de La BBD du projet' height='400px' />
-          <img src='/assets/docker/1.png' alt='Diagramme UML de La BBD du projet' height='400px' />
+          <img
+            src='/assets/docker/0.png'
+            alt='Docker compose du site profesionnel hébergé sur le serveur VPS'
+            height='400px'
+          />
+          <img
+            src='/assets/docker/1.png'
+            alt='deuxieme partie du docker compose du site profesionnel hébergé sur le VPS'
+            height='400px'
+          />
         </div>
       </section>
     ),
@@ -206,7 +214,7 @@ export const PROJECTS: Project[] = [
   },
   {
     name: 'gites-hautes-vosges',
-    displayName: 'Creation de site profesionnel',
+    displayName: 'Création de site professionnel',
     image: '/assets/location/0.png',
     presentation: (
       <p>
@@ -247,7 +255,11 @@ export const PROJECTS: Project[] = [
         </ul>
 
         <div className='center-img'>
-          <img src='/assets/location/0.png' alt='Accueil du projet' height='400px' />
+          <img
+            src='/assets/location/0.png'
+            alt='Docker compose le projet de site professionnel'
+            height='400px'
+          />
           <img src='/assets/location/2.png' alt='Accueil du projet' height='400px' />
         </div>
         <p>Le site web a été réalisé uniquement en JavaScript et PHP vanilla.</p>

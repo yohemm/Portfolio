@@ -94,6 +94,10 @@ export default function Home() {
           back={['NodeJS', 'React-Router', 'Docker']}
           front={['React', 'TypeScript', 'CSS']}
         />
+
+        <div className='center-img'>
+          <img src='/assets/portfolio/data.jpg' alt='Accueil du projet' height='800px' />
+        </div>
       </section>
     </>
   );
