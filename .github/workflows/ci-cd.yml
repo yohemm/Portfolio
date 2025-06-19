@@ -21,7 +21,7 @@ jobs:
           node-version: 22
         # execute des commandes
       - name: Clean install NPM
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
